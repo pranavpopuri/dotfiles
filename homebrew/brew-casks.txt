@@ -1,3 +1,0 @@
-font-go-mono-nerd-font
-font-hack-nerd-font
-wezterm
