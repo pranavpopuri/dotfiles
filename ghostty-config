@@ -1,0 +1,18 @@
+# Ghostty Configuration
+
+# Font (Nerd Font required for Neovim icons)
+font-family = "FiraCode Nerd Font"
+font-size = 14
+font-feature = -liga
+font-feature = -calt
+
+# Window
+macos-titlebar-style = transparent
+window-save-state = always
+window-theme = ghostty
+window-padding-x = 8
+window-padding-y = 8
+
+# Cursor
+cursor-style = block
+cursor-style-blink = true
