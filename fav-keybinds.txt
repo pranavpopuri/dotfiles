@@ -1,7 +1,0 @@
-Keybind, Purpose
-
-Ctrl+R, Jump (Ace jumper)
-
-Ctrl+Enter, New line (regardless of current cursor position)
-
-?, Shows all command palette options (Visual Studio Code, after opening Command Palette)
