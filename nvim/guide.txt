@@ -1,0 +1,651 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                       NEOVIM IDE - COMPLETE GUIDE                            ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+================================================================================
+TABLE OF CONTENTS
+================================================================================
+
+  1. Configuration Structure
+  2. First Time Setup
+  3. Plugin Manager (Lazy.nvim)
+  4. File Explorer (nvim-tree)
+  5. Fuzzy Finding (Telescope)
+  6. LSP & Code Intelligence
+  7. Auto-Completion
+  8. Language Development (C++/Rust/Python)
+  9. Debugging (DAP)
+  10. Git Integration
+  11. Terminal
+  12. LeetCode
+  13. Session Management
+  14. Theme & UI
+  15. Editing Enhancements
+  16. Troubleshooting
+
+================================================================================
+1. CONFIGURATION STRUCTURE
+================================================================================
+
+~/.config/nvim/
+├── init.lua                    # Entry point - loads everything
+├── cheatsheet.txt              # Quick reference keybindings
+├── plugins.txt                 # Plugin descriptions
+├── guide.txt                   # This file
+│
+└── lua/
+    ├── config/                 # Core configuration
+    │   ├── lazy.lua            # Plugin manager bootstrap
+    │   ├── options.lua         # Neovim settings (tabs, numbers, etc.)
+    │   ├── keymaps.lua         # Custom key mappings
+    │   └── autocmds.lua        # Auto commands (format on save, etc.)
+    │
+    └── plugins/                # Plugin configurations (loaded by lazy.nvim)
+        ├── ui.lua              # Theme, statusline, bufferline, dashboard
+        ├── editor.lua          # Treesitter, autopairs, comments, surround
+        ├── lsp.lua             # LSP, completion, formatting, diagnostics
+        ├── explorer.lua        # File tree (nvim-tree)
+        ├── telescope.lua       # Fuzzy finder
+        ├── git.lua             # Git signs, lazygit, diffview
+        ├── debug.lua           # Debug Adapter Protocol (DAP)
+        ├── terminal.lua        # Integrated terminal
+        └── extras.lua          # WakaTime, LeetCode, sessions, CMake
+
+Data directories (auto-created):
+~/.local/share/nvim/lazy/       # Downloaded plugins
+~/.local/share/nvim/mason/      # LSP servers, formatters, debuggers
+~/.local/share/nvim/leetcode/   # LeetCode problems cache
+~/.local/state/nvim/sessions/   # Saved sessions
+
+================================================================================
+2. FIRST TIME SETUP
+================================================================================
+
+PREREQUISITES:
+--------------
+Install these before using the config:
+
+  # macOS (Homebrew)
+  brew install neovim           # Neovim 0.9+ required
+  brew install ripgrep          # Fast search (for Telescope)
+  brew install lazygit          # Git UI
+  brew install node             # Required for some LSP servers
+  brew install --cask font-jetbrains-mono-nerd-font  # Icons
+
+  # Verify C++ toolchain
+  clang++ --version             # Should show clang version
+
+FIRST LAUNCH:
+-------------
+1. Open Neovim:
+   $ nvim
+
+2. Lazy.nvim will automatically:
+   - Bootstrap itself
+   - Download all plugins
+   - Show installation progress
+
+3. After plugins install, run:
+   :Lazy sync                   # Ensure all plugins are up to date
+
+4. Install LSP servers and tools:
+   :Mason                       # Opens Mason UI
+
+   Or install directly:
+   :MasonInstall clangd codelldb clang-format lua-language-server
+
+5. Restart Neovim
+
+WAKATIME SETUP:
+---------------
+1. Create account at https://wakatime.com
+2. Get API key from https://wakatime.com/settings/api-key
+3. On first launch, you'll be prompted for the key
+4. Coding time will appear in the status line
+
+LEETCODE SETUP:
+---------------
+1. Run :Leet
+2. Sign in with your LeetCode account (browser opens)
+3. After auth, problems will sync
+
+================================================================================
+3. PLUGIN MANAGER (LAZY.NVIM)
+================================================================================
+
+Lazy.nvim is a modern, fast plugin manager.
+
+COMMANDS:
+  :Lazy                         # Open Lazy UI
+  :Lazy sync                    # Install/update/clean plugins
+  :Lazy update                  # Update all plugins
+  :Lazy clean                   # Remove unused plugins
+  :Lazy health                  # Check health
+  :Lazy profile                 # View startup performance
+
+LAZY UI NAVIGATION:
+  - Press <CR> on a plugin to see details
+  - Press 'i' to install
+  - Press 'u' to update
+  - Press 'x' to clean
+  - Press 'q' to close
+
+ADDING NEW PLUGINS:
+Edit the appropriate file in ~/.config/nvim/lua/plugins/
+Example - add a new plugin to editor.lua:
+
+  {
+    "username/plugin-name",
+    event = "VeryLazy",           -- When to load (lazy loading)
+    opts = {                      -- Plugin options
+      setting = true,
+    },
+  },
+
+================================================================================
+4. FILE EXPLORER (NVIM-TREE)
+================================================================================
+
+A VSCode-like sidebar file explorer.
+
+OPENING/CLOSING:
+  <Space>e                      # Toggle file explorer
+  <Space>E                      # Focus file explorer
+
+NAVIGATION (inside nvim-tree):
+  j/k                           # Move up/down
+  h                             # Close folder / go to parent
+  l or <CR>                     # Open file / expand folder
+  <Tab>                         # Preview file (don't switch to it)
+
+FILE OPERATIONS:
+  a                             # Create new file/folder (end with / for folder)
+  r                             # Rename
+  d                             # Delete
+  x                             # Cut
+  c                             # Copy
+  p                             # Paste
+  y                             # Copy name
+  Y                             # Copy relative path
+  gy                            # Copy absolute path
+
+VIEW OPTIONS:
+  H                             # Toggle hidden files
+  I                             # Toggle gitignore filter
+  R                             # Refresh
+  ?                             # Show help
+
+================================================================================
+5. FUZZY FINDING (TELESCOPE)
+================================================================================
+
+Telescope is a powerful fuzzy finder for files, text, and more.
+
+FILE FINDING:
+  <Space>ff                     # Find files in project
+  <Space>fr                     # Recent files
+  <Space>fb                     # Open buffers
+  <Space>f/                     # Fuzzy search in current file
+
+TEXT SEARCH:
+  <Space>fg                     # Live grep (search text in all files)
+  <Space>fc                     # Search word under cursor
+
+CODE NAVIGATION:
+  <Space>fs                     # Document symbols (functions, classes)
+  <Space>fS                     # Workspace symbols
+  <Space>fd                     # All diagnostics
+
+OTHER:
+  <Space>fh                     # Help tags
+  <Space>fk                     # Keymaps
+  <Space>fm                     # Marks
+
+INSIDE TELESCOPE:
+  <C-j>/<C-k>                   # Move selection up/down
+  <CR>                          # Open selected
+  <C-x>                         # Delete buffer (in buffer picker)
+  <C-q>                         # Send to quickfix list
+  <Esc>                         # Close Telescope
+
+================================================================================
+6. LSP & CODE INTELLIGENCE
+================================================================================
+
+Language Server Protocol provides IDE features.
+
+INSTALLED SERVERS:
+  - clangd        (C/C++)
+  - lua_ls        (Lua)
+  - cmake         (CMake)
+
+NAVIGATION:
+  gd                            # Go to definition
+  gD                            # Go to declaration
+  gr                            # Find all references
+  gi                            # Go to implementation
+  <Space>D                      # Go to type definition
+
+DOCUMENTATION:
+  K                             # Hover documentation
+  <C-k>                         # Signature help (in insert mode)
+
+REFACTORING:
+  <Space>rn                     # Rename symbol (project-wide)
+  <Space>ca                     # Code actions (quick fixes, refactors)
+
+DIAGNOSTICS:
+  <Space>ld                     # Show line diagnostics in float
+  [d                            # Previous diagnostic
+  ]d                            # Next diagnostic
+  <Space>xx                     # Open Trouble (diagnostics panel)
+
+FORMATTING:
+  <Space>lf                     # Format current buffer
+  (Auto-formats on save for C/C++ files)
+
+MASON (LSP INSTALLER):
+  :Mason                        # Open Mason UI
+  :MasonInstall <server>        # Install a server
+  :MasonUninstall <server>      # Remove a server
+  :MasonLog                     # View logs
+
+================================================================================
+7. AUTO-COMPLETION
+================================================================================
+
+nvim-cmp provides intelligent auto-completion.
+
+TRIGGER:
+  - Completion appears automatically as you type
+  - <C-Space>                   # Manually trigger completion
+
+NAVIGATION:
+  <Tab>                         # Next item
+  <S-Tab>                       # Previous item
+  <C-j>/<C-k>                   # Also moves through items
+  <CR>                          # Confirm selection
+  <C-e>                         # Cancel/close completion
+
+DOCUMENTATION:
+  <C-b>                         # Scroll docs up
+  <C-f>                         # Scroll docs down
+
+SOURCES (in priority order):
+  [LSP]                         # Language server completions
+  [Snip]                        # Snippet completions
+  [Buf]                         # Words from current buffer
+  [Path]                        # File path completions
+
+SNIPPETS:
+  - Snippets expand with <Tab> after selection
+  - <Tab> jumps to next placeholder
+  - <S-Tab> jumps to previous placeholder
+
+================================================================================
+8. LANGUAGE DEVELOPMENT (C++/Rust/Python)
+================================================================================
+
+BUILD & RUN (language-aware):
+  <Space>cb                     # Build current file
+  <Space>cr                     # Build and run current file
+  <Space>ct                     # Run tests
+
+  C++:    cb = clang++ -std=c++20, cr = compile + run
+  Rust:   cb = cargo build, cr = cargo run, ct = cargo test
+  Python: cb = skip (interpreted), cr = python3 file, ct = pytest
+
+CMAKE PROJECTS (C++):
+  <Space>cg                     # CMake generate (configure)
+  <Space>cB                     # CMake build
+  <Space>cR                     # CMake run
+  <Space>cD                     # CMake debug
+  <Space>cs                     # Select build type (Debug/Release)
+  <Space>cT                     # Select build target
+
+C++ SPECIFIC:
+  <Space>ch                     # Switch header/source
+  LSP: clangd with clang-tidy, inlay hints
+  Format: clang-format
+
+  Project setup for clangd:
+  - CMake: cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=1 ..
+  - Or create .clangd file with CompileFlags
+
+RUST SPECIFIC:
+  LSP: rust-analyzer with clippy on save
+  Format: rustfmt
+  Just open a Cargo project - everything works automatically
+
+PYTHON SPECIFIC:
+  LSP: pyright (type checking)
+  Format: black
+  Tests: pytest
+
+================================================================================
+9. DEBUGGING (DAP)
+================================================================================
+
+Debug adapters: codelldb (C++/Rust), debugpy (Python)
+
+SETUP:
+  :MasonInstall codelldb        # Install the debug adapter
+
+BREAKPOINTS:
+  <Space>db                     # Toggle breakpoint
+  <Space>dB                     # Conditional breakpoint (enter condition)
+
+STARTING DEBUG:
+  <Space>dc                     # Start/continue debugging
+                                # (prompts for executable path first time)
+
+STEPPING:
+  <Space>di                     # Step into
+  <Space>do                     # Step out
+  <Space>dO                     # Step over
+  <Space>dC                     # Run to cursor
+
+INSPECTION:
+  <Space>de                     # Evaluate expression
+  <Space>dw                     # Hover widget (inspect variable)
+  <Space>du                     # Toggle debug UI
+
+CONTROL:
+  <Space>dp                     # Pause
+  <Space>dt                     # Terminate session
+  <Space>dr                     # Toggle REPL
+
+DEBUG UI PANELS:
+  - Scopes (local variables)
+  - Breakpoints list
+  - Stacks (call stack)
+  - Watches (custom expressions)
+  - Console (output)
+
+COMPILING FOR DEBUG:
+  Always compile with -g flag:
+  $ clang++ -std=c++20 -g myfile.cpp -o myfile
+
+================================================================================
+10. GIT INTEGRATION
+================================================================================
+
+Full git integration with gitsigns, lazygit, and diffview.
+
+LAZYGIT (Full Git UI):
+  <Space>gg                     # Open LazyGit
+  <Space>gf                     # LazyGit file history
+
+GITSIGNS (Gutter signs):
+  Signs in the gutter show:
+  │  = Added line
+  │  = Modified line
+  _  = Deleted line
+
+  Navigation:
+  ]h                            # Next hunk
+  [h                            # Previous hunk
+
+  Actions:
+  <Space>ghs                    # Stage hunk
+  <Space>ghr                    # Reset hunk
+  <Space>ghS                    # Stage entire buffer
+  <Space>ghR                    # Reset entire buffer
+  <Space>ghu                    # Undo stage hunk
+  <Space>ghp                    # Preview hunk
+  <Space>ghb                    # Blame line (detailed)
+
+  Toggles:
+  <Space>gtb                    # Toggle blame on current line
+  <Space>gtd                    # Toggle showing deleted lines
+
+TELESCOPE GIT:
+  <Space>gc                     # Git commits
+  <Space>gb                     # Git branches
+  <Space>gs                     # Git status
+
+DIFFVIEW:
+  <Space>gd                     # Open diff view (all changes)
+  <Space>gD                     # Close diff view
+  <Space>gh                     # Current file history
+  <Space>gH                     # Entire repo history
+
+================================================================================
+11. TERMINAL
+================================================================================
+
+Integrated terminal with toggleterm.
+
+TOGGLE:
+  <C-\>                         # Toggle floating terminal
+  <Space>tf                     # Float terminal
+  <Space>th                     # Horizontal split terminal
+  <Space>tv                     # Vertical split terminal
+
+INSIDE TERMINAL:
+  <Esc> or jk                   # Exit terminal mode (to normal mode)
+  <C-h/j/k/l>                   # Navigate to other windows
+
+MULTIPLE TERMINALS:
+  1<C-\>                        # Toggle terminal #1
+  2<C-\>                        # Toggle terminal #2
+  (prefix with number)
+
+================================================================================
+12. LEETCODE
+================================================================================
+
+Practice LeetCode directly in Neovim.
+
+OPEN LEETCODE:
+  <Space>lc                     # Open LeetCode menu
+  :Leet                         # Same as above
+
+WORKFLOW:
+  :Leet list                    # Browse problems
+  :Leet random                  # Random problem
+  :Leet daily                   # Daily challenge
+
+WHILE SOLVING:
+  <Space>lr                     # Run code with test cases
+  <Space>ls                     # Submit solution
+  <Space>ld                     # Toggle problem description
+  <Space>lt                     # Show open problem tabs
+
+DEFAULT LANGUAGE: C++ (configured in extras.lua)
+
+PROBLEM FILES:
+  Saved in: ~/.local/share/nvim/leetcode/
+
+================================================================================
+13. SESSION MANAGEMENT
+================================================================================
+
+auto-session saves and restores your workspace.
+
+AUTO BEHAVIOR:
+  - Sessions auto-save when you quit
+  - Sessions auto-restore when you open nvim in a project directory
+
+MANUAL CONTROL:
+  <Space>ss                     # Save session
+  <Space>sr                     # Restore session
+  <Space>sd                     # Delete session
+  <Space>sf                     # Search/browse sessions
+
+SESSION INCLUDES:
+  - Open buffers
+  - Window layout
+  - Cursor positions
+  - Working directory
+
+================================================================================
+14. THEME & UI
+================================================================================
+
+THEME: Sonokai (Monokai variant - "espresso" style)
+
+STATUS LINE (lualine):
+  Left:   Mode | Branch | Diff | Diagnostics | Filename
+  Right:  WakaTime | Encoding | Format | Filetype | Progress | Location
+
+BUFFER LINE (tabs at top):
+  <S-h>                         # Previous buffer
+  <S-l>                         # Next buffer
+  <Space>bp                     # Pin buffer
+  <Space>bd                     # Delete buffer
+
+DASHBOARD:
+  Shown when opening nvim without a file
+  - Find file
+  - New file
+  - Recent files
+  - Find text
+  - Configuration
+  - LeetCode
+  - Restore session
+
+INDENT GUIDES:
+  Vertical lines showing indentation levels
+  Highlights current scope
+
+WHICH-KEY:
+  Press <Space> and wait - shows available keybindings
+
+NOTIFICATIONS:
+  Pop-up notifications for LSP messages, errors, etc.
+
+================================================================================
+15. EDITING ENHANCEMENTS
+================================================================================
+
+TREESITTER (Syntax Highlighting):
+  - Semantic highlighting (knows code structure)
+  - Better folding
+  - Incremental selection:
+    <C-Space>                   # Start/expand selection
+    <BS>                        # Shrink selection
+
+  Text objects:
+    af/if                       # Around/inside function
+    ac/ic                       # Around/inside class
+    aa/ia                       # Around/inside argument/parameter
+
+RAINBOW BRACKETS:
+  Matching brackets colored the same
+
+AUTOPAIRS:
+  - Auto-closes brackets, quotes, etc.
+  - <M-e> (Alt+e)               # Fast wrap (wrap selection in brackets)
+
+COMMENTS:
+  gcc                           # Toggle line comment
+  gc{motion}                    # Comment motion (e.g., gcip = comment paragraph)
+  gbc                           # Toggle block comment
+
+  In visual mode:
+  gc                            # Comment selection
+
+SURROUND:
+  ys{motion}{char}              # Add surround
+    ysiw"                       # Surround word with quotes
+    yss)                        # Surround line with parentheses
+
+  ds{char}                      # Delete surround
+    ds"                         # Delete surrounding quotes
+
+  cs{old}{new}                  # Change surround
+    cs"'                        # Change " to '
+    cs)]                        # Change () to []
+
+TODO HIGHLIGHTING:
+  Keywords highlighted: TODO, FIXME, BUG, HACK, WARN, PERF, NOTE
+
+  ]t                            # Next TODO
+  [t                            # Previous TODO
+  <Space>xt                     # Search TODOs (Telescope)
+
+ILLUMINATE:
+  - Highlights all occurrences of word under cursor
+  ]]                            # Next occurrence
+  [[                            # Previous occurrence
+
+================================================================================
+16. TROUBLESHOOTING
+================================================================================
+
+HEALTH CHECK:
+  :checkhealth                  # Full system check
+  :checkhealth nvim-treesitter  # Check specific plugin
+  :checkhealth mason            # Check Mason
+
+COMMON ISSUES:
+
+"No LSP client attached"
+  1. :LspInfo to check status
+  2. :Mason to ensure clangd is installed
+  3. Check if project has compile_commands.json or .clangd
+
+Icons showing as boxes/question marks
+  1. Install a Nerd Font
+  2. Set your terminal to use that font
+  3. Restart terminal and nvim
+
+Slow startup
+  1. :Lazy profile to see what's slow
+  2. Consider lazy-loading more plugins
+
+Plugin errors
+  1. :Lazy sync to reinstall
+  2. :Lazy clean to remove old plugins
+  3. Delete ~/.local/share/nvim/lazy/ and restart
+
+Treesitter issues
+  :TSUpdate                     # Update parsers
+  :TSInstall cpp                # Reinstall specific parser
+
+Formatting not working
+  1. :ConformInfo to check status
+  2. :MasonInstall clang-format
+  3. Ensure .clang-format exists or use default style
+
+Neovim hangs on startup
+  1. Check network - Mason/Lazy need internet on first run
+  2. Try: nvim --clean (loads without config)
+  3. :Lazy to see if plugins are still downloading
+
+clangd not finding headers / red squiggles everywhere
+  1. Generate compile_commands.json:
+     - CMake: cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON ..
+     - Make: bear -- make
+     - Single file: create .clangd file with:
+       CompileFlags:
+         Add: [-std=c++20, -Wall]
+  2. :LspRestart to reload
+
+LazyGit not opening
+  1. Install it: brew install lazygit
+  2. Check: which lazygit
+
+DEBUG INFO:
+  :messages                     # View message history
+  :lua print(vim.inspect(...))  # Print Lua values
+  :verbose map <key>            # See where a keymap is defined
+
+RESET EVERYTHING:
+  $ rm -rf ~/.local/share/nvim
+  $ rm -rf ~/.local/state/nvim
+  $ rm -rf ~/.cache/nvim
+  (Then restart nvim - plugins will reinstall)
+
+================================================================================
+QUICK REFERENCE
+================================================================================
+
+  Open cheatsheet:     <Space>?
+  Open this guide:     :e ~/.config/nvim/guide.txt
+  Plugin manager:      :Lazy
+  LSP installer:       :Mason
+  Health check:        :checkhealth
+
+================================================================================
