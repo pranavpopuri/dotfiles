@@ -1,0 +1,5 @@
+name: geoai
+channels:
+  - conda-forge
+  - defaults
+prefix: /opt/homebrew/Caskroom/miniconda/base/envs/geoai
