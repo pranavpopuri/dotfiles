@@ -38,7 +38,7 @@ return {
               vim.ui.open(link)
             elseif link:match("%.pdf$") then
               local path = vim.fn.fnamemodify(vim.fn.expand("%:p:h") .. "/" .. link, ":p")
-              vim.fn.jobstart({ "mupdf-gl", path }, { detach = true })
+              vim.fn.jobstart({ "open", path }, { detach = true })
             else
               vim.cmd("edit " .. vim.fn.fnamemodify(vim.fn.expand("%:p:h") .. "/" .. link, ":p"))
             end
@@ -183,21 +183,13 @@ return {
   {
     "goolord/alpha-nvim",
     event = "VimEnter",
-    dependencies = { "nvim-tree/nvim-web-devicons" },
+    dependencies = { "nvim-tree/nvim-web-devicons", "amansingh-afk/milli.nvim" },
     config = function()
       local alpha = require("alpha")
       local dashboard = require("alpha.themes.dashboard")
 
-      dashboard.section.header.val = {
-        "                                                     ",
-        "  ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗ ",
-        "  ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║ ",
-        "  ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║ ",
-        "  ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║ ",
-        "  ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║ ",
-        "  ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝ ",
-        "                                                     ",
-      }
+      local splash = require("config.boids_splash").generate()
+      dashboard.section.header.val = splash.frames[1]
 
       dashboard.section.buttons.val = {
         dashboard.button("f", "  Find file", ":Telescope find_files<CR>"),
@@ -210,13 +202,20 @@ return {
         dashboard.button("k", "  Keybindings", ":e ~/.config/nvim/cheatsheet.txt<CR>"),
         dashboard.button("p", "  Plugins", ":e ~/.config/nvim/plugins.txt<CR>"),
         dashboard.button("h", "  Guide", ":e ~/.config/nvim/guide.txt<CR>"),
-        dashboard.button("w", "  Wiki", ":e ~/wiki/index.md<CR>"),
+        dashboard.button("w", "  Wiki", ":e ~/Documents/wiki/index.md<CR>"),
         dashboard.button("q", "  Quit", ":qa<CR>"),
       }
 
-      dashboard.section.footer.val = "Happy Coding!"
+      dashboard.config.layout = {
+        { type = "padding", val = 0 },
+        dashboard.section.header,
+        { type = "padding", val = 0 },
+        dashboard.section.buttons,
+      }
 
       alpha.setup(dashboard.config)
+
+      require("milli").alpha({ data = splash, loop = true })
     end,
   },
 

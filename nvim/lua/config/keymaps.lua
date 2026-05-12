@@ -79,7 +79,7 @@ keymap("n", "<leader>hg", ":e ~/.config/nvim/guide.txt<CR>", { desc = "Open guid
 keymap("n", "<leader>R", ":wa | qa<CR>", { desc = "Save all and quit (restart)" })
 
 -- Wiki
-keymap("n", "<leader>r", ":e ~/wiki/index.md<CR>", { desc = "Open wiki" })
+keymap("n", "<leader>r", ":e ~/Documents/wiki/index.md<CR>", { desc = "Open wiki" })
 
 -- Toggle diagnostics virtual text
 local diagnostics_visible = true
