@@ -48,38 +48,37 @@ return {
     end,
   },
 
-  -- Use terminal colors (matches Ghostty theme)
+  -- Sonokai colorscheme
   {
-    "catppuccin/nvim",
-    name = "catppuccin",
+    "sainnhe/sonokai",
     lazy = false,
     priority = 1000,
+    init = function()
+      vim.g.sonokai_transparent_background = 1
+      vim.g.sonokai_better_performance = 1
+    end,
+  },
+
+  -- Theme switcher (persistent colorscheme via :Themery)
+  {
+    "zaldih/themery.nvim",
+    lazy = false,
+    priority = 998,
+    keys = {
+      { "<leader>ft", "<cmd>Themery<CR>", desc = "Themes" },
+    },
     config = function()
-      require("catppuccin").setup({
-        flavour = "mocha",  -- dark theme matching Ghostty
-        transparent_background = true,  -- use Ghostty's background
-        term_colors = true,
-        integrations = {
-          cmp = true,
-          gitsigns = true,
-          nvimtree = true,
-          telescope = true,
-          treesitter = true,
-          mason = true,
-          which_key = true,
-          indent_blankline = { enabled = true },
-          native_lsp = {
-            enabled = true,
-            underlines = {
-              errors = { "undercurl" },
-              hints = { "undercurl" },
-              warnings = { "undercurl" },
-              information = { "undercurl" },
-            },
-          },
+      require("themery").setup({
+        livePreview = true,
+        themes = {
+          { name = "Sonokai Default",   colorscheme = "sonokai", before = [[vim.g.sonokai_style = "default"]] },
+          { name = "Sonokai Atlantis",  colorscheme = "sonokai", before = [[vim.g.sonokai_style = "atlantis"]] },
+          { name = "Sonokai Andromeda", colorscheme = "sonokai", before = [[vim.g.sonokai_style = "andromeda"]] },
+          { name = "Sonokai Shusia",    colorscheme = "sonokai", before = [[vim.g.sonokai_style = "shusia"]] },
+          { name = "Sonokai Maia",      colorscheme = "sonokai", before = [[vim.g.sonokai_style = "maia"]] },
+          { name = "Sonokai Espresso",  colorscheme = "sonokai", before = [[vim.g.sonokai_style = "espresso"]] },
         },
       })
-      vim.cmd.colorscheme("catppuccin")
     end,
   },
 
@@ -309,7 +308,7 @@ return {
     config = function()
       require("notify").setup({
         timeout = 3000,
-        background_colour = "#1e1e2e",
+        background_colour = "#1F1F28",
         render = "wrapped-compact",
         stages = "fade",
         max_height = function()

@@ -113,7 +113,9 @@ autocmd({ "VimEnter", "DirChanged" }, {
   callback = function()
     if vim.fn.filereadable(vim.fn.getcwd() .. "/CMakeLists.txt") == 1 then
       vim.defer_fn(function()
-        vim.cmd("CMakeGenerate")
+        if vim.fn.exists(":CMakeGenerate") == 2 then
+          vim.cmd("CMakeGenerate")
+        end
       end, 500)
     end
   end,
