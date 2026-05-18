@@ -20,8 +20,3 @@ require("config.lazy")
 require("config.options")
 require("config.keymaps")
 require("config.autocmds")
-
--- Themery block
--- This block will be replaced by Themery.
-vim.cmd("colorscheme sonokai")
--- end themery block

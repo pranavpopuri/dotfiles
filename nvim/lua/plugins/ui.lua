@@ -56,7 +56,20 @@ return {
     init = function()
       vim.g.sonokai_transparent_background = 1
       vim.g.sonokai_better_performance = 1
+      vim.g.sonokai_disable_italic_comment = 1
     end,
+  },
+
+  -- Catppuccin colorscheme
+  {
+    "catppuccin/nvim",
+    name = "catppuccin",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      transparent_background = true,
+      no_italic = true,
+    },
   },
 
   -- Theme switcher (persistent colorscheme via :Themery)
@@ -71,12 +84,15 @@ return {
       require("themery").setup({
         livePreview = true,
         themes = {
-          { name = "Sonokai Default",   colorscheme = "sonokai", before = [[vim.g.sonokai_style = "default"]] },
-          { name = "Sonokai Atlantis",  colorscheme = "sonokai", before = [[vim.g.sonokai_style = "atlantis"]] },
-          { name = "Sonokai Andromeda", colorscheme = "sonokai", before = [[vim.g.sonokai_style = "andromeda"]] },
-          { name = "Sonokai Shusia",    colorscheme = "sonokai", before = [[vim.g.sonokai_style = "shusia"]] },
-          { name = "Sonokai Maia",      colorscheme = "sonokai", before = [[vim.g.sonokai_style = "maia"]] },
-          { name = "Sonokai Espresso",  colorscheme = "sonokai", before = [[vim.g.sonokai_style = "espresso"]] },
+          { name = "Sonokai Default",      colorscheme = "sonokai",             before = [[vim.g.sonokai_style = "default"]] },
+          { name = "Sonokai Atlantis",     colorscheme = "sonokai",             before = [[vim.g.sonokai_style = "atlantis"]] },
+          { name = "Sonokai Andromeda",    colorscheme = "sonokai",             before = [[vim.g.sonokai_style = "andromeda"]] },
+          { name = "Sonokai Shusia",       colorscheme = "sonokai",             before = [[vim.g.sonokai_style = "shusia"]] },
+          { name = "Sonokai Maia",         colorscheme = "sonokai",             before = [[vim.g.sonokai_style = "maia"]] },
+          { name = "Sonokai Espresso",     colorscheme = "sonokai",             before = [[vim.g.sonokai_style = "espresso"]] },
+          { name = "Catppuccin Frappe",    colorscheme = "catppuccin-frappe" },
+          { name = "Catppuccin Macchiato", colorscheme = "catppuccin-macchiato" },
+          { name = "Catppuccin Mocha",     colorscheme = "catppuccin-mocha" },
         },
       })
     end,
