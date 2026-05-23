@@ -10,6 +10,16 @@ return {
       anti_conceal = { enabled = false },
       sign = { enabled = false },
       heading = { backgrounds = {} },
+      table = {
+        enabled = true,
+        style = "full",
+        border = {
+          "┌", "┬", "┐",
+          "├", "┼", "┤",
+          "└", "┴", "┘",
+          "│", "─",
+        },
+      },
     },
     config = function(_, opts)
       require("render-markdown").setup(opts)
@@ -17,11 +27,61 @@ return {
       vim.api.nvim_create_autocmd("FileType", {
         pattern = "markdown",
         callback = function()
-          vim.opt_local.wrap = true
+          vim.opt_local.wrap = false
           vim.opt_local.linebreak = true
           vim.opt_local.shiftwidth = 4
           vim.opt_local.breakindent = true
           vim.opt_local.breakindentopt = "list:-1"
+          vim.keymap.set("n", "<leader>mw", function()
+            vim.opt_local.wrap = not vim.opt_local.wrap:get()
+          end, { buffer = true, desc = "Toggle wrap" })
+          local function realign_table()
+            local buf = 0
+            local lnum = vim.api.nvim_win_get_cursor(0)[1]
+            local lines = vim.api.nvim_buf_get_lines(buf, 0, -1, false)
+            local s, e = lnum, lnum
+            while s > 1 and lines[s - 1]:match("^%s*|") do s = s - 1 end
+            while e < #lines and lines[e + 1] and lines[e + 1]:match("^%s*|") do e = e + 1 end
+            local rows, sep = {}, {}
+            for i = s, e do
+              local line = lines[i]
+              sep[i - s + 1] = line:match("^[|%s:%-]+$") ~= nil
+              local cells = {}
+              local inner = line:match("^%s*|(.+)|%s*$") or ""
+              for cell in (inner .. "|"):gmatch("([^|]*)|") do
+                table.insert(cells, vim.trim(cell))
+              end
+              rows[i - s + 1] = cells
+            end
+            local ncols = 0
+            for _, row in ipairs(rows) do ncols = math.max(ncols, #row) end
+            local widths = {}
+            for c = 1, ncols do widths[c] = 3 end
+            for r, row in ipairs(rows) do
+              if not sep[r] then
+                for c, cell in ipairs(row) do
+                  widths[c] = math.max(widths[c], #cell)
+                end
+              end
+            end
+            local new_lines = {}
+            for r, row in ipairs(rows) do
+              local parts = {}
+              for c = 1, ncols do
+                local cell = row[c] or ""
+                if sep[r] then
+                  local l = cell:match("^:") and ":" or ""
+                  local rr = cell:match(":$") and ":" or ""
+                  parts[c] = " " .. l .. string.rep("-", widths[c] - #l - #rr) .. rr .. " "
+                else
+                  parts[c] = " " .. cell .. string.rep(" ", widths[c] - #cell) .. " "
+                end
+              end
+              new_lines[r] = "|" .. table.concat(parts, "|") .. "|"
+            end
+            vim.api.nvim_buf_set_lines(buf, s - 1, e, false, new_lines)
+          end
+          vim.keymap.set("n", "<leader>mf", realign_table, { buffer = true, desc = "Realign pipe table" })
           vim.keymap.set("n", "<CR>", function()
             local line = vim.api.nvim_get_current_line()
             local col = vim.api.nvim_win_get_cursor(0)[2] + 1
@@ -294,6 +354,11 @@ return {
         { "<leader>g", group = "Git" },
         { "<leader>h", group = "Help" },
         { "<leader>l", group = "LSP/LeetCode" },
+        { "<leader>m",  group = "Markdown" },
+        { "<leader>mf", desc = "Realign pipe table" },
+        { "<leader>mg", desc = "Convert to grid table" },
+        { "<leader>mr", desc = "Realign grid table" },
+        { "<leader>mw", desc = "Toggle wrap" },
         { "<leader>n", group = "Notifications" },
         { "<leader>r", group = "Rename" },
         { "<leader>s", group = "Split/Session" },
