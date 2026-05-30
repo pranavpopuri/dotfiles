@@ -20,10 +20,10 @@ return {
     },
     keys = {
       { "<leader>lc", "<cmd>Leet<cr>", desc = "Open LeetCode" },
-      { "<leader>ll", "<cmd>Leet list<cr>", desc = "List problems" },
-      { "<leader>lr", "<cmd>Leet run<cr>", desc = "Run code" },
-      { "<leader>ls", "<cmd>Leet submit<cr>", desc = "Submit solution" },
-      { "<leader>lp", "<cmd>Leet desc<cr>", desc = "Problem description" },
+      { "<leader>ll", function() require("leetcode.command").problems({}) end, desc = "List problems" },
+      { "<leader>lr", function() require("leetcode.command").q_run() end, desc = "Run code" },
+      { "<leader>ls", function() require("leetcode.command").q_submit() end, desc = "Submit solution" },
+      { "<leader>lp", function() require("leetcode.command").desc_toggle() end, desc = "Problem description" },
     },
     opts = {
       arg = "leetcode.nvim",

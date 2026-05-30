@@ -132,6 +132,64 @@ return {
     },
   },
 
+  -- One Dark colorscheme (Atom-inspired)
+  {
+    "navarasu/onedark.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      transparent = true,
+      style = "dark",
+    },
+  },
+
+  -- Gruvbox Material colorscheme
+  {
+    "sainnhe/gruvbox-material",
+    lazy = false,
+    priority = 1000,
+    init = function()
+      vim.g.gruvbox_material_transparent_background = 1
+      vim.g.gruvbox_material_better_performance = 1
+      vim.g.gruvbox_material_disable_italic_comment = 1
+    end,
+  },
+
+  -- Ayu colorscheme
+  {
+    "Shatur/neovim-ayu",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("ayu").setup({ mirage = true })
+    end,
+  },
+
+  -- Tokyo Night colorscheme
+  {
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      transparent = true,
+      styles = {
+        comments = { italic = false },
+        keywords = { italic = false },
+      },
+    },
+  },
+
+  -- Monokai colorscheme
+  {
+    "tanvirtin/monokai.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      transparent = { background = true },
+      italic = false,
+    },
+  },
+
   -- Theme switcher (persistent colorscheme via :Themery)
   {
     "zaldih/themery.nvim",
@@ -150,9 +208,29 @@ return {
           { name = "Sonokai Shusia",       colorscheme = "sonokai",             before = [[vim.g.sonokai_style = "shusia"]] },
           { name = "Sonokai Maia",         colorscheme = "sonokai",             before = [[vim.g.sonokai_style = "maia"]] },
           { name = "Sonokai Espresso",     colorscheme = "sonokai",             before = [[vim.g.sonokai_style = "espresso"]] },
-          { name = "Catppuccin Frappe",    colorscheme = "catppuccin-frappe" },
-          { name = "Catppuccin Macchiato", colorscheme = "catppuccin-macchiato" },
-          { name = "Catppuccin Mocha",     colorscheme = "catppuccin-mocha" },
+          { name = "Catppuccin Frappe",      colorscheme = "catppuccin-frappe" },
+          { name = "Catppuccin Macchiato",  colorscheme = "catppuccin-macchiato" },
+          { name = "Catppuccin Mocha",      colorscheme = "catppuccin-mocha" },
+          { name = "One Dark",            colorscheme = "onedark", before = [[require("onedark").setup({ style = "dark",   transparent = true }); require("onedark").load()]] },
+          { name = "One Dark Darker",     colorscheme = "onedark", before = [[require("onedark").setup({ style = "darker", transparent = true }); require("onedark").load()]] },
+          { name = "One Dark Cool",       colorscheme = "onedark", before = [[require("onedark").setup({ style = "cool",   transparent = true }); require("onedark").load()]] },
+          { name = "One Dark Deep",       colorscheme = "onedark", before = [[require("onedark").setup({ style = "deep",   transparent = true }); require("onedark").load()]] },
+          { name = "One Dark Warm",       colorscheme = "onedark", before = [[require("onedark").setup({ style = "warm",   transparent = true }); require("onedark").load()]] },
+          { name = "One Dark Warmer",     colorscheme = "onedark", before = [[require("onedark").setup({ style = "warmer", transparent = true }); require("onedark").load()]] },
+          { name = "Gruvbox Material Dark Hard",   colorscheme = "gruvbox-material", before = [[vim.g.gruvbox_material_background = "hard";  vim.g.gruvbox_material_foreground = "original"]] },
+          { name = "Gruvbox Material Dark Medium", colorscheme = "gruvbox-material", before = [[vim.g.gruvbox_material_background = "medium"; vim.g.gruvbox_material_foreground = "original"]] },
+          { name = "Gruvbox Material Dark Soft",   colorscheme = "gruvbox-material", before = [[vim.g.gruvbox_material_background = "soft";   vim.g.gruvbox_material_foreground = "original"]] },
+          { name = "Ayu Dark",            colorscheme = "ayu-dark" },
+          { name = "Ayu Mirage",          colorscheme = "ayu-mirage" },
+          { name = "Ayu Light",           colorscheme = "ayu-light" },
+{ name = "Tokyo Night Storm",   colorscheme = "tokyonight-storm" },
+          { name = "Tokyo Night Night",  colorscheme = "tokyonight-night" },
+          { name = "Tokyo Night Moon",   colorscheme = "tokyonight-moon" },
+          { name = "Tokyo Night Day",    colorscheme = "tokyonight-day" },
+          { name = "Monokai",           colorscheme = "monokai" },
+          { name = "Monokai Pro",       colorscheme = "monokai_pro" },
+          { name = "Monokai Soda",      colorscheme = "monokai_soda" },
+          { name = "Monokai Ristretto", colorscheme = "monokai_ristretto" },
         },
       })
     end,

@@ -13,6 +13,12 @@ return {
       vim.g.loaded_netrw = 1
       vim.g.loaded_netrwPlugin = 1
 
+      -- Pre-define diagnostic signs so they exist before git callbacks fire
+      vim.fn.sign_define("NvimTreeDiagnosticErrorIcon", { text = "", texthl = "DiagnosticError" })
+      vim.fn.sign_define("NvimTreeDiagnosticWarnIcon",  { text = "", texthl = "DiagnosticWarn" })
+      vim.fn.sign_define("NvimTreeDiagnosticInfoIcon",  { text = "", texthl = "DiagnosticInfo" })
+      vim.fn.sign_define("NvimTreeDiagnosticHintIcon",  { text = "󰠠", texthl = "DiagnosticHint" })
+
       require("nvim-tree").setup({
         sort_by = "case_sensitive",
         view = {

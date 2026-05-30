@@ -65,6 +65,7 @@ return {
   -- Rainbow brackets (colored bracket pairs)
   {
     "HiPhish/rainbow-delimiters.nvim",
+    pin = true,
     event = { "BufReadPost", "BufNewFile" },
     config = function()
       local rainbow_delimiters = require("rainbow-delimiters")

@@ -121,6 +121,7 @@ return {
           "--completion-style=detailed",
           "--function-arg-placeholders",
           "--fallback-style=llvm",
+          "--query-driver=/usr/bin/clang++,/usr/bin/clang,/Library/Developer/CommandLineTools/usr/bin/clang++",
         },
         capabilities = capabilities,
         init_options = {
@@ -207,7 +208,7 @@ return {
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-cmdline",
-      "L3MON4D3/LuaSnip",
+      { "L3MON4D3/LuaSnip", pin = true },
       "saadparwaiz1/cmp_luasnip",
       "rafamadriz/friendly-snippets",
       "onsails/lspkind.nvim",

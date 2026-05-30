@@ -2,7 +2,6 @@
 return {
   {
     "nvim-telescope/telescope.nvim",
-    branch = "0.1.x",
     dependencies = {
       "nvim-lua/plenary.nvim",
       {
@@ -35,13 +34,6 @@ return {
       { "<leader>gs", "<cmd>Telescope git_status<cr>", desc = "Git status" },
     },
     config = function()
-      -- ft_to_lang was removed in Neovim 0.10; shim it for telescope compatibility
-      if vim.treesitter.language and not vim.treesitter.language.ft_to_lang then
-        vim.treesitter.language.ft_to_lang = function(ft)
-          return vim.treesitter.language.get_lang(ft) or ft
-        end
-      end
-
       local telescope = require("telescope")
       local actions = require("telescope.actions")
 
