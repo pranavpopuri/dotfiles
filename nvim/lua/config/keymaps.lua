@@ -81,6 +81,10 @@ keymap("n", "<leader>R", ":wa | qa<CR>", { desc = "Save all and quit (restart)" 
 -- Wiki
 keymap("n", "<leader>r", ":e ~/Documents/wiki/index.md<CR>", { desc = "Open wiki" })
 
+-- Diagnostics navigation
+keymap("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
+keymap("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
+
 -- Toggle diagnostics virtual text
 local diagnostics_visible = true
 keymap("n", "<leader>cd", function()

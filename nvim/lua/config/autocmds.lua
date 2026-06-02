@@ -52,14 +52,6 @@ autocmd("FileType", {
   end,
 })
 
--- Auto resize splits when window is resized
-autocmd("VimResized", {
-  group = general,
-  callback = function()
-    vim.cmd("tabdo wincmd =")
-  end,
-})
-
 -- Language-specific settings
 local lang_group = augroup("LanguageSettings", { clear = true })
 
