@@ -116,7 +116,11 @@ return {
       },
     },
     config = function(_, opts)
-      require("nvim-autopairs").setup(opts)
+      local npairs = require("nvim-autopairs")
+      npairs.setup(opts)
+      -- Remove parentheses and square bracket pairs
+      npairs.remove_rule("(")
+      npairs.remove_rule("[")
       -- Integration with nvim-cmp
       local cmp_autopairs = require("nvim-autopairs.completion.cmp")
       local cmp = require("cmp")
