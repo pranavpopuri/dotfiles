@@ -27,7 +27,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export PATH="$HOME/.local/bin:$PATH"
 
-# eval "$(oh-my-posh init zsh)"
+eval "$(tirith init)"
 
 eval $(thefuck --alias --enable-experimental-instant-mode)
 
