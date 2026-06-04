@@ -27,6 +27,12 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 export PATH="$HOME/.local/bin:$PATH"
 
-eval "$(tirith init)"
+# eval "$(oh-my-posh init zsh)"
 
-eval "$(oh-my-posh init zsh)"
+eval $(thefuck --alias --enable-experimental-instant-mode)
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/ppopuri/.lmstudio/bin"
+# End of LM Studio CLI section
+
+
