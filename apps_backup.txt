@@ -2584,6 +2584,30 @@ Copyright © 2001-2002 Jim Ingham & Ian Reid
       Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
       Location: /System/Library/Services/Summary Service.app
 
+    Autodesk Fusion:
+
+      Version: 2702.1.58
+      Obtained from: Unknown
+      Last Modified: 5/20/26, 11:28 PM
+      Kind: Other
+      Location: /Users/ppopuri/Applications/Autodesk Fusion.app
+
+    Remove Autodesk Fusion:
+
+      Version: 2702.1.58
+      Obtained from: Unknown
+      Last Modified: 5/20/26, 11:28 PM
+      Kind: Other
+      Location: /Users/ppopuri/Applications/Remove Autodesk Fusion.app
+
+    Autodesk Fusion Service Utility:
+
+      Version: 2702.1.58
+      Obtained from: Unknown
+      Last Modified: 5/20/26, 11:28 PM
+      Kind: Other
+      Location: /Users/ppopuri/Applications/Autodesk Fusion Service Utility.app
+
     Pearcleaner:
 
       Version: 4.5.3
@@ -2601,67 +2625,6 @@ Copyright © 2001-2002 Jim Ingham & Ian Reid
       Kind: Universal
       Signed by: Apple Mac OS Application Signing, Apple Worldwide Developer Relations Certification Authority, Apple Root CA
       Location: /Applications/Focus for YouTube.app
-
-    Noir:
-
-      Version: 2026.1.3
-      Obtained from: App Store
-      Last Modified: 5/3/26, 9:54 PM
-      Kind: Universal
-      Signed by: Apple Mac OS Application Signing, Apple Worldwide Developer Relations Certification Authority, Apple Root CA
-      Location: /Applications/Noir.app
-
-    Visual Studio Code:
-
-      Version: 1.120.0
-      Obtained from: Identified Developer
-      Last Modified: 5/12/26, 1:59 PM
-      Kind: Universal
-      Signed by: Developer ID Application: Microsoft Corporation (UBF8T346G9), Developer ID Certification Authority, Apple Root CA
-      Location: /Applications/Visual Studio Code.app
-
-    Docker:
-
-      Version: 4.74.0
-      Obtained from: Identified Developer
-      Last Modified: 5/19/26, 12:43 AM
-      Kind: Apple Silicon
-      Signed by: Developer ID Application: Docker Inc (9BNSXJN65R), Developer ID Certification Authority, Apple Root CA
-      Location: /Applications/Docker.app
-
-    Magnet:
-
-      Version: 3.0.7
-      Obtained from: App Store
-      Last Modified: 5/20/26, 4:32 PM
-      Kind: Universal
-      Signed by: Apple Mac OS Application Signing, Apple Worldwide Developer Relations Certification Authority, Apple Root CA
-      Location: /Applications/Magnet.app
-
-    SANDISK:
-
-      Version: 3.0.0
-      Obtained from: Identified Developer
-      Last Modified: 3/27/26, 9:37 AM
-      Kind: Universal
-      Signed by: Developer ID Application: SanDisk Corporation (4F36JV57PQ), Developer ID Certification Authority, Apple Root CA
-      Location: /Applications/SANDISK.app
-
-    Spotify:
-
-      Version: 1.2.90.451
-      Obtained from: Identified Developer
-      Last Modified: 5/23/26, 1:33 AM
-      Kind: Apple Silicon
-      Signed by: Developer ID Application: Spotify (2FNC3A47ZF), Developer ID Certification Authority, Apple Root CA
-      Location: /Applications/Spotify.app
-
-    com.apple.ctcategories:
-
-      Obtained from: Unknown
-      Last Modified: 7/29/25, 2:59 PM
-      Kind: Other
-      Location: /Users/ppopuri/Library/HTTPStorages/com.apple.ctcategories.service
 
     SingleFile:
 
@@ -2813,6 +2776,15 @@ Copyright © 2001-2002 Jim Ingham & Ian Reid
       Signed by: Developer ID Application: Zoom Video Communications, Inc. (BJ4HAAB9B3), Developer ID Certification Authority, Apple Root CA
       Location: /Users/ppopuri/Applications/zoom.us.app
 
+    Noir:
+
+      Version: 2026.1.3
+      Obtained from: App Store
+      Last Modified: 5/3/26, 9:54 PM
+      Kind: Universal
+      Signed by: Apple Mac OS Application Signing, Apple Worldwide Developer Relations Certification Authority, Apple Root CA
+      Location: /Applications/Noir.app
+
     Ghostty:
 
       Version: 1.3.1
@@ -2858,6 +2830,33 @@ Copyright © 2001-2002 Jim Ingham & Ian Reid
       Signed by: Developer ID Application: Luke Street (N98X7L627T), Developer ID Certification Authority, Apple Root CA
       Location: /Applications/Dusk.app
 
+    Visual Studio Code:
+
+      Version: 1.120.0
+      Obtained from: Identified Developer
+      Last Modified: 5/12/26, 1:59 PM
+      Kind: Universal
+      Signed by: Developer ID Application: Microsoft Corporation (UBF8T346G9), Developer ID Certification Authority, Apple Root CA
+      Location: /Applications/Visual Studio Code.app
+
+    Docker:
+
+      Version: 4.74.0
+      Obtained from: Identified Developer
+      Last Modified: 5/19/26, 12:43 AM
+      Kind: Apple Silicon
+      Signed by: Developer ID Application: Docker Inc (9BNSXJN65R), Developer ID Certification Authority, Apple Root CA
+      Location: /Applications/Docker.app
+
+    Magnet:
+
+      Version: 3.0.7
+      Obtained from: App Store
+      Last Modified: 5/20/26, 4:32 PM
+      Kind: Universal
+      Signed by: Apple Mac OS Application Signing, Apple Worldwide Developer Relations Certification Authority, Apple Root CA
+      Location: /Applications/Magnet.app
+
     Cemu_Metal_arm64:
 
       Version: 2.6.2
@@ -2866,29 +2865,23 @@ Copyright © 2001-2002 Jim Ingham & Ian Reid
       Kind: iOS
       Location: /Applications/Cemu_Metal_arm64.app
 
-    Autodesk Fusion:
+    SANDISK:
 
-      Version: 2702.1.58
-      Obtained from: Unknown
-      Last Modified: 5/20/26, 11:28 PM
-      Kind: Other
-      Location: /Users/ppopuri/Applications/Autodesk Fusion.app
+      Version: 3.0.0
+      Obtained from: Identified Developer
+      Last Modified: 3/27/26, 9:37 AM
+      Kind: Universal
+      Signed by: Developer ID Application: SanDisk Corporation (4F36JV57PQ), Developer ID Certification Authority, Apple Root CA
+      Location: /Applications/SANDISK.app
 
-    Remove Autodesk Fusion:
+    Spotify:
 
-      Version: 2702.1.58
-      Obtained from: Unknown
-      Last Modified: 5/20/26, 11:28 PM
-      Kind: Other
-      Location: /Users/ppopuri/Applications/Remove Autodesk Fusion.app
-
-    Autodesk Fusion Service Utility:
-
-      Version: 2702.1.58
-      Obtained from: Unknown
-      Last Modified: 5/20/26, 11:28 PM
-      Kind: Other
-      Location: /Users/ppopuri/Applications/Autodesk Fusion Service Utility.app
+      Version: 1.2.90.451
+      Obtained from: Identified Developer
+      Last Modified: 5/23/26, 1:33 AM
+      Kind: Apple Silicon
+      Signed by: Developer ID Application: Spotify (2FNC3A47ZF), Developer ID Certification Authority, Apple Root CA
+      Location: /Applications/Spotify.app
 
     Amphetamine:
 
@@ -2992,6 +2985,13 @@ Copyright © 2001-2002 Jim Ingham & Ian Reid
       Last Modified: 7/29/25, 2:54 PM
       Kind: Other
       Location: /Users/ppopuri/Library/Application Scripts/group.is.workflow.my.app
+
+    com.apple.ctcategories:
+
+      Obtained from: Unknown
+      Last Modified: 7/29/25, 2:59 PM
+      Kind: Other
+      Location: /Users/ppopuri/Library/HTTPStorages/com.apple.ctcategories.service
 
     MRT:
 
