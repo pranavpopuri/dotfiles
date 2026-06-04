@@ -78,6 +78,13 @@ keymap("n", "<leader>hg", ":e ~/.config/nvim/guide.txt<CR>", { desc = "Open guid
 -- Reload config / Restart
 keymap("n", "<leader>R", ":wa | qa<CR>", { desc = "Save all and quit (restart)" })
 
+-- Yank current file's directory to system clipboard
+keymap("n", "<leader>yd", function()
+  local dir = vim.fn.expand("%:p:h")
+  vim.fn.setreg("+", dir)
+  vim.notify("Copied: " .. dir)
+end, { desc = "Yank current file's directory" })
+
 -- Wiki
 keymap("n", "<leader>r", ":e ~/Documents/wiki/index.md<CR>", { desc = "Open wiki" })
 
