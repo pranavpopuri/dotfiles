@@ -85,6 +85,13 @@ keymap("n", "<leader>yd", function()
   vim.notify("Copied: " .. dir)
 end, { desc = "Yank current file's directory" })
 
+-- Yank current file's full path to system clipboard
+keymap("n", "<leader>yf", function()
+  local path = vim.fn.expand("%:p")
+  vim.fn.setreg("+", path)
+  vim.notify("Copied: " .. path)
+end, { desc = "Yank current file's path" })
+
 -- Wiki
 keymap("n", "<leader>r", ":e ~/Documents/wiki/index.md<CR>", { desc = "Open wiki" })
 
