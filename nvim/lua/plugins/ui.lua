@@ -190,6 +190,53 @@ return {
     },
   },
 
+  -- GitHub colorscheme
+  {
+    "projekt0n/github-nvim-theme",
+    lazy = false,
+    priority = 1000,
+  },
+
+  -- Material colorscheme
+  {
+    "marko-cerovac/material.nvim",
+    lazy = false,
+    priority = 1000,
+  },
+
+  -- Edge colorscheme
+  {
+    "sainnhe/edge",
+    lazy = false,
+    priority = 1000,
+    init = function()
+      vim.g.edge_better_performance = 1
+      vim.g.edge_disable_italic_comment = 1
+    end,
+  },
+
+  -- Moonfly colorscheme
+  {
+    "bluz71/vim-moonfly-colors",
+    name = "moonfly",
+    lazy = false,
+    priority = 1000,
+  },
+
+  -- Melange colorscheme
+  {
+    "savq/melange-nvim",
+    lazy = false,
+    priority = 1000,
+  },
+
+  -- Oxocarbon colorscheme
+  {
+    "nyoom-engineering/oxocarbon.nvim",
+    lazy = false,
+    priority = 1000,
+  },
+
   -- Theme switcher (persistent colorscheme via :Themery)
   {
     "zaldih/themery.nvim",
@@ -231,6 +278,22 @@ return {
           { name = "Monokai Pro",       colorscheme = "monokai_pro" },
           { name = "Monokai Soda",      colorscheme = "monokai_soda" },
           { name = "Monokai Ristretto", colorscheme = "monokai_ristretto" },
+          { name = "GitHub Dark",               colorscheme = "github_dark" },
+          { name = "GitHub Dark Dimmed",        colorscheme = "github_dark_dimmed" },
+          { name = "GitHub Dark High Contrast", colorscheme = "github_dark_high_contrast" },
+          { name = "GitHub Light",              colorscheme = "github_light" },
+          { name = "Material Darker",      colorscheme = "material", before = [[vim.g.material_style = "darker"]] },
+          { name = "Material Oceanic",     colorscheme = "material", before = [[vim.g.material_style = "oceanic"]] },
+          { name = "Material Palenight",   colorscheme = "material", before = [[vim.g.material_style = "palenight"]] },
+          { name = "Material Deep Ocean",  colorscheme = "material", before = [[vim.g.material_style = "deep ocean"]] },
+          { name = "Material Lighter",     colorscheme = "material", before = [[vim.g.material_style = "lighter"]] },
+          { name = "Edge Default",  colorscheme = "edge", before = [[vim.g.edge_style = "default"]] },
+          { name = "Edge Aura",     colorscheme = "edge", before = [[vim.g.edge_style = "aura"]] },
+          { name = "Edge Neon",     colorscheme = "edge", before = [[vim.g.edge_style = "neon"]] },
+          { name = "Moonfly",          colorscheme = "moonfly" },
+          { name = "Melange",          colorscheme = "melange" },
+          { name = "Oxocarbon",        colorscheme = "oxocarbon" },
+          { name = "Screenshot Theme", colorscheme = "screenshot_theme" },
         },
       })
     end,
