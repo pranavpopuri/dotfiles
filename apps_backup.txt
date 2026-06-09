@@ -1,204 +1,522 @@
 Applications:
 
-    App Store:
+    Audio MIDI Setup:
 
-      Version: 3.0
+      Version: 3.6
       Obtained from: Apple
       Last Modified: 4/30/26, 7:12 AM
       Kind: Universal
       Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/App Store.app
+      Location: /System/Applications/Utilities/Audio MIDI Setup.app
+      Get Info String: 3.6, Copyright 2002–2024 Apple Inc.
 
-    Automator:
-
-      Version: 2.10
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Automator.app
-
-    Books:
-
-      Version: 7.6
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Books.app
-
-    Calculator:
-
-      Version: 11.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Calculator.app
-
-    Calendar:
-
-      Version: 15.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Calendar.app
-
-    Chess:
-
-      Version: 3.18
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Chess.app
-      Get Info String: 3.18, Copyright 2003–2024 Apple Inc.
-
-    Clock:
-
-      Version: 1.1
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Clock.app
-
-    Contacts:
-
-      Version: 14.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Contacts.app
-
-    Dictionary:
-
-      Version: 2.3.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Dictionary.app
-
-    FaceTime:
-
-      Version: 36
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/FaceTime.app
-
-    Find My:
-
-      Version: 4.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/FindMy.app
-
-    Font Book:
-
-      Version: 11.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Font Book.app
-
-    Freeform:
-
-      Version: 3.5
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Freeform.app
-
-    Home:
+    Bluetooth File Exchange:
 
       Version: 9.0
       Obtained from: Apple
       Last Modified: 4/30/26, 7:12 AM
       Kind: Universal
       Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Home.app
+      Location: /System/Applications/Utilities/Bluetooth File Exchange.app
+      Get Info String: 7.0.0, Copyright © 2002-2018 Apple Inc. All rights reserved.
 
-    Image Capture:
+    Boot Camp Assistant:
 
-      Version: 8.0
+      Version: 6.1.0
       Obtained from: Apple
       Last Modified: 4/30/26, 7:12 AM
       Kind: Universal
       Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Image Capture.app
+      Location: /System/Applications/Utilities/Boot Camp Assistant.app
 
-    Image Playground:
+    ColorSync Utility:
+
+      Version: 12.1.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Utilities/ColorSync Utility.app
+
+    Console:
+
+      Version: 1.1
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Utilities/Console.app
+
+    Digital Color Meter:
+
+      Version: 5.26
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Utilities/Digital Color Meter.app
+
+    Disk Utility:
+
+      Version: 22.7
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Utilities/Disk Utility.app
+
+    Grapher:
+
+      Version: 2.7
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Utilities/Grapher.app
+
+    Migration Assistant:
+
+      Version: 15.7
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Utilities/Migration Assistant.app
+
+    Print Center:
 
       Version: 1.0
       Obtained from: Apple
       Last Modified: 4/30/26, 7:12 AM
-      Kind: Apple Silicon
+      Kind: Universal
       Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Image Playground.app
+      Location: /System/Applications/Utilities/Print Center.app
 
-    Launchpad:
+    Screen Sharing:
+
+      Version: 5.3
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Utilities/Screen Sharing.app
+
+    Screenshot:
 
       Version: 1.0
       Obtained from: Apple
       Last Modified: 4/30/26, 7:12 AM
       Kind: Universal
       Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Launchpad.app
+      Location: /System/Applications/Utilities/Screenshot.app
 
-    Mail:
+    Script Editor:
 
-      Version: 16.0
+      Version: 2.11
       Obtained from: Apple
       Last Modified: 4/30/26, 7:12 AM
       Kind: Universal
       Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Mail.app
+      Location: /System/Applications/Utilities/Script Editor.app
 
-    Maps:
+    System Information:
 
-      Version: 3.0
+      Version: 11.0
       Obtained from: Apple
       Last Modified: 4/30/26, 7:12 AM
       Kind: Universal
       Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Maps.app
+      Location: /System/Applications/Utilities/System Information.app
 
-    Messages:
+    Terminal:
 
-      Version: 14.0
+      Version: 2.14
       Obtained from: Apple
       Last Modified: 4/30/26, 7:12 AM
       Kind: Universal
       Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Messages.app
+      Location: /System/Applications/Utilities/Terminal.app
 
-    Mission Control:
+    VoiceOver Utility:
+
+      Version: 10
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Utilities/VoiceOver Utility.app
+
+    Voice Memos:
+
+      Version: 3.1
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/VoiceMemos.app
+
+    Weather:
+
+      Version: 5.1
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Weather.app
+
+    iPhone Mirroring:
+
+      Version: 1.3
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/iPhone Mirroring.app
+
+    About This Mac:
+
+      Version: 1.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/Applications/About This Mac.app
+
+    Archive Utility:
+
+      Version: 10.15
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/Applications/Archive Utility.app
+
+    DVD Player:
+
+      Version: 6.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/Applications/DVD Player.app
+
+    Desk View:
+
+      Version: 2.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/Applications/Desk View.app
+
+    Directory Utility:
+
+      Version: 6.4
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/Applications/Directory Utility.app
+
+    Expansion Slot Utility:
+
+      Version: 2.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/Applications/Expansion Slot Utility.app
+
+    Feedback Assistant:
+
+      Version: 5.1
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/Applications/Feedback Assistant.app
+
+    Folder Actions Setup:
 
       Version: 1.2
       Obtained from: Apple
       Last Modified: 4/30/26, 7:12 AM
       Kind: Universal
       Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Mission Control.app
+      Location: /System/Library/CoreServices/Applications/Folder Actions Setup.app
 
-    Music:
+    Keychain Access:
 
-      Version: 1.5.6
+      Version: 11.0
       Obtained from: Apple
       Last Modified: 4/30/26, 7:12 AM
       Kind: Universal
       Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Music.app
-      Get Info String: Music 1.5.6.11, © 2019–2025 Apple Inc. All rights reserved.
+      Location: /System/Library/CoreServices/Applications/Keychain Access.app
+
+    Ticket Viewer:
+
+      Version: 4.1
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/Applications/Ticket Viewer.app
+
+    Wireless Diagnostics:
+
+      Version: 11.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/Applications/Wireless Diagnostics.app
+
+    iOS App Installer:
+
+      Version: 1.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/Applications/iOS App Installer.app
+
+    Finder:
+
+      Version: 15.5
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/Finder.app
+
+    AirDrop:
+
+      Version: 15.5
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/Finder.app/Contents/Applications/AirDrop.app
+
+    Computer:
+
+      Version: 15.5
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/Finder.app/Contents/Applications/Computer.app
+
+    Network:
+
+      Version: 15.5
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/Finder.app/Contents/Applications/Network.app
+
+    Recents:
+
+      Version: 15.5
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/Finder.app/Contents/Applications/Recents.app
+
+    iCloud Drive:
+
+      Version: 15.5
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/Finder.app/Contents/Applications/iCloud Drive.app
+
+    ClassroomStudentMenuExtra:
+
+      Version: 1.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/Classroom/ClassroomStudentMenuExtra.app
+
+    Display Calibrator:
+
+      Version: 4.19
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/ColorSync/Calibrators/Display Calibrator.app
+      Get Info String: 4.19, Copyright 2014-2024 Apple Computer, Inc.
+
+    AOSUIPrefPaneLauncher:
+
+      Version: 1.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/AOSUIPrefPaneLauncher.app
+
+    AVB Configuration:
+
+      Version: 1320.3
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/AVB Configuration.app
+
+    AddPrinter:
+
+      Version: 607
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/AddPrinter.app
+
+    AddressBookUrlForwarder:
+
+      Version: 14.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/AddressBookUrlForwarder.app
+
+    AirPlayUIAgent:
+
+      Version: 2.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/AirPlayUIAgent.app
+
+    AirPort Base Station Agent:
+
+      Version: 2.2.1
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/AirPort Base Station Agent.app
+      Get Info String: 2.2.1 (221.12), Copyright © 2006 -2024 Apple Inc. All Rights Reserved.
+
+    Apple Diagnostics:
+
+      Version: 1.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/Apple Diagnostics.app
+
+    AppleScript Utility:
+
+      Version: 1.1.2
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/AppleScript Utility.app
+
+    AskToMessagesHost:
+
+      Version: 1.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/AskToMessagesHost.app
+
+    Automator Application Stub:
+
+      Version: 1.3
+      Obtained from: Unknown
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Location: /System/Library/CoreServices/Automator Application Stub.app
+
+    Automator Installer:
+
+      Version: 2.10
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/Automator Installer.app
+
+    Batteries:
+
+      Version: 1.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/Batteries.app
+
+    Bluetooth Setup Assistant:
+
+      Version: 9.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/BluetoothSetupAssistant.app
+      Get Info String: 9.0 (1)
+
+    BluetoothUIServer:
+
+      Version: 9.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/BluetoothUIServer.app
+      Get Info String: kBluetoothCFBundleGetInfoString
+
+    BluetoothUIService:
+
+      Version: 1.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/BluetoothUIService.app
+
+    CalendarFileHandler:
+
+      Version: 8.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/CalendarFileHandler.app
+
+    Captive Network Assistant:
+
+      Version: 5.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/Captive Network Assistant.app
+
+    Certificate Assistant:
+
+      Version: 5.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Library/CoreServices/Certificate Assistant.app
 
     News:
 
@@ -1054,6 +1372,206 @@ Applications:
       Kind: Universal
       Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
       Location: /System/Library/CoreServices/ThermalTrap.app
+
+    App Store:
+
+      Version: 3.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/App Store.app
+
+    Automator:
+
+      Version: 2.10
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Automator.app
+
+    Books:
+
+      Version: 7.6
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Books.app
+
+    Calculator:
+
+      Version: 11.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Calculator.app
+
+    Calendar:
+
+      Version: 15.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Calendar.app
+
+    Chess:
+
+      Version: 3.18
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Chess.app
+      Get Info String: 3.18, Copyright 2003–2024 Apple Inc.
+
+    Clock:
+
+      Version: 1.1
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Clock.app
+
+    Contacts:
+
+      Version: 14.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Contacts.app
+
+    Dictionary:
+
+      Version: 2.3.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Dictionary.app
+
+    FaceTime:
+
+      Version: 36
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/FaceTime.app
+
+    Find My:
+
+      Version: 4.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/FindMy.app
+
+    Font Book:
+
+      Version: 11.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Font Book.app
+
+    Freeform:
+
+      Version: 3.5
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Freeform.app
+
+    Home:
+
+      Version: 9.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Home.app
+
+    Image Capture:
+
+      Version: 8.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Image Capture.app
+
+    Image Playground:
+
+      Version: 1.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Apple Silicon
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Image Playground.app
+
+    Launchpad:
+
+      Version: 1.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Launchpad.app
+
+    Mail:
+
+      Version: 16.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Mail.app
+
+    Maps:
+
+      Version: 3.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Maps.app
+
+    Messages:
+
+      Version: 14.0
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Messages.app
+
+    Mission Control:
+
+      Version: 1.2
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Mission Control.app
+
+    Music:
+
+      Version: 1.5.6
+      Obtained from: Apple
+      Last Modified: 4/30/26, 7:12 AM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /System/Applications/Music.app
+      Get Info String: Music 1.5.6.11, © 2019–2025 Apple Inc. All rights reserved.
 
     TMHelperAgent:
 
@@ -2066,524 +2584,6 @@ Copyright © 2001-2002 Jim Ingham & Ian Reid
       Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
       Location: /System/Library/Services/Summary Service.app
 
-    Audio MIDI Setup:
-
-      Version: 3.6
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Utilities/Audio MIDI Setup.app
-      Get Info String: 3.6, Copyright 2002–2024 Apple Inc.
-
-    Bluetooth File Exchange:
-
-      Version: 9.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Utilities/Bluetooth File Exchange.app
-      Get Info String: 7.0.0, Copyright © 2002-2018 Apple Inc. All rights reserved.
-
-    Boot Camp Assistant:
-
-      Version: 6.1.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Utilities/Boot Camp Assistant.app
-
-    ColorSync Utility:
-
-      Version: 12.1.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Utilities/ColorSync Utility.app
-
-    Console:
-
-      Version: 1.1
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Utilities/Console.app
-
-    Digital Color Meter:
-
-      Version: 5.26
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Utilities/Digital Color Meter.app
-
-    Disk Utility:
-
-      Version: 22.7
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Utilities/Disk Utility.app
-
-    Grapher:
-
-      Version: 2.7
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Utilities/Grapher.app
-
-    Migration Assistant:
-
-      Version: 15.7
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Utilities/Migration Assistant.app
-
-    Print Center:
-
-      Version: 1.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Utilities/Print Center.app
-
-    Screen Sharing:
-
-      Version: 5.3
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Utilities/Screen Sharing.app
-
-    Screenshot:
-
-      Version: 1.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Utilities/Screenshot.app
-
-    Script Editor:
-
-      Version: 2.11
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Utilities/Script Editor.app
-
-    System Information:
-
-      Version: 11.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Utilities/System Information.app
-
-    Terminal:
-
-      Version: 2.14
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Utilities/Terminal.app
-
-    VoiceOver Utility:
-
-      Version: 10
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Utilities/VoiceOver Utility.app
-
-    Voice Memos:
-
-      Version: 3.1
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/VoiceMemos.app
-
-    Weather:
-
-      Version: 5.1
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/Weather.app
-
-    iPhone Mirroring:
-
-      Version: 1.3
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Applications/iPhone Mirroring.app
-
-    About This Mac:
-
-      Version: 1.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/Applications/About This Mac.app
-
-    Archive Utility:
-
-      Version: 10.15
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/Applications/Archive Utility.app
-
-    DVD Player:
-
-      Version: 6.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/Applications/DVD Player.app
-
-    Desk View:
-
-      Version: 2.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/Applications/Desk View.app
-
-    Directory Utility:
-
-      Version: 6.4
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/Applications/Directory Utility.app
-
-    Expansion Slot Utility:
-
-      Version: 2.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/Applications/Expansion Slot Utility.app
-
-    Feedback Assistant:
-
-      Version: 5.1
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/Applications/Feedback Assistant.app
-
-    Folder Actions Setup:
-
-      Version: 1.2
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/Applications/Folder Actions Setup.app
-
-    Keychain Access:
-
-      Version: 11.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/Applications/Keychain Access.app
-
-    Ticket Viewer:
-
-      Version: 4.1
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/Applications/Ticket Viewer.app
-
-    Wireless Diagnostics:
-
-      Version: 11.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/Applications/Wireless Diagnostics.app
-
-    iOS App Installer:
-
-      Version: 1.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/Applications/iOS App Installer.app
-
-    Finder:
-
-      Version: 15.5
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/Finder.app
-
-    AirDrop:
-
-      Version: 15.5
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/Finder.app/Contents/Applications/AirDrop.app
-
-    Computer:
-
-      Version: 15.5
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/Finder.app/Contents/Applications/Computer.app
-
-    Network:
-
-      Version: 15.5
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/Finder.app/Contents/Applications/Network.app
-
-    Recents:
-
-      Version: 15.5
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/Finder.app/Contents/Applications/Recents.app
-
-    iCloud Drive:
-
-      Version: 15.5
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/Finder.app/Contents/Applications/iCloud Drive.app
-
-    ClassroomStudentMenuExtra:
-
-      Version: 1.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/Classroom/ClassroomStudentMenuExtra.app
-
-    Display Calibrator:
-
-      Version: 4.19
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/ColorSync/Calibrators/Display Calibrator.app
-      Get Info String: 4.19, Copyright 2014-2024 Apple Computer, Inc.
-
-    AOSUIPrefPaneLauncher:
-
-      Version: 1.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/AOSUIPrefPaneLauncher.app
-
-    AVB Configuration:
-
-      Version: 1320.3
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/AVB Configuration.app
-
-    AddPrinter:
-
-      Version: 607
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/AddPrinter.app
-
-    AddressBookUrlForwarder:
-
-      Version: 14.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/AddressBookUrlForwarder.app
-
-    AirPlayUIAgent:
-
-      Version: 2.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/AirPlayUIAgent.app
-
-    AirPort Base Station Agent:
-
-      Version: 2.2.1
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/AirPort Base Station Agent.app
-      Get Info String: 2.2.1 (221.12), Copyright © 2006 -2024 Apple Inc. All Rights Reserved.
-
-    Apple Diagnostics:
-
-      Version: 1.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/Apple Diagnostics.app
-
-    AppleScript Utility:
-
-      Version: 1.1.2
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/AppleScript Utility.app
-
-    AskToMessagesHost:
-
-      Version: 1.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/AskToMessagesHost.app
-
-    Automator Application Stub:
-
-      Version: 1.3
-      Obtained from: Unknown
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Location: /System/Library/CoreServices/Automator Application Stub.app
-
-    Automator Installer:
-
-      Version: 2.10
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/Automator Installer.app
-
-    Batteries:
-
-      Version: 1.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/Batteries.app
-
-    Bluetooth Setup Assistant:
-
-      Version: 9.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/BluetoothSetupAssistant.app
-      Get Info String: 9.0 (1)
-
-    BluetoothUIServer:
-
-      Version: 9.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/BluetoothUIServer.app
-      Get Info String: kBluetoothCFBundleGetInfoString
-
-    BluetoothUIService:
-
-      Version: 1.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/BluetoothUIService.app
-
-    CalendarFileHandler:
-
-      Version: 8.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/CalendarFileHandler.app
-
-    Captive Network Assistant:
-
-      Version: 5.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/Captive Network Assistant.app
-
-    Certificate Assistant:
-
-      Version: 5.0
-      Obtained from: Apple
-      Last Modified: 4/30/26, 7:12 AM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /System/Library/CoreServices/Certificate Assistant.app
-
     Pearcleaner:
 
       Version: 4.5.3
@@ -2602,82 +2602,6 @@ Copyright © 2001-2002 Jim Ingham & Ian Reid
       Signed by: Apple Mac OS Application Signing, Apple Worldwide Developer Relations Certification Authority, Apple Root CA
       Location: /Applications/Focus for YouTube.app
 
-    Ghostty:
-
-      Version: 1.3.1
-      Obtained from: Identified Developer
-      Last Modified: 3/13/26, 9:08 AM
-      Kind: Universal
-      Signed by: Developer ID Application: Mitchell Hashimoto (24VZTF6M5V), Developer ID Certification Authority, Apple Root CA
-      Location: /Applications/Ghostty.app
-
-    SANDISK:
-
-      Version: 3.0.0
-      Obtained from: Identified Developer
-      Last Modified: 3/27/26, 9:37 AM
-      Kind: Universal
-      Signed by: Developer ID Application: SanDisk Corporation (4F36JV57PQ), Developer ID Certification Authority, Apple Root CA
-      Location: /Applications/SANDISK.app
-
-    Spotify:
-
-      Version: 1.2.90.451
-      Obtained from: Identified Developer
-      Last Modified: 5/23/26, 1:33 AM
-      Kind: Apple Silicon
-      Signed by: Developer ID Application: Spotify (2FNC3A47ZF), Developer ID Certification Authority, Apple Root CA
-      Location: /Applications/Spotify.app
-
-    Autodesk Fusion:
-
-      Version: 2702.1.58
-      Obtained from: Unknown
-      Last Modified: 5/20/26, 11:28 PM
-      Kind: Other
-      Location: /Users/ppopuri/Applications/Autodesk Fusion.app
-
-    Remove Autodesk Fusion:
-
-      Version: 2702.1.58
-      Obtained from: Unknown
-      Last Modified: 5/20/26, 11:28 PM
-      Kind: Other
-      Location: /Users/ppopuri/Applications/Remove Autodesk Fusion.app
-
-    Autodesk Fusion Service Utility:
-
-      Version: 2702.1.58
-      Obtained from: Unknown
-      Last Modified: 5/20/26, 11:28 PM
-      Kind: Other
-      Location: /Users/ppopuri/Applications/Autodesk Fusion Service Utility.app
-
-    com.apple.ctcategories:
-
-      Obtained from: Unknown
-      Last Modified: 7/29/25, 2:59 PM
-      Kind: Other
-      Location: /Users/ppopuri/Library/HTTPStorages/com.apple.ctcategories.service
-
-    Claude:
-
-      Version: 1.11187.4
-      Obtained from: Identified Developer
-      Last Modified: 6/5/26, 8:26 PM
-      Kind: Universal
-      Signed by: Developer ID Application: Anthropic PBC (Q6L2SF6YDW), Developer ID Certification Authority, Apple Root CA
-      Location: /Applications/Claude.app
-
-    SingleFile:
-
-      Version: 1.22.81
-      Obtained from: App Store
-      Last Modified: 8/25/25, 9:44 PM
-      Kind: Universal
-      Signed by: Apple Mac OS Application Signing, Apple Worldwide Developer Relations Certification Authority, Apple Root CA
-      Location: /Applications/SingleFile.app
-
     Cold Turkey Blocker:
 
       Version: 4.7
@@ -2695,6 +2619,76 @@ Copyright © 2001-2002 Jim Ingham & Ian Reid
       Kind: Universal
       Signed by: Developer ID Application: Jan-Philipp Hülsmann (B7HSFEB698), Developer ID Certification Authority, Apple Root CA
       Location: /Applications/SaneSideButtons.app
+
+    Vial:
+
+      Version: 0.7.5
+      Obtained from: Unknown
+      Last Modified: 8/2/25, 3:19 PM
+      Kind: Intel
+      Location: /Applications/Vial.app
+
+    VLC:
+
+      Version: 3.0.21
+      Obtained from: Identified Developer
+      Last Modified: 6/6/24, 12:47 AM
+      Kind: Intel
+      Signed by: Developer ID Application: VideoLAN (75GAHG3SZQ), Developer ID Certification Authority, Apple Root CA
+      Location: /Applications/VLC.app
+
+    KeyboardCleanTool:
+
+      Version: 7
+      Obtained from: Identified Developer
+      Last Modified: 11/14/25, 10:30 PM
+      Kind: Universal
+      Signed by: Developer ID Application: folivora.AI GmbH (DAFVSXZ82P), Developer ID Certification Authority, Apple Root CA
+      Location: /Applications/KeyboardCleanTool.app
+
+    QMK Toolbox:
+
+      Version: 0.3.3
+      Obtained from: Unknown
+      Last Modified: 6/13/24, 5:13 AM
+      Kind: Universal
+      Location: /Applications/QMK Toolbox.app
+
+    Noir:
+
+      Version: 2026.1.3
+      Obtained from: App Store
+      Last Modified: 5/3/26, 9:54 PM
+      Kind: Universal
+      Signed by: Apple Mac OS Application Signing, Apple Worldwide Developer Relations Certification Authority, Apple Root CA
+      Location: /Applications/Noir.app
+
+    Docker:
+
+      Version: 4.77.0
+      Obtained from: Identified Developer
+      Last Modified: 5/19/26, 12:43 AM
+      Kind: Apple Silicon
+      Signed by: Developer ID Application: Docker Inc (9BNSXJN65R), Developer ID Certification Authority, Apple Root CA
+      Location: /Users/ppopuri/Library/Application Support/com.docker.install/in_progress/Docker.app
+
+    Claude Code URL Handler:
+
+      Version: 1.0
+      Obtained from: Unknown
+      Last Modified: 6/9/26, 10:52 AM
+      Kind: iOS
+      Signed by: Developer ID Application: Anthropic PBC (Q6L2SF6YDW), Developer ID Certification Authority, Apple Root CA
+      Location: /Users/ppopuri/Applications/Claude Code URL Handler.app
+
+    SingleFile:
+
+      Version: 1.22.81
+      Obtained from: App Store
+      Last Modified: 8/25/25, 9:44 PM
+      Kind: Universal
+      Signed by: Apple Mac OS Application Signing, Apple Worldwide Developer Relations Certification Authority, Apple Root CA
+      Location: /Applications/SingleFile.app
 
     Anki:
 
@@ -2767,40 +2761,6 @@ Copyright © 2001-2002 Jim Ingham & Ian Reid
       Location: /Applications/Raspberry Pi Imager.app
       Get Info String: 
 
-    Vial:
-
-      Version: 0.7.5
-      Obtained from: Unknown
-      Last Modified: 8/2/25, 3:19 PM
-      Kind: Intel
-      Location: /Applications/Vial.app
-
-    VLC:
-
-      Version: 3.0.21
-      Obtained from: Identified Developer
-      Last Modified: 6/6/24, 12:47 AM
-      Kind: Intel
-      Signed by: Developer ID Application: VideoLAN (75GAHG3SZQ), Developer ID Certification Authority, Apple Root CA
-      Location: /Applications/VLC.app
-
-    KeyboardCleanTool:
-
-      Version: 7
-      Obtained from: Identified Developer
-      Last Modified: 11/14/25, 10:30 PM
-      Kind: Universal
-      Signed by: Developer ID Application: folivora.AI GmbH (DAFVSXZ82P), Developer ID Certification Authority, Apple Root CA
-      Location: /Applications/KeyboardCleanTool.app
-
-    QMK Toolbox:
-
-      Version: 0.3.3
-      Obtained from: Unknown
-      Last Modified: 6/13/24, 5:13 AM
-      Kind: Universal
-      Location: /Applications/QMK Toolbox.app
-
     NVIDIA GeForce NOW:
 
       Version: 2.0.82.170
@@ -2819,23 +2779,14 @@ Copyright © 2001-2002 Jim Ingham & Ian Reid
       Signed by: Developer ID Application: Zoom Video Communications, Inc. (BJ4HAAB9B3), Developer ID Certification Authority, Apple Root CA
       Location: /Users/ppopuri/Applications/zoom.us.app
 
-    Noir:
+    Ghostty:
 
-      Version: 2026.1.3
-      Obtained from: App Store
-      Last Modified: 5/3/26, 9:54 PM
+      Version: 1.3.1
+      Obtained from: Identified Developer
+      Last Modified: 3/13/26, 9:08 AM
       Kind: Universal
-      Signed by: Apple Mac OS Application Signing, Apple Worldwide Developer Relations Certification Authority, Apple Root CA
-      Location: /Applications/Noir.app
-
-    Claude Code URL Handler:
-
-      Version: 1.0
-      Obtained from: Unknown
-      Last Modified: 5/11/26, 9:16 PM
-      Kind: iOS
-      Signed by: Developer ID Application: Anthropic PBC (Q6L2SF6YDW), Developer ID Certification Authority, Apple Root CA
-      Location: /Users/ppopuri/Applications/Claude Code URL Handler.app
+      Signed by: Developer ID Application: Mitchell Hashimoto (24VZTF6M5V), Developer ID Certification Authority, Apple Root CA
+      Location: /Applications/Ghostty.app
 
     PCSX2-v2.6:
 
@@ -2898,6 +2849,48 @@ Copyright © 2001-2002 Jim Ingham & Ian Reid
       Last Modified: 6/28/25, 11:53 PM
       Kind: iOS
       Location: /Applications/Cemu_Metal_arm64.app
+
+    SANDISK:
+
+      Version: 3.0.0
+      Obtained from: Identified Developer
+      Last Modified: 3/27/26, 9:37 AM
+      Kind: Universal
+      Signed by: Developer ID Application: SanDisk Corporation (4F36JV57PQ), Developer ID Certification Authority, Apple Root CA
+      Location: /Applications/SANDISK.app
+
+    Spotify:
+
+      Version: 1.2.90.451
+      Obtained from: Identified Developer
+      Last Modified: 5/23/26, 1:33 AM
+      Kind: Apple Silicon
+      Signed by: Developer ID Application: Spotify (2FNC3A47ZF), Developer ID Certification Authority, Apple Root CA
+      Location: /Applications/Spotify.app
+
+    Autodesk Fusion:
+
+      Version: 2702.1.58
+      Obtained from: Unknown
+      Last Modified: 5/20/26, 11:28 PM
+      Kind: Other
+      Location: /Users/ppopuri/Applications/Autodesk Fusion.app
+
+    Remove Autodesk Fusion:
+
+      Version: 2702.1.58
+      Obtained from: Unknown
+      Last Modified: 5/20/26, 11:28 PM
+      Kind: Other
+      Location: /Users/ppopuri/Applications/Remove Autodesk Fusion.app
+
+    Autodesk Fusion Service Utility:
+
+      Version: 2702.1.58
+      Obtained from: Unknown
+      Last Modified: 5/20/26, 11:28 PM
+      Kind: Other
+      Location: /Users/ppopuri/Applications/Autodesk Fusion Service Utility.app
 
     Amphetamine:
 
@@ -2993,6 +2986,13 @@ Copyright © 2001-2002 Jim Ingham & Ian Reid
       Kind: Other
       Location: /Users/ppopuri/Library/Application Scripts/group.is.workflow.my.app
 
+    com.apple.ctcategories:
+
+      Obtained from: Unknown
+      Last Modified: 7/29/25, 2:59 PM
+      Kind: Other
+      Location: /Users/ppopuri/Library/HTTPStorages/com.apple.ctcategories.service
+
     MRT:
 
       Version: 1.93
@@ -3038,33 +3038,6 @@ Copyright © 2001-2002 Jim Ingham & Ian Reid
       Signed by: Developer ID Application: Autodesk (XXKJ396S2Y), Developer ID Certification Authority, Apple Root CA
       Location: /Users/ppopuri/Library/Application Support/Autodesk/webdeploy/production/2448aa8b3276a952725a8bb01f628b797da18a2a/Autodesk Fusion.app
 
-    QtWebEngineProcess:
-
-      Version: 
-      Obtained from: Unknown
-      Last Modified: 9/10/25, 7:55 AM
-      Kind: iOS
-      Location: /Users/ppopuri/Library/Application Support/AnkiProgramFiles/cache/archive-v0/BsHO-nqN8sEpoRGRCki29/PyQt6/Qt6/lib/QtWebEngineCore.framework/Helpers/QtWebEngineProcess.app
-
-    Python:
-
-      Version: 3.9.6
-      Obtained from: Apple
-      Last Modified: 7/29/25, 7:08 PM
-      Kind: Universal
-      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
-      Location: /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app
-      Get Info String: 3.9.6, (c) 2001-2020 Python Software Foundation.
-
-    Discord:
-
-      Version: 0.0.393
-      Obtained from: Identified Developer
-      Last Modified: 6/3/26, 6:48 PM
-      Kind: Universal
-      Signed by: Developer ID Application: Discord, Inc. (53Q6R32WPB), Developer ID Certification Authority, Apple Root CA
-      Location: /Applications/Discord.app
-
     Recursive File Processing Droplet:
 
       Version: 1.0
@@ -3096,6 +3069,42 @@ Copyright © 2001-2002 Jim Ingham & Ian Reid
       Last Modified: 4/30/26, 7:12 AM
       Kind: Universal
       Location: /Library/Application Support/Script Editor/Templates/Cocoa-AppleScript Applet.app
+
+    QtWebEngineProcess:
+
+      Version: 
+      Obtained from: Unknown
+      Last Modified: 9/10/25, 7:55 AM
+      Kind: iOS
+      Location: /Users/ppopuri/Library/Application Support/AnkiProgramFiles/cache/archive-v0/BsHO-nqN8sEpoRGRCki29/PyQt6/Qt6/lib/QtWebEngineCore.framework/Helpers/QtWebEngineProcess.app
+
+    Python:
+
+      Version: 3.9.6
+      Obtained from: Apple
+      Last Modified: 7/29/25, 7:08 PM
+      Kind: Universal
+      Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
+      Location: /Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/Resources/Python.app
+      Get Info String: 3.9.6, (c) 2001-2020 Python Software Foundation.
+
+    Claude:
+
+      Version: 1.11187.4
+      Obtained from: Identified Developer
+      Last Modified: 6/5/26, 8:26 PM
+      Kind: Universal
+      Signed by: Developer ID Application: Anthropic PBC (Q6L2SF6YDW), Developer ID Certification Authority, Apple Root CA
+      Location: /Applications/Claude.app
+
+    claude:
+
+      Version: 2.1.161
+      Obtained from: Identified Developer
+      Last Modified: 6/8/26, 12:19 AM
+      Kind: iOS
+      Signed by: Developer ID Application: Anthropic PBC (Q6L2SF6YDW), Developer ID Certification Authority, Apple Root CA
+      Location: /Users/ppopuri/Library/Application Support/Claude/claude-code/2.1.161/claude.app
 
     AppleMobileDeviceHelper:
 
@@ -3133,6 +3142,15 @@ Copyright © 2001-2002 Jim Ingham & Ian Reid
       Signed by: Software Signing, Apple Code Signing Certification Authority, Apple Root CA
       Location: /Library/Image Capture/Support/LegacyDeviceDiscoveryHelpers/AirScanLegacyDiscovery.app
 
+    Discord:
+
+      Version: 0.0.393
+      Obtained from: Identified Developer
+      Last Modified: 6/3/26, 6:48 PM
+      Kind: Universal
+      Signed by: Developer ID Application: Discord, Inc. (53Q6R32WPB), Developer ID Certification Authority, Apple Root CA
+      Location: /Applications/Discord.app
+
     UTM:
 
       Version: 4.7.5
@@ -3141,13 +3159,4 @@ Copyright © 2001-2002 Jim Ingham & Ian Reid
       Kind: Universal
       Signed by: Developer ID Application: Turing Software, LLC (WDNLXAD4W8), Developer ID Certification Authority, Apple Root CA
       Location: /Applications/UTM.app
-
-    claude:
-
-      Version: 2.1.161
-      Obtained from: Identified Developer
-      Last Modified: 6/8/26, 12:19 AM
-      Kind: iOS
-      Signed by: Developer ID Application: Anthropic PBC (Q6L2SF6YDW), Developer ID Certification Authority, Apple Root CA
-      Location: /Users/ppopuri/Library/Application Support/Claude/claude-code/2.1.161/claude.app
 
