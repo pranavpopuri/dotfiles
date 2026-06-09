@@ -23,3 +23,5 @@ export PATH="$PATH:/Users/ppopuri/.lmstudio/bin"
 
 
 eval "$(zoxide init zsh)"
+
+alias dotfiles-sync="brew bundle dump --file=~/Documents/GitHub/dotfiles/Brewfile --force && system_profiler SPApplicationsDataType > ~/Documents/GitHub/dotfiles/apps_backup.txt"
