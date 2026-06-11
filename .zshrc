@@ -2,7 +2,7 @@ eval "$(tirith init)"
 
 eval $(thefuck --alias --enable-experimental-instant-mode)
 
-eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh --cmd cd)"
 
 source "$(brew --prefix)/opt/fzf/shell/key-bindings.zsh"
 source "$(brew --prefix)/opt/fzf/shell/completion.zsh"
