@@ -20,3 +20,5 @@ alias ls="eza --icons"
 alias glow="glow --width 0"
 
 alias dotfiles-sync="brew bundle dump --file=~/Documents/GitHub/dotfiles/Brewfile --force && system_profiler SPApplicationsDataType > ~/Documents/GitHub/dotfiles/apps_backup.txt"
+
+[[ -o interactive ]] && source ~/.config/dateprogress.zsh
