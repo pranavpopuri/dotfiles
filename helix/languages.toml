@@ -1,0 +1,5 @@
+[[language]]
+name = "markdown"
+auto-format = true
+formatter = { command = "dprint", args = ["fmt", "--config", "/Users/ppopuri/.config/dprint.json", "--stdin", "md"] }
+language-servers = ["markdown-oxide"]
