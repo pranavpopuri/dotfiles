@@ -1,6 +1,6 @@
 eval "$(tirith init)"
 
-eval $(thefuck --alias --enable-experimental-instant-mode)
+eval $(thefuck --alias)
 
 eval "$(zoxide init zsh --cmd cd)"
 
