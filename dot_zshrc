@@ -19,6 +19,6 @@ function y() {
 alias ls="eza --icons"
 alias glow="glow --width 0"
 
-alias dotfiles-sync="brew bundle dump --file=~/Documents/GitHub/dotfiles/Brewfile --force && system_profiler SPApplicationsDataType > ~/Documents/GitHub/dotfiles/apps_backup.txt"
+alias dotfiles-sync="brew bundle dump --file=~/.local/share/chezmoi/Brewfile --force && system_profiler SPApplicationsDataType > ~/.local/share/chezmoi/apps_backup.txt"
 
 [[ -o interactive ]] && source ~/.config/dateprogress.zsh
