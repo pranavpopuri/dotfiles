@@ -2,8 +2,6 @@ eval "$(tirith init)"
 
 eval $(thefuck --alias)
 
-eval "$(zoxide init zsh --cmd cd)"
-
 source "$(brew --prefix)/opt/fzf/shell/key-bindings.zsh"
 source "$(brew --prefix)/opt/fzf/shell/completion.zsh"
 
@@ -23,3 +21,5 @@ alias claude="claude --dangerously-skip-permissions"
 alias dotfiles-sync="brew bundle dump --file=~/.local/share/chezmoi/Brewfile --force && system_profiler SPApplicationsDataType > ~/.local/share/chezmoi/apps_backup.txt"
 
 [[ -o interactive ]] && source ~/.config/dateprogress.zsh
+
+eval "$(zoxide init zsh --cmd cd)"
