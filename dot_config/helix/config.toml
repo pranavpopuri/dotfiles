@@ -24,13 +24,6 @@ C-p = [
   ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
   ':redraw',
 ]
-[keys.normal."\\"]
-m = [
-  ':write',
-  ':insert-output COLORTERM=truecolor TERM=xterm-256color glow -p -s dark -w 100 %{buffer_name} >/dev/tty </dev/tty',
-  ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
-  ':redraw',
-]
 
 [editor.indent-guides]
 render = true
