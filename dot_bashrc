@@ -1,0 +1,19 @@
+command -v tirith >/dev/null && eval "$(tirith init)"
+command -v thefuck >/dev/null && eval "$(thefuck --alias)"
+if command -v fzf >/dev/null; then
+    [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+fi
+function y() {
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+    yazi "$@" --cwd-file="$tmp"
+    if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+        builtin cd -- "$cwd"
+    fi
+    rm -f -- "$tmp"
+}
+command -v eza >/dev/null && alias ls="eza --icons"
+alias glow="glow --width 0"
+alias claude="claude --dangerously-skip-permissions"
+alias dotfiles-sync="brew bundle dump --file=~/.local/share/chezmoi/Brewfile --force && system_profiler SPApplicationsDataType > ~/.local/share/chezmoi/apps_backup.txt"
+[[ $- == *i* ]] && [ -f ~/.config/dateprogress.bash ] && source ~/.config/dateprogress.bash
+command -v zoxide >/dev/null && eval "$(zoxide init bash --cmd cd)"
