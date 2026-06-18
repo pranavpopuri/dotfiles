@@ -2,6 +2,7 @@ Brewfile
 apps_backup.txt
 macos.sh
 .gitconfig
+.zshrc
 .config/dateprogress.zsh
 .config/nvim
 .config/sc-im
