@@ -1,0 +1,8 @@
+brew "helix"
+brew "yazi"
+brew "fzf"
+brew "ripgrep"
+brew "fd"
+brew "eza"
+brew "zoxide"
+brew "glow"

@@ -1,9 +1,11 @@
-eval "$(tirith init)"
+command -v tirith >/dev/null && eval "$(tirith init)"
 
-eval $(thefuck --alias)
+command -v thefuck >/dev/null && eval "$(thefuck --alias)"
 
-source "$(brew --prefix)/opt/fzf/shell/key-bindings.zsh"
-source "$(brew --prefix)/opt/fzf/shell/completion.zsh"
+if command -v brew >/dev/null && command -v fzf >/dev/null; then
+	source "$(brew --prefix)/opt/fzf/shell/key-bindings.zsh"
+	source "$(brew --prefix)/opt/fzf/shell/completion.zsh"
+fi
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -20,6 +22,6 @@ alias claude="claude --dangerously-skip-permissions"
 
 alias dotfiles-sync="brew bundle dump --file=~/.local/share/chezmoi/Brewfile --force && system_profiler SPApplicationsDataType > ~/.local/share/chezmoi/apps_backup.txt"
 
-[[ -o interactive ]] && source ~/.config/dateprogress.zsh
+[[ -o interactive ]] && [ -f ~/.config/dateprogress.zsh ] && source ~/.config/dateprogress.zsh
 
-eval "$(zoxide init zsh --cmd cd)"
+command -v zoxide >/dev/null && eval "$(zoxide init zsh --cmd cd)"

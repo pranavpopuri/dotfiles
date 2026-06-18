@@ -1,0 +1,4 @@
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init pranavpopuri
+cd ~/.local/share/chezmoi
+brew bundle --file=Brewfile.core
+chezmoi apply

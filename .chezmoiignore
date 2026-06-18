@@ -1,5 +1,6 @@
-Brewfile
+Brewfile*
 apps_backup.txt
+install.txt
 macos.sh
 .gitconfig
 .zshrc
