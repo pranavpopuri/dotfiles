@@ -1,10 +1,4 @@
 Brewfile*
 apps_backup.txt
-install*.txt
+install*
 macos.sh
-.gitconfig
-.zshrc
-.config/dateprogress.zsh
-.config/nvim
-.config/sc-im
-.config/thefuck

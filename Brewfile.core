@@ -1,3 +1,4 @@
+brew "chezmoi"
 brew "helix"
 brew "yazi"
 brew "fzf"

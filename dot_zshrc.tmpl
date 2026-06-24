@@ -1,0 +1,6 @@
+{{ template "shellrc-common" . }}
+command -v fzf >/dev/null && source <(fzf --zsh)
+
+[[ -o interactive ]] && [ -f ~/.config/dateprogress.zsh ] && source ~/.config/dateprogress.zsh
+
+command -v zoxide >/dev/null && eval "$(zoxide init zsh --cmd cd)"

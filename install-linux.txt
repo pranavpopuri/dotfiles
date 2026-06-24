@@ -1,3 +1,4 @@
 sh -c "$(curl -fsLS get.chezmoi.io)" -- -b ~/bin
 ~/bin/chezmoi init pranavpopuri
+bash ~/.local/share/chezmoi/install-brewfile-core-linux.sh
 ~/bin/chezmoi apply

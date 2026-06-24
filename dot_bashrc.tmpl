@@ -1,0 +1,6 @@
+{{ template "shellrc-common" . }}
+command -v fzf >/dev/null && eval "$(fzf --bash)"
+
+[[ $- == *i* ]] && [ -f ~/.config/dateprogress.bash ] && source ~/.config/dateprogress.bash
+
+command -v zoxide >/dev/null && eval "$(zoxide init bash --cmd cd)"
