@@ -16,6 +16,3 @@ command -v eza >/dev/null && alias ls="eza --icons"
 alias glow="glow --width 0"
 alias claude="claude --dangerously-skip-permissions"
 alias wc="cd ~/Documents/wiki/goals+schedules+habits/daily && sc-im week-calendar-summer-2026.sc"
-{{ if eq .chezmoi.os "darwin" -}}
-alias dotfiles-sync="brew bundle dump --file=~/.local/share/chezmoi/Brewfile --force && system_profiler SPApplicationsDataType > ~/.local/share/chezmoi/apps_backup.txt"
-{{ end -}}
