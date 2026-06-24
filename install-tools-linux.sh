@@ -33,4 +33,18 @@ EGET="$HOME/bin/eget"
 "$EGET" sxyazi/yazi        --to "$HOME/bin" --asset musl --asset ^deb --file yazi
 "$EGET" sxyazi/yazi        --to "$HOME/bin" --asset musl --asset ^deb --file ya
 
+# helix ships the hx binary plus a runtime/ directory it requires; eget only
+# extracts single binaries, so download the tarball and place both ourselves.
+# (Needs glibc + xz, both present on standard distros; not Alpine.)
+echo "Installing helix..."
+hxtmp=$(mktemp -d)
+"$EGET" helix-editor/helix --to "$hxtmp" --asset .tar --download-only
+tar -xf "$hxtmp"/helix-*-linux.tar.* -C "$hxtmp"
+hxdir=$(find "$hxtmp" -maxdepth 1 -type d -name 'helix-*-linux')
+cp "$hxdir/hx" "$HOME/bin/" && chmod +x "$HOME/bin/hx"
+mkdir -p "$HOME/.config/helix"
+rm -rf "$HOME/.config/helix/runtime"
+cp -r "$hxdir/runtime" "$HOME/.config/helix/runtime"
+rm -rf "$hxtmp"
+
 echo "Done! Tools installed to ~/bin"
