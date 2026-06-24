@@ -1,0 +1,36 @@
+#!/bin/bash
+# Install core CLI tools into ~/bin on Linux — no root required.
+#
+# Uses eget (https://github.com/zyedidia/eget) to fetch the right prebuilt
+# binary for this machine's OS/arch from each project's GitHub releases, so
+# there are no hardcoded versions, architecture strings, or download URLs to
+# maintain. Everything stays inside $HOME and is trivially removable.
+#
+# To pin a tool for reproducibility, add `--tag vX.Y.Z` to its line.
+# If you hit GitHub API rate limits, export GITHUB_TOKEN before running.
+set -e
+mkdir -p "$HOME/bin"
+
+# Bootstrap eget itself (its installer detects platform automatically).
+if [ ! -x "$HOME/bin/eget" ]; then
+	echo "Installing eget..."
+	cd /tmp
+	curl -fsSL https://zyedidia.github.io/eget.sh | sh
+	mv eget "$HOME/bin/"
+fi
+
+EGET="$HOME/bin/eget"
+
+# The --asset filters keep selection unambiguous; without them eget would
+# prompt to choose between musl/gnu/.deb/etc. and a non-interactive run would
+# hang. Verified non-interactive on x86_64 and aarch64.
+"$EGET" BurntSushi/ripgrep --to "$HOME/bin"
+"$EGET" sharkdp/fd         --to "$HOME/bin" --asset musl --asset ^deb
+"$EGET" eza-community/eza  --to "$HOME/bin" --asset gnu --asset tar.gz --asset ^no_libgit
+"$EGET" ajeetdsouza/zoxide --to "$HOME/bin"
+"$EGET" junegunn/fzf       --to "$HOME/bin"
+"$EGET" charmbracelet/glow --to "$HOME/bin" --asset tar.gz --asset ^sbom
+"$EGET" sxyazi/yazi        --to "$HOME/bin" --asset musl --asset ^deb --file yazi
+"$EGET" sxyazi/yazi        --to "$HOME/bin" --asset musl --asset ^deb --file ya
+
+echo "Done! Tools installed to ~/bin"

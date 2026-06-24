@@ -8,7 +8,7 @@ chezmoi's run scripts install everything else automatically:
   - macOS: installs Homebrew if missing, then `brew bundle` from Brewfile.core,
     and applies macos.sh system defaults once (prompts for sudo; restarts
     Dock/Finder).
-  - Linux: downloads prebuilt tool binaries into ~/bin
-    (install-brewfile-core-linux.sh, x86_64 and aarch64).
+  - Linux: fetches the tools into ~/bin with eget — no root, no hardcoded
+    URLs/versions (install-tools-linux.sh; works on x86_64 and aarch64).
 
 When it finishes, restart your shell:  exec $SHELL
