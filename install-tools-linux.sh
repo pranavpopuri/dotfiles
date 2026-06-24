@@ -47,4 +47,17 @@ rm -rf "$HOME/.config/helix/runtime"
 cp -r "$hxdir/runtime" "$HOME/.config/helix/runtime"
 rm -rf "$hxtmp"
 
+# Nerd Font for icon glyphs (eza --icons, etc.) when using a GUI terminal
+# *inside* the VM (e.g. UTM Ubuntu desktop). Harmless headless or over SSH,
+# where the client terminal's own font does the rendering. After install,
+# select "FiraCode Nerd Font" in your VM terminal's font settings.
+echo "Installing FiraCode Nerd Font..."
+fontdir="$HOME/.local/share/fonts"
+mkdir -p "$fontdir"
+fonttmp=$(mktemp -d)
+"$EGET" ryanoasis/nerd-fonts --to "$fonttmp" --asset FiraCode.tar.xz --download-only
+tar -xf "$fonttmp"/FiraCode.tar.* -C "$fontdir"
+command -v fc-cache >/dev/null && fc-cache -f "$fontdir" >/dev/null 2>&1 || true
+rm -rf "$fonttmp"
+
 echo "Done! Tools installed to ~/bin"
