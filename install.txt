@@ -1,0 +1,14 @@
+One-command setup — macOS or Linux:
+
+  sh -c "$(curl -fsLS get.chezmoi.io)" -- -b ~/bin init --apply pranavpopuri
+
+This installs chezmoi to ~/bin, clones the dotfiles, applies them, and then
+chezmoi's run scripts install everything else automatically:
+
+  - macOS: installs Homebrew if missing, then `brew bundle` from Brewfile.core,
+    and applies macos.sh system defaults once (prompts for sudo; restarts
+    Dock/Finder).
+  - Linux: downloads prebuilt tool binaries into ~/bin
+    (install-brewfile-core-linux.sh, x86_64 and aarch64).
+
+When it finishes, restart your shell:  exec $SHELL

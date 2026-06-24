@@ -1,0 +1,17 @@
+#!/bin/bash
+set -e
+
+# Re-run automatically when the package lists change:
+# Brewfile.core:    {{ include "Brewfile.core" | sha256sum }}
+# linux installer:  {{ include "install-brewfile-core-linux.sh" | sha256sum }}
+
+{{ if eq .chezmoi.os "darwin" -}}
+if ! command -v brew >/dev/null 2>&1; then
+	echo "Installing Homebrew..."
+	NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/main/install.sh)"
+fi
+eval "$(/opt/homebrew/bin/brew shellenv 2>/dev/null || /usr/local/bin/brew shellenv)"
+brew bundle --file="{{ .chezmoi.sourceDir }}/Brewfile.core"
+{{ else if eq .chezmoi.os "linux" -}}
+bash "{{ .chezmoi.sourceDir }}/install-brewfile-core-linux.sh"
+{{ end -}}

@@ -1,0 +1,5 @@
+#!/bin/bash
+{{ if eq .chezmoi.os "darwin" -}}
+# Re-run if macos.sh changes: {{ include "macos.sh" | sha256sum }}
+bash "{{ .chezmoi.sourceDir }}/macos.sh"
+{{ end -}}
