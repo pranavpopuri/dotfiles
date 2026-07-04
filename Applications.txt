@@ -1,0 +1,43 @@
+# Installed macOS apps — inventory snapshot
+# Generated 2026-07-05. Manual/reference list (not auto-installed by chezmoi).
+# For apps available via Homebrew, prefer the Brewfile so they auto-reinstall.
+
+## /Applications
+Amphetamine
+Anki
+Claude
+Discord
+Docker
+Dolphin
+Dusk
+GeForceNOW
+Ghostty
+KeyboardCleanTool
+Magnet
+MenuBarUSB
+MountMate
+Noir
+Pearcleaner
+QuickShade
+R
+RStudio
+Safari.app -> ../System/Cryptexes/App/System/Applications/Safari
+SANDISK
+SaneSideButtons
+SingleFile
+Slack
+Spotify
+SpotMenu
+Stats
+Steam
+TickTick
+TrackWeight
+UpNote
+UTM
+Vial
+VLC
+WhatsApp
+WiiUDownloader
+
+## ~/Applications (user-local, if any)
+zoom.us
