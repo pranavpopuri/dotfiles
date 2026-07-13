@@ -9,6 +9,7 @@ tap "rafaelswi/menubarusb"
 tap "serkanyersen/dotstate"
 tap "sheeki03/tap"
 tap "sikarugir-app/sikarugir", "https://github.com/Sikarugir-App/homebrew-sikarugir", trusted: true
+tap "vancluever/input-leap", trusted: { formulae: ["input-leap"] }
 tap "viamrobotics/brews"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
@@ -126,10 +127,18 @@ brew "yazi"
 brew "zoxide"
 # Interactive TUI for Homebrew
 brew "gromgit/brewtils/taproom", trusted: true
+# Display management tool
+cask "betterdisplay"
 # Terminal-based AI coding assistant
 cask "claude-code"
+# Clipboard extension app
+cask "clipy"
 cask "font-fira-code-nerd-font"
 cask "font-symbols-only-nerd-font"
+# Secure video conferencing app
+cask "jitsi-meet"
+# Keyboard customiser
+cask "karabiner-elements"
 # Blocks all Keyboard and TouchBar input
 cask "keyboardcleantool"
 # Track your USB devices in the macOS menu bar

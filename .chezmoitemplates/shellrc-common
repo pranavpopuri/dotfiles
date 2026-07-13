@@ -13,6 +13,8 @@ function y() {
 }
 
 command -v eza >/dev/null && alias ls="eza --icons"
-alias glow="glow --width 0"
+# Wrap glow to the terminal width, leaving a small margin for clean wrapping
+unalias glow 2>/dev/null
+glow() { command glow --width "$(( $(tput cols) - 2 ))" "$@"; }
 alias claude="claude --dangerously-skip-permissions"
-alias wc="cd ~/Documents/wiki/goals+schedules+habits/daily && sc-im week-calendar-summer-2026.sc"
+alias wc-open="cd ~/Documents/wiki/goals+schedules+habits/daily && sc-im week-calendar-summer-2026.sc"
