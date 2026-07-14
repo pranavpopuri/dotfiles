@@ -1,0 +1,11 @@
+inherits = "fleet_dark"
+
+"ui.cursor.primary.normal" = { fg = "#212121", bg = "#c8c8c8" }
+"ui.cursor.primary.insert" = { fg = "#212121", bg = "#99be70" }
+"ui.cursor.primary.select" = { fg = "#212121", bg = "#F05E48" }
+"ui.cursor.normal" = { fg = "#212121", bg = "#c8c8c8" }
+"ui.cursor.insert" = { fg = "#212121", bg = "#99be70" }
+"ui.cursor.select" = { fg = "#212121", bg = "#F05E48" }
+
+"ui.statusline.insert" = { fg = "#212121", bg = "#99be70", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "#212121", bg = "#F05E48", modifiers = ["bold"] }
