@@ -1,10 +1,11 @@
 # Ghostty Configuration
 
 # Font (Nerd Font required for Neovim icons)
-font-family = "FiraCode Nerd Font"
+font-family = "Menlo"
 font-size = 14
 font-feature = +liga
 font-feature = +calt
+adjust-cell-height = 30%
 
 # Window
 macos-titlebar-style = transparent
@@ -16,3 +17,8 @@ window-padding-y = 8
 # Cursor
 cursor-style = block
 cursor-style-blink = true
+
+# Colors — Monokai Pro Spectrum matches the Helix theme exactly.
+# Background overridden to #1F1F1F (slightly darker than Helix's #222222 editor bg).
+theme = Monokai Pro Spectrum
+background = 1f1f1f

@@ -1,0 +1,175 @@
+# One Monokai Darker Spectrum — Helix port
+# Ported from the VS Code theme by Ivan Kinder (alchezar/vscode-theme_one-monokai-darker-spectrum),
+# itself a combination of Monokai Pro (Spectrum filter) and One Dark Pro Monokai Darker.
+#
+# Install: save as ~/.config/helix/themes/one_monokai_darker_spectrum.toml
+# then set `theme = "one_monokai_darker_spectrum"` in ~/.config/helix/config.toml
+# or preview with :theme one_monokai_darker_spectrum
+
+# ── Syntax ──────────────────────────────────────────────
+
+"comment" = { fg = "gray" }
+
+"keyword" = "red"
+"keyword.control" = "red"
+"keyword.operator" = "red"
+"keyword.directive" = "red"            # preprocessor #include, #define
+"keyword.storage" = "red"              # static, const, mut
+"keyword.storage.type" = "cyan"        # int, float, void, char
+"keyword.storage.modifier" = "red"
+"keyword.function" = "red"             # fn, def, func
+
+"operator" = "red"
+
+"function" = "green"
+"function.builtin" = "green"
+"function.method" = "green"
+"function.macro" = "green"
+
+"type" = "blue"                        # user types / classes (One Dark blue survives the merge)
+"type.builtin" = "cyan"
+"type.enum.variant" = "purple"
+"constructor" = "blue"
+
+"constant" = "purple"
+"constant.numeric" = "purple"
+"constant.builtin" = "cyan"            # true, false, null, nullptr
+"constant.character" = "cyan"
+"constant.character.escape" = "purple"
+
+"string" = "yellow"
+"string.regexp" = "yellow"
+"string.special" = "purple"
+"string.special.url" = { fg = "blue", modifiers = ["underlined"] }
+
+"variable" = "fg"
+"variable.builtin" = "pink"            # this, self
+"variable.parameter" = { fg = "orange" }
+"variable.other.member" = "fg-dim"     # struct fields / properties
+
+"label" = "pink"
+"namespace" = "gray"
+"punctuation" = "gray"
+"punctuation.delimiter" = "gray"
+"punctuation.bracket" = "fg"
+"special" = "purple"
+"attribute" = "attr-green"             # attributes / annotations / html attrs
+
+"tag" = "red"
+
+# ── Markup (markdown etc.) ─────────────────────────────
+
+"markup.heading" = { fg = "pink", modifiers = ["bold"] }
+"markup.list" = { fg = "white", modifiers = ["bold"] }
+"markup.bold" = { modifiers = ["bold"] }
+"markup.italic" = { modifiers = ["italic"] }
+"markup.strikethrough" = { modifiers = ["crossed_out"] }
+"markup.link.url" = { fg = "blue", modifiers = ["underlined"] }
+"markup.link.text" = "blue"
+"markup.quote" = "attr-green"
+"markup.raw" = "cyan"
+
+# ── Diffs ──────────────────────────────────────────────
+
+"diff.plus" = "diff-add"
+"diff.minus" = "diff-del"
+"diff.delta" = "diff-mod"
+
+# ── Interface ──────────────────────────────────────────
+
+"ui.background" = { bg = "bg" }
+"ui.text" = { fg = "fg" }
+"ui.text.focus" = { fg = "white", bg = "bg-select" }
+"ui.text.inactive" = { fg = "gray" }
+
+"ui.cursor" = { fg = "bg", bg = "cursor" }
+"ui.cursor.primary" = { fg = "bg", bg = "cursor" }
+"ui.cursor.match" = { fg = "bracket-active", modifiers = ["bold"] }
+
+"ui.selection" = { bg = "bg-select" }
+"ui.selection.primary" = { bg = "bg-select" }
+"ui.highlight" = { bg = "bg-select" }
+
+"ui.cursorline.primary" = { bg = "bg-line" }
+"ui.linenr" = { fg = "linenr" }
+"ui.linenr.selected" = { fg = "linenr-active" }
+
+"ui.statusline" = { fg = "ui-fg", bg = "bg-line" }
+"ui.statusline.inactive" = { fg = "gray", bg = "bg-line" }
+"ui.statusline.normal" = { fg = "bg", bg = "blue" }
+"ui.statusline.insert" = { fg = "bg", bg = "green" }
+"ui.statusline.select" = { fg = "bg", bg = "purple" }
+
+"ui.popup" = { fg = "fg", bg = "bg-popup" }
+"ui.popup.info" = { fg = "fg", bg = "bg-popup" }
+"ui.window" = { fg = "border" }
+"ui.help" = { fg = "fg", bg = "bg-popup" }
+
+"ui.menu" = { fg = "fg", bg = "bg-popup" }
+"ui.menu.selected" = { fg = "white", bg = "bg-select" }
+"ui.menu.scroll" = { fg = "gray", bg = "bg-popup" }
+
+"ui.virtual.whitespace" = { fg = "whitespace" }
+"ui.virtual.indent-guide" = { fg = "indent" }
+"ui.virtual.ruler" = { bg = "bg-line" }
+"ui.virtual.inlay-hint" = { fg = "gray", bg = "bg-line" }
+"ui.virtual.jump-label" = { fg = "pink", modifiers = ["bold"] }
+
+"ui.gutter" = { bg = "bg" }
+"ui.debug.breakpoint" = { fg = "error" }
+"ui.debug.active" = { fg = "warning" }
+
+"ui.bufferline" = { fg = "gray", bg = "bg-line" }
+"ui.bufferline.active" = { fg = "white", bg = "bg" }
+
+# ── Diagnostics ────────────────────────────────────────
+
+"error" = "error"
+"warning" = "warning"
+"info" = "info"
+"hint" = "hint"
+
+"diagnostic.error" = { underline = { color = "error", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "warning", style = "curl" } }
+"diagnostic.info" = { underline = { color = "info", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "hint", style = "curl" } }
+"diagnostic.unnecessary" = { modifiers = ["dim"] }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+# ── Palette ────────────────────────────────────────────
+
+[palette]
+bg = "#222222"            # editor.background
+bg-line = "#181818"       # editor.lineHighlightBackground
+bg-select = "#111111"     # editor.selectionBackground (yes, darker than bg — faithful to the original)
+bg-popup = "#1d1f23"      # dropdown.background
+fg = "#bbbbbb"            # editor.foreground
+fg-dim = "#abb2bf"        # properties / members (One Dark gray)
+white = "#f7f1ff"         # Monokai Spectrum bright text
+gray = "#6c6c6c"          # comments, punctuation, namespaces
+linenr = "#505050"
+linenr-active = "#c6c6c6"
+cursor = "#f8f8f0"
+border = "#181a1f"
+whitespace = "#484a50"
+indent = "#3b4048"
+match-bg = "#515c6a"      # editor.findMatchBackground
+bracket-active = "#ff2fd4" # matching bracket highlight (hot magenta, unused elsewhere)
+
+red = "#ff6b6c"           # keywords, operators, tags
+pink = "#fc618d"          # this/self, headings, labels
+orange = "#fd9353"        # parameters
+yellow = "#fce566"        # strings
+green = "#7bd88f"         # functions
+attr-green = "#98c379"    # attributes, markdown quotes (One Dark green)
+cyan = "#5ad4e6"          # builtin types, language constants
+blue = "#61afef"          # classes / user types (One Dark blue)
+purple = "#948ae3"        # numbers, constants, escapes
+
+error = "#f44747"
+warning = "#cd9731"
+info = "#6796e6"
+hint = "#eeeeee"
+diff-add = "#487e02"
+diff-del = "#704040"
+diff-mod = "#1b81a8"
