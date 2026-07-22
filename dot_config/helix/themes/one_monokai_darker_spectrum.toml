@@ -48,7 +48,7 @@
 "variable.other.member" = "fg-dim"     # struct fields / properties
 
 "label" = "pink"
-"namespace" = "gray"
+"namespace" = "blue"                   # class scopes in X::Y look like namespaces to tree-sitter
 "punctuation" = "gray"
 "punctuation.delimiter" = "gray"
 "punctuation.bracket" = "fg"
@@ -94,7 +94,7 @@
 "ui.linenr" = { fg = "linenr" }
 "ui.linenr.selected" = { fg = "linenr-active" }
 
-"ui.statusline" = { fg = "ui-fg", bg = "bg-line" }
+"ui.statusline" = { fg = "fg", bg = "bg-line" }
 "ui.statusline.inactive" = { fg = "gray", bg = "bg-line" }
 "ui.statusline.normal" = { fg = "bg", bg = "blue" }
 "ui.statusline.insert" = { fg = "bg", bg = "green" }
