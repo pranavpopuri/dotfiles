@@ -1,4 +1,13 @@
 [[language]]
+name = "cuda"
+scope = "source.cuda"
+file-types = ["cu", "cuh"]
+grammar = "cpp"
+comment-token = "//"
+indent = { tab-width = 2, unit = "  " }
+language-servers = ["clangd"]
+
+[[language]]
 name = "markdown"
 auto-format = true
 formatter = { command = "dprint", args = ["fmt", "--config", "/Users/ppopuri/.config/dprint.json", "--stdin", "md"] }
