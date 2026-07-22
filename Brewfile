@@ -135,16 +135,14 @@ cask "claude-code"
 cask "clipy"
 cask "font-fira-code-nerd-font"
 cask "font-symbols-only-nerd-font"
+# 3D parametric modeller
+cask "freecad"
 # Secure video conferencing app
 cask "jitsi-meet"
-# Keyboard customiser
-cask "karabiner-elements"
 # Blocks all Keyboard and TouchBar input
 cask "keyboardcleantool"
-# Track your USB devices in the macOS menu bar
-cask "rafaelswi/menubarusb/menubarusb"
-# A menubar app to easily manage external drives
-cask "homielab/mountmate/mountmate"
+cask "menubarusb"
+cask "mountmate"
 # Toolbox companion for QMK Firmware
 cask "qmk-toolbox"
 # Menu bar app that enables system-wide navigation using side mouse buttons
@@ -155,8 +153,7 @@ cask "sikarugir-app/sikarugir/sikarugir", trusted: true
 cask "spotmenu"
 # System monitor for the menu bar
 cask "stats"
-# Turn your MacBook's trackpad into a precise digital weighing scale
-cask "krishkrosh/apps/trackweight"
+cask "trackweight"
 # Virtual machines UI using QEMU
 cask "utm"
 vscode "anthropic.claude-code"

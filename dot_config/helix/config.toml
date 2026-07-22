@@ -1,7 +1,10 @@
-theme = "dark_plus"
+theme = "one_monokai_darker_spectrum"
 
 [editor]
+true-color = true
 color-modes = true
+cursorline = true
+bufferline = "always"
 
 
 [keys.normal]
