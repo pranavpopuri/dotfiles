@@ -7,3 +7,41 @@ command -v zoxide >/dev/null && eval "$(zoxide init zsh --cmd cd)"
 
 # Prompt: directory-only locally; user@host reappears over SSH (starship defaults)
 command -v starship >/dev/null && eval "$(starship init zsh)"
+export PATH="$HOME/Miniforge3/bin:$PATH"
+
+# audiobook-pipeline: point at ebook2audiobook install
+export EBOOK2AUDIOBOOK_HOME="/Users/ppopuri/Documents/GitHub/ebook2audiobook"
+
+# Wardrowbe self-hosted app: `wardrobe up` / `wardrobe down` / `wardrobe status`
+wardrobe() {
+	local dir="$HOME/Documents/GitHub/wardrowbe"
+	case "$1" in
+	up)
+		# Ensure Docker Desktop engine is running
+		if ! docker info >/dev/null 2>&1; then
+			echo "Starting Docker Desktop..."
+			open -a Docker
+			until docker info >/dev/null 2>&1; do sleep 2; done
+		fi
+		# Ensure Ollama is serving (needed for AI tagging)
+		if ! curl -s http://localhost:11434/api/tags >/dev/null 2>&1; then
+			echo "Starting Ollama..."
+			nohup ollama serve >/dev/null 2>&1 &
+			until curl -s http://localhost:11434/api/tags >/dev/null 2>&1; do sleep 1; done
+		fi
+		(cd "$dir" && docker compose up -d) && echo "Wardrowbe up → http://localhost:3000" && open http://localhost:3000
+		;;
+	down)
+		(cd "$dir" && docker compose down) && echo "Wardrowbe stopped (data preserved)."
+		;;
+	status)
+		(cd "$dir" && docker compose ps)
+		;;
+	logs)
+		(cd "$dir" && docker compose logs -f "${2:-}")
+		;;
+	*)
+		echo "usage: wardrobe {up|down|status|logs [service]}"
+		;;
+	esac
+}

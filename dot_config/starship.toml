@@ -37,6 +37,7 @@ symbol = " "
 
 [directory]
 read_only = " 󰌾"
+style = "bold #61afef"       # blue — matches eza directories
 
 [docker_context]
 symbol = " "
@@ -57,6 +58,7 @@ symbol = " "
 symbol = "  "
 
 [git_branch]
+style = "#fc618d"            # pink (was default bold purple)
 symbol = " "
 
 [git_commit]
@@ -193,6 +195,13 @@ symbol = " "
 
 [zig]
 symbol = " "
+
+[git_status]
+style = "#fd9353"            # orange — dirty-tree markers
+
+[character]
+success_symbol = "[❯](bold #7bd88f)"   # green
+error_symbol = "[❯](bold #fc618d)"     # pink
 
 [gradle]
 symbol = " "

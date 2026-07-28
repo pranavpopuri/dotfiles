@@ -1,0 +1,4 @@
+# Glow configuration
+width: 0
+# Monokai Pro Spectrum style — matches the Helix/eza/starship palette.
+style: "/Users/ppopuri/.config/glow/monokai-pro-spectrum.json"
