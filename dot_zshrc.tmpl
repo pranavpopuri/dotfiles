@@ -7,12 +7,15 @@ command -v zoxide >/dev/null && eval "$(zoxide init zsh --cmd cd)"
 
 # Prompt: directory-only locally; user@host reappears over SSH (starship defaults)
 command -v starship >/dev/null && eval "$(starship init zsh)"
-export PATH="$HOME/Miniforge3/bin:$PATH"
+
+# Only activate machine-specific bits where they actually exist.
+[ -d "$HOME/Miniforge3/bin" ] && export PATH="$HOME/Miniforge3/bin:$PATH"
 
 # audiobook-pipeline: point at ebook2audiobook install
-export EBOOK2AUDIOBOOK_HOME="/Users/ppopuri/Documents/GitHub/ebook2audiobook"
+[ -d "$HOME/Documents/GitHub/ebook2audiobook" ] && export EBOOK2AUDIOBOOK_HOME="$HOME/Documents/GitHub/ebook2audiobook"
 
 # Wardrowbe self-hosted app: `wardrobe up` / `wardrobe down` / `wardrobe status`
+if [ -d "$HOME/Documents/GitHub/wardrowbe" ]; then
 wardrobe() {
 	local dir="$HOME/Documents/GitHub/wardrowbe"
 	case "$1" in
@@ -45,3 +48,4 @@ wardrobe() {
 		;;
 	esac
 }
+fi
