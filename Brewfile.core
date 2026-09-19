@@ -7,4 +7,6 @@ brew "fd"
 brew "eza"
 brew "zoxide"
 brew "glow"
+# node: powers the markmap/markserv wiki-map toolchain (see wikimap)
+brew "node"
 cask "font-fira-code-nerd-font"

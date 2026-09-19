@@ -15,3 +15,11 @@ brew bundle --file="{{ .chezmoi.sourceDir }}/Brewfile.core"
 {{ else if eq .chezmoi.os "linux" -}}
 bash "{{ .chezmoi.sourceDir }}/install-tools-linux.sh"
 {{ end -}}
+
+# wikimap toolchain: markmap renders map.md into an interactive tree,
+# markserv serves the wiki so map nodes open rendered markdown.
+if command -v npm >/dev/null 2>&1; then
+	for pkg in markmap-cli markserv; do
+		npm ls -g --depth=0 "$pkg" >/dev/null 2>&1 || npm install -g "$pkg"
+	done
+fi
