@@ -13,3 +13,6 @@ command -v starship >/dev/null && eval "$(starship init zsh)"
 
 # audiobook-pipeline: point at ebook2audiobook install
 [ -d "$HOME/Documents/GitHub/ebook2audiobook" ] && export EBOOK2AUDIOBOOK_HOME="$HOME/Documents/GitHub/ebook2audiobook"
+
+# fnm: auto-switch Node version per directory (reads .nvmrc/.node-version)
+command -v fnm >/dev/null && eval "$(fnm env --use-on-cd --version-file-strategy local)"
