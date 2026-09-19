@@ -1,8 +1,9 @@
 command_timeout = 1000
 
 # Prompt layout: dir + git only (user@host reappears over SSH).
-# Language version modules ("via  v1.2.3", etc.) are omitted.
-format = "$username$hostname$directory$git_branch$git_status$character"
+# Language version modules ("via  v1.2.3", etc.) are omitted, except the
+# python module which is configured below to show only the active venv name.
+format = "$username$hostname$directory$python$git_branch$git_status$character"
 
 [aws]
 symbol = "  "
@@ -176,6 +177,10 @@ symbol = "󰏗 "
 
 [python]
 symbol = " "
+# Show only the active virtualenv name (no python version), and render it
+# whenever a venv is active — even in dirs without .py/pyproject files.
+format = '[${symbol}(\($virtualenv\))]($style) '
+detect_env_vars = ["VIRTUAL_ENV"]
 
 [rlang]
 disabled = true

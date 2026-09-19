@@ -1,9 +1,9 @@
 {
   "document": {
-    "block_prefix": "\n",
+    "block_prefix": "",
     "block_suffix": "\n",
     "color": "#bbbbbb",
-    "margin": 2
+    "margin": 0
   },
   "block_quote": {
     "color": "#69676c",
