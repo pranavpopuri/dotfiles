@@ -1,16 +1,22 @@
+tap "anomalyco/tap"
+tap "daniyalmaster693/casks"
+tap "darrylmorley/whatcable"
+tap "deimosfr/tap"
 tap "espressif/eim"
 tap "fwartner/tap"
 tap "gromgit/brewtils"
 tap "homielab/mountmate", "https://github.com/homielab/mountmate"
 tap "huseyinbabal/tap"
-tap "jandedobbeleer/oh-my-posh"
+tap "jandedobbeleer/oh-my-posh", trusted: true
 tap "krishkrosh/apps"
 tap "rafaelswi/menubarusb"
 tap "serkanyersen/dotstate"
-tap "sheeki03/tap"
+tap "sheeki03/tap", trusted: true
 tap "sikarugir-app/sikarugir", "https://github.com/Sikarugir-App/homebrew-sikarugir", trusted: true
 tap "vancluever/input-leap", trusted: { formulae: ["input-leap"] }
-tap "viamrobotics/brews"
+tap "viamrobotics/brews", trusted: true
+# ANSI HTML adapter
+brew "aha"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
 # Collection of portable C++ source libraries
@@ -33,6 +39,8 @@ brew "dfu-util"
 brew "doxygen"
 # Pluggable and configurable code formatting platform written in Rust
 brew "dprint"
+# Speech synthesizer that supports more than hundred languages and accents
+brew "espeak-ng"
 # Modern, maintained replacement for ls
 brew "eza"
 # Like neofetch, but much faster because written mostly in C
@@ -45,6 +53,8 @@ brew "sdl2-compat"
 brew "ffmpeg"
 # Stack trace visualizer
 brew "flamegraph"
+# Fast and simple Node.js version manager
+brew "fnm"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GitHub command-line tool
@@ -55,6 +65,8 @@ brew "git-lfs"
 brew "gittype"
 # Render markdown on the CLI
 brew "glow"
+# Cryptographic library based on the code from GnuPG
+brew "libgcrypt"
 # Generic library support script
 brew "libtool"
 # Graph visualization software from AT&T and Bell Labs
@@ -67,18 +79,20 @@ brew "htop"
 brew "lazydocker"
 # Simple terminal UI for git commands
 brew "lazygit"
-# Cryptographic library based on the code from GnuPG
-brew "libgcrypt"
 # SIXEL encoder/decoder implementation
 brew "libsixel"
 # General purpose TCP-IP emulator
 brew "libslirp"
+# Next-gen compiler infrastructure
+brew "llvm@15"
 # Personal Knowledge Management System for the LSP
 brew "markdown-oxide"
+# Unified display of technical and tag data for audio/video
+brew "media-info"
 # Simple tool to make locally trusted development certificates
 brew "mkcert"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.14"
+# Deep clean and optimize your Mac
+brew "mole"
 # Feature-rich command-line audio/video downloader
 brew "yt-dlp"
 # Media player based on MPlayer and mplayer2
@@ -97,38 +111,64 @@ brew "ninja"
 brew "nmap"
 # Open-source, cross-platform JavaScript runtime environment
 brew "node"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node@22"
 # Create, run, and share large language models (LLMs)
 brew "ollama"
 # Execute binaries from Python packages in isolated environments
 brew "pipx"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
+# PDF rendering library (based on the xpdf-3.0 code base)
+brew "poppler"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.10"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.12"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.14"
 # SVG rendering tool and library
 brew "resvg"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Spreadsheet program for the terminal, using ncurses
 brew "sc-im"
+# Cross-shell prompt for astronauts (also used by ~/.config/starship.toml)
+brew "starship"
+# SOund eXchange: universal sound sample translator
+brew "sox"
+# OCR (Optical Character Recognition) engine
+brew "tesseract"
 # Programmatically correct mistyped console commands
 brew "thefuck"
+# Terminal multiplexer
+brew "tmux"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
+# Internet file retriever
+brew "wget"
 # Play wordle in command-line
 brew "wordle"
 # Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
+# OpenCode V2 - the AI coding agent for the terminal
+brew "anomalyco/tap/opencode-v2", trusted: true
 # Interactive TUI for Homebrew
 brew "gromgit/brewtils/taproom", trusted: true
+# Prompt theme engine for any shell
+brew "jandedobbeleer/oh-my-posh/oh-my-posh"
+# Terminal security - catches homograph attacks, pipe-to-shell, ANSI injection
+brew "sheeki03/tap/tirith"
+# Main server application of the viam robot development kit (RDK)
+brew "viamrobotics/brews/viam-server"
 # Display management tool
 cask "betterdisplay"
+# E-books management software
+cask "calibre"
 # Terminal-based AI coding assistant
 cask "claude-code"
 # Clipboard extension app
@@ -142,7 +182,11 @@ cask "jitsi-meet"
 # Blocks all Keyboard and TouchBar input
 cask "keyboardcleantool"
 cask "menubarusb"
+# Live Scores - Right From Your Notch
+cask "daniyalmaster693/casks/menuscores", trusted: true
 cask "mountmate"
+# Menu bar app to monitor PrusaLink-equipped 3D printers
+cask "deimosfr/tap/prusa-statusbar", trusted: true
 # Toolbox companion for QMK Firmware
 cask "qmk-toolbox"
 # Menu bar app that enables system-wide navigation using side mouse buttons
@@ -156,6 +200,8 @@ cask "stats"
 cask "trackweight"
 # Virtual machines UI using QEMU
 cask "utm"
+# Menu bar app for USB-C cable diagnostics
+cask "darrylmorley/whatcable/whatcable", trusted: true
 vscode "anthropic.claude-code"
 vscode "google.gemini-cli-vscode-ide-companion"
 vscode "ms-vscode-remote.remote-containers"
@@ -164,3 +210,7 @@ vscode "ms-vscode-remote.remote-ssh-edit"
 vscode "ms-vscode.remote-explorer"
 cargo "cargo-update"
 cargo "youtube-tui"
+npm "corepack"
+npm "markmap-cli"
+npm "markserv"
+npm "site-archiver"
