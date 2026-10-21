@@ -1,31 +1,37 @@
 # Installed macOS apps — inventory snapshot
-# Generated 2026-07-18. Manual/reference list (not auto-installed by chezmoi).
+# Generated 2026-10-21. Manual/reference list (not auto-installed by chezmoi).
 # For apps available via Homebrew, prefer the Brewfile so they auto-reinstall.
 
 ## /Applications
 Amphetamine
 BetterDisplay
+calibre
 Cemu Metal
 Claude
 Clipy
 Cold Turkey Blocker
+CP210xVCPDriver
+Dark Reader for Safari
 Discord
 Docker
 Dolphin
 Dusk
 Focus for YouTube
 FreeCAD
-GeForceNOW
+GeekTool
 Ghostty
+Google Chrome
 Jitsi Meet
 KeyboardCleanTool
+LibreOffice
 Magnet
-MenuBarUSB
+MenuScores
 MountMate
-Noir
-Pearcleaner
+NVIDIA Nsight Compute
+NVIDIA Nsight Systems
+Original Prusa Drivers
+PrusaStatusBar
 QMK Toolbox
-QuickShade
 R
 Raspberry Pi Imager
 RStudio
@@ -35,10 +41,13 @@ SaneSideButtons
 Sikarugir Creator
 SingleFile
 Slack
+SpeakLine
 Spotify
 SpotMenu
 Stats
 Steam
+Sublime Text
+TI-Nspire CX CAS Student Software
 TrackWeight
 uBlock Origin Lite
 UpNote
@@ -47,11 +56,13 @@ UTM
 Vial
 Visual Studio Code
 VLC
+WhatCable
 WhatsApp
 WiiUDownloader
 
 ## ~/Applications (user-local, if any)
 Chrome Apps.localized
 Claude Code URL Handler
+ebook2audiobook
 Sikarugir
 zoom.us
