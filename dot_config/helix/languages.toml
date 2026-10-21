@@ -12,3 +12,21 @@ name = "markdown"
 auto-format = true
 formatter = { command = "dprint", args = ["fmt", "--config", "/Users/ppopuri/.config/dprint.json", "--stdin", "md"] }
 language-servers = ["markdown-oxide"]
+
+[[language]]
+name = "mips"
+scope = "source.mips"
+injection-regex = "mips"
+file-types = ["s", "mips"]
+comment-token = "#"
+indent = { tab-width = 8, unit = "\t" }
+
+[[grammar]]
+name = "mips"
+source = { git = "https://github.com/omeyenburg/tree-sitter-mips", rev = "676f16a7662ccb4c494f131d26d9c1cc72bc2b52" }
+
+# Upstream helix points gotmpl at a repo that was deleted from GitHub.
+# Override with the surviving fork so `:fetch-grammars` stops erroring.
+[[grammar]]
+name = "gotmpl"
+source = { git = "https://github.com/ngalaiko/tree-sitter-go-template", rev = "06b2fd2ac32a7be71cdcf925eeeb868a68e2acde" }
