@@ -1,4 +1,8 @@
 {{ template "shellrc-common" . }}
+
+# opencode launcher (zsh-only; bash keeps the `claude` alias from shellrc-common)
+alias oc="opencode"
+
 command -v fzf >/dev/null && source <(fzf --zsh)
 
 [[ -o interactive ]] && [ -f ~/.config/dateprogress.zsh ] && source ~/.config/dateprogress.zsh

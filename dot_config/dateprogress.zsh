@@ -58,8 +58,11 @@ dateprogress() {
   (( frac < 0 ))   && frac=0
   (( frac > 100 )) && frac=100
 
-  # Bar width: fit the terminal, but cap it so it doesn't sprawl
-  local width=$(( ${COLUMNS:-80} - 10 ))
+  # Bar width: fit the terminal, but cap it so it doesn't sprawl.
+  # COLUMNS is 0 when stdout is not a terminal — fall back to 80 in that case.
+  local cols="${COLUMNS:-80}"
+  (( cols < 1 )) && cols=80
+  local width=$(( cols - 10 ))
   (( width > 50 )) && width=50
   (( width < 10 )) && width=10
   local filled=$(( int(width * frac / 100.0 + 0.5) ))
