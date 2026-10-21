@@ -10,5 +10,10 @@ chezmoi's run scripts install everything else automatically:
     Dock/Finder).
   - Linux: fetches the tools into ~/bin with eget — no root, no hardcoded
     URLs/versions (install-tools-linux.sh; works on x86_64 and aarch64).
+    Node comes from fnm, which resolves the LTS release at install time.
+
+On Linux, Helix builds its tree-sitter grammars (the MIPS one included) on
+demand, which needs git and a C compiler. Install those, then run
+':grammar fetch' and ':grammar build' inside Helix.
 
 When it finishes, restart your shell:  exec $SHELL
