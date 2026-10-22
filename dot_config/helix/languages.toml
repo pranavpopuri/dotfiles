@@ -19,7 +19,7 @@ scope = "source.mips"
 injection-regex = "mips"
 file-types = ["s", "mips"]
 comment-token = "#"
-indent = { tab-width = 8, unit = "\t" }
+indent = { tab-width = 6, unit = "\t" }
 
 [[grammar]]
 name = "mips"

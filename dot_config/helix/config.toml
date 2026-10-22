@@ -1,11 +1,11 @@
-theme = "one_monokai_darker_spectrum"
+theme = "gruvbox-material"
 
 [editor]
 true-color = true
 color-modes = true
 cursorline = true
 bufferline = "always"
-
+smart-tab.enable = false
 
 [keys.normal]
 C-e = [
