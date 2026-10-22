@@ -1,0 +1,11 @@
+macos-titlebar-style = transparent
+
+cursor-style = block
+
+window-save-state = always
+
+window-theme = ghostty
+
+theme = subliminal
+
+font-thicken = true
