@@ -14,9 +14,6 @@ cask "font-fira-code-nerd-font"
 brew "starship"
 # Node version manager, auto-switches per .nvmrc (referenced by .zshrc)
 brew "fnm"
-# Shell prompt assistant (referenced by the shared shellrc)
-tap "sheeki03/tap", trusted: true
-brew "sheeki03/tap/tirith", trusted: true
 # AI coding agent, exposed as `oc` in zsh
 tap "anomalyco/tap", trusted: true
 brew "anomalyco/tap/opencode-v2", trusted: true

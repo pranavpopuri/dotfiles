@@ -11,7 +11,6 @@ tap "jandedobbeleer/oh-my-posh", trusted: true
 tap "krishkrosh/apps"
 tap "rafaelswi/menubarusb"
 tap "serkanyersen/dotstate"
-tap "sheeki03/tap", trusted: true
 tap "sikarugir-app/sikarugir", "https://github.com/Sikarugir-App/homebrew-sikarugir", trusted: true
 tap "vancluever/input-leap", trusted: { formulae: ["input-leap"] }
 tap "viamrobotics/brews", trusted: true
@@ -161,8 +160,6 @@ brew "anomalyco/tap/opencode-v2", trusted: true
 brew "gromgit/brewtils/taproom", trusted: true
 # Prompt theme engine for any shell
 brew "jandedobbeleer/oh-my-posh/oh-my-posh"
-# Terminal security - catches homograph attacks, pipe-to-shell, ANSI injection
-brew "sheeki03/tap/tirith"
 # Main server application of the viam robot development kit (RDK)
 brew "viamrobotics/brews/viam-server"
 # Display management tool

@@ -45,11 +45,10 @@ EGET="$HOME/bin/eget"
 "$EGET" sxyazi/yazi        --to "$HOME/bin" --asset musl --asset ^deb --file ya
 
 # Shell tooling the dotfiles reference: starship (the prompt, see
-# ~/.config/starship.toml), fnm (per-directory node versions), tirith
-# (shellrc-common) and opencode (the `oc` alias).
+# ~/.config/starship.toml), fnm (per-directory node versions) and
+# opencode (the `oc` alias).
 "$EGET" starship/starship --to "$HOME/bin" --asset "$ARCH_GNU-unknown-linux-musl.tar.gz" --asset ^sha256
 "$EGET" Schniz/fnm        --to "$HOME/bin" --asset "$FNM_ASSET"
-"$EGET" sheeki03/tirith   --to "$HOME/bin" --asset "$ARCH_GNU-unknown-linux-gnu.tar.gz"
 "$EGET" sst/opencode      --to "$HOME/bin" --asset "opencode-linux-$ARCH_SHORT.tar.gz"
 
 # Node itself: fnm pulls the requested release straight from nodejs.org, so
