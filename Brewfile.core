@@ -13,6 +13,8 @@ brew "thefuck"
 brew "sc-im"
 # node: powers the markmap/markserv wiki-map toolchain (see wikimap)
 brew "node"
+# Editor whose settings and extension list are managed by chezmoi
+cask "vscodium"
 cask "font-fira-code-nerd-font"
 # Prompt engine behind ~/.config/starship.toml (referenced by .zshrc)
 brew "starship"
