@@ -18,7 +18,7 @@ window-padding-y = 8
 cursor-style = block
 cursor-style-blink = true
 
-# Colors — Monokai Pro Spectrum matches the Helix theme exactly.
-# Background overridden to #1F1F1F (slightly darker than Helix's #222222 editor bg).
-theme = Monokai Pro Spectrum
+# Colors — Gruvbox Material Dark matches the Helix theme.
+# Background overridden to #1F1F1F (darker than the theme's #282828).
+theme = Gruvbox Material Dark
 background = 1f1f1f

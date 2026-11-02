@@ -1,5 +1,5 @@
 # Installed macOS apps — inventory snapshot
-# Generated 2026-10-21. Manual/reference list (not auto-installed by chezmoi).
+# Generated 2026-11-02. Manual/reference list (not auto-installed by chezmoi).
 # For apps available via Homebrew, prefer the Brewfile so they auto-reinstall.
 
 ## /Applications
@@ -56,13 +56,17 @@ UTM
 Vial
 Visual Studio Code
 VLC
+VSCodium
 WhatCable
 WhatsApp
 WiiUDownloader
 
 ## ~/Applications (user-local, if any)
+Autodesk Fusion
+Autodesk Fusion Service Utility
 Chrome Apps.localized
 Claude Code URL Handler
 ebook2audiobook
+Remove Autodesk Fusion
 Sikarugir
 zoom.us

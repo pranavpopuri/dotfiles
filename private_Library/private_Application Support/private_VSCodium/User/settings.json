@@ -15,7 +15,7 @@
     "breadcrumbs.enabled": false,
     "editor.fontSize": 14,
     "files.autoSave": "afterDelay",
-    "editor.lineNumbers": "off",
+    "editor.lineNumbers": "on",
     "editor.glyphMargin": false,
     "workbench.colorTheme": "gruvbox-material-theme",
 

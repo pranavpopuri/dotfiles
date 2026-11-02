@@ -6,6 +6,6 @@ window-save-state = always
 
 window-theme = ghostty
 
-theme = subliminal
+theme = Gruvbox Material Dark
 
 font-thicken = true

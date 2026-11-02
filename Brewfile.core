@@ -7,6 +7,10 @@ brew "fd"
 brew "eza"
 brew "zoxide"
 brew "glow"
+# Programmatically correct mistyped console commands (shared shellrc)
+brew "thefuck"
+# Terminal spreadsheet behind the `wc-open` alias
+brew "sc-im"
 # node: powers the markmap/markserv wiki-map toolchain (see wikimap)
 brew "node"
 cask "font-fira-code-nerd-font"

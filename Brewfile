@@ -1,4 +1,4 @@
-tap "anomalyco/tap"
+tap "anomalyco/tap", trusted: true
 tap "daniyalmaster693/casks"
 tap "darrylmorley/whatcable"
 tap "deimosfr/tap"
@@ -83,6 +83,8 @@ brew "libsixel"
 # General purpose TCP-IP emulator
 brew "libslirp"
 # Next-gen compiler infrastructure
+brew "llvm"
+# Older LLVM release for compatibility
 brew "llvm@15"
 # Personal Knowledge Management System for the LSP
 brew "markdown-oxide"

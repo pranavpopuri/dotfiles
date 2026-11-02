@@ -85,8 +85,8 @@ defaults write com.apple.finder ShowStatusBar -bool true
 # Show POSIX path in window title.
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 
-# Default to column view.
-defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
+# Default to list view.
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
 
 # Search current folder by default instead of "This Mac".
 defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
