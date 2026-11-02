@@ -197,6 +197,8 @@ cask "stats"
 cask "trackweight"
 # Virtual machines UI using QEMU
 cask "utm"
+# Open-source telemetry-free VS Code distribution
+cask "vscodium"
 # Menu bar app for USB-C cable diagnostics
 cask "darrylmorley/whatcable/whatcable", trusted: true
 vscode "anthropic.claude-code"
