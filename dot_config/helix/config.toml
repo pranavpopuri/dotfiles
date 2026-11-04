@@ -27,6 +27,7 @@ C-p = [
   ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
   ':redraw',
 ]
+C-y = ':sh cd "$(dirname "%{buffer_name}")" && pwd | tr -d "\n" | pbcopy'
 
 [editor.indent-guides]
 render = true
