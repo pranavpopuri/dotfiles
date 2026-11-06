@@ -4,7 +4,7 @@
   "latex-workshop.latex.recipe.default": "first",
   "latex-workshop.latex.tools": [
     {
-      "name": "latexmk",
+      "name": "toolkit-latexmk",
       "command": {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/.venv/bin/python" | toJson }},
       "args": [
         {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/tools/build_latex.py" | toJson }},
@@ -12,7 +12,7 @@
       ]
     },
     {
-      "name": "pythontex-build",
+      "name": "toolkit-pythontex",
       "command": {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/.venv/bin/python" | toJson }},
       "args": [
         {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/tools/build_pythontex.py" | toJson }},
@@ -22,15 +22,15 @@
   ],
   "latex-workshop.latex.recipes": [
     {
-      "name": "latexmk",
+      "name": "LaTeX toolkit (latexmk)",
       "tools": [
-        "latexmk"
+        "toolkit-latexmk"
       ]
     },
     {
       "name": "PythonTeX (trusted documents)",
       "tools": [
-        "pythontex-build"
+        "toolkit-pythontex"
       ]
     }
   ],
@@ -43,7 +43,6 @@
   ],
   "latex-workshop.intellisense.update.aggressive.enabled": true,
   "[latex]": {
-    "editor.wordWrap": "on",
     "editor.quickSuggestions": {
       "other": "on",
       "comments": "off",
@@ -90,11 +89,5 @@
   "cSpell.import": [
     {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/config/cspell.json" | toJson }}
   ],
-  "window.title": "LaTeX \u00b7 ${rootName}${separator}${activeEditorShort}",
-  "editor.fontSize": 14,
-  "editor.lineHeight": 22,
-  "workbench.statusBar.visible": true,
-  "extensions.ignoreRecommendations": true,
-  "extensions.autoUpdate": false,
   "latex-workshop.selection.smart.latex.enabled": true
 }

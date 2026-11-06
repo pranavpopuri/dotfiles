@@ -1,0 +1,3 @@
+{{- $existing := include ".chezmoitemplates/vscodium-keybindings.json" | fromJson -}}
+{{- $latex := include "dot_local/share/latex-workflow/config/keybindings.json" | fromJson -}}
+{{ concat $existing $latex | toPrettyJson }}

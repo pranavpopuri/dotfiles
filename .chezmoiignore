@@ -5,6 +5,8 @@ Applications.txt
 
 # The LaTeX toolkit currently has a macOS installer; keep Linux configuration unchanged.
 {{ if ne .chezmoi.os "darwin" }}
+Library/Application Support/VSCodium
+Library/Application Support/VSCodium/**
 .local/share/latex-workflow
 .local/share/latex-workflow/**
 .local/bin/latex-workflow

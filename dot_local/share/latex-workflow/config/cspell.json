@@ -6,24 +6,52 @@
     "**/texmf/**",
     "**/pythontex-files-*/**"
   ],
-  "words": [
-    "SymPy",
-    "PythonTeX",
-    "TinyTeX",
-    "HyperSnips",
-    "VSCodium",
-    "Inkscape",
-    "PGFPlots",
-    "integrand",
-    "eigenvalue",
-    "eigenvector"
-  ],
-  "ignoreRegExpList": [
-    "/\\\\[A-Za-z@]+/g",
-    "/\\$\\$[\\s\\S]*?\\$\\$/g",
-    "/\\$(?:\\\\.|[^$\\\\])*\\$/g",
-    "/\\\\\\[[\\s\\S]*?\\\\\\]/g",
-    "/\\\\\\([\\s\\S]*?\\\\\\)/g",
-    "/\\\\begin\\{(equation\\*?|align\\*?|gather\\*?|sympycode|pycode|tikzpicture)\\}[\\s\\S]*?\\\\end\\{\\1\\}/g"
+  "languageSettings": [
+    {
+      "languageId": "latex",
+      "words": [
+        "SymPy",
+        "PythonTeX",
+        "TinyTeX",
+        "HyperSnips",
+        "VSCodium",
+        "Inkscape",
+        "PGFPlots",
+        "integrand",
+        "eigenvalue",
+        "eigenvector"
+      ],
+      "ignoreRegExpList": [
+        "/\\\\[A-Za-z@]+/g",
+        "/\\$\\$[\\s\\S]*?\\$\\$/g",
+        "/\\$(?:\\\\.|[^$\\\\])*\\$/g",
+        "/\\\\\\[[\\s\\S]*?\\\\\\]/g",
+        "/\\\\\\([\\s\\S]*?\\\\\\)/g",
+        "/\\\\begin\\{(equation\\*?|align\\*?|gather\\*?|sympycode|pycode|tikzpicture)\\}[\\s\\S]*?\\\\end\\{\\1\\}/g"
+      ]
+    },
+    {
+      "languageId": "tex",
+      "words": [
+        "SymPy",
+        "PythonTeX",
+        "TinyTeX",
+        "HyperSnips",
+        "VSCodium",
+        "Inkscape",
+        "PGFPlots",
+        "integrand",
+        "eigenvalue",
+        "eigenvector"
+      ],
+      "ignoreRegExpList": [
+        "/\\\\[A-Za-z@]+/g",
+        "/\\$\\$[\\s\\S]*?\\$\\$/g",
+        "/\\$(?:\\\\.|[^$\\\\])*\\$/g",
+        "/\\\\\\[[\\s\\S]*?\\\\\\]/g",
+        "/\\\\\\([\\s\\S]*?\\\\\\)/g",
+        "/\\\\begin\\{(equation\\*?|align\\*?|gather\\*?|sympycode|pycode|tikzpicture)\\}[\\s\\S]*?\\\\end\\{\\1\\}/g"
+      ]
+    }
   ]
 }

@@ -39,10 +39,10 @@ For existing notes, just use:
 latex-workflow open /path/to/your/notes
 ```
 
-**Use this launcher for the complete workflow.** It opens a dedicated VSCodium
-instance with the math settings and extensions. Opening the same folder in your
-ordinary coding window uses your other configuration. Individual note projects
-need no copy of the toolkit, virtual environment, or editor settings.
+**The workflow now runs in your normal VSCodium window.** You may open the folder
+normally or use the launcher, which reuses that window. Your appearance and
+general settings are retained; LaTeX features are added to the normal config.
+Individual note projects need no toolkit copy, virtual environment, or editor settings.
 
 The new-project preamble loads `course-macros.tex`, which loads the shared math
 macros. Existing documents can add `\input{math-macros.tex}` in their preamble.
@@ -79,7 +79,7 @@ when a keyboard binding conflicts with another extension or a macOS shortcut.
 
 ## Every custom editor shortcut
 
-The dedicated editor now uses **Helix**, not VSCodeVim. All custom bindings and
+Your normal VSCodium uses **Helix** for modal controls; VSCodeVim is removed to avoid conflicts. All custom bindings and
 TeX-aware environment/section selections are documented in
 [TEX-EDITING.md](TEX-EDITING.md), including their differences from VimTeX.
 
@@ -228,7 +228,7 @@ to reveal its original LaTeX, then move away to render it again. The stored file
 stays LaTeX. Incomplete or unsupported formulas stay visible as source; CAS
 input stays source until evaluated.
 
-- **Ctrl+L m:** toggle in-source rendering for the dedicated editor.
+- **Ctrl+L m:** toggle in-source rendering for the normal VSCodium editor.
 - **Ctrl+L p:** open/close Workshop's larger live math preview panel below.
 - Hover on source math for a Workshop equation preview.
 
@@ -393,7 +393,7 @@ placing two wide plots on one line; an `Overfull \hbox` is a layout warning.
 
 ## Build documents and use PythonTeX
 
-The default recipe is **latexmk**, suitable for ordinary notes. It handles the
+The default recipe is **LaTeX toolkit (latexmk)**, suitable for ordinary notes. It handles the
 needed TeX passes and writes build products beside the document. The toolkit
 wrapper supplies shared macros and its writable TeX package tree. Source/PDF
 synchronization is enabled.
@@ -401,7 +401,15 @@ synchronization is enabled.
 For embedded calculations, select **LaTeX Workshop: Build with recipe →
 PythonTeX (trusted documents)**. This runs TeX, PythonTeX using the permanent
 Python environment, and TeX again. Use the explicit recipe or CLI option for
-PythonTeX documents; the default recipe remains latexmk.
+PythonTeX documents; the default recipe remains the toolkit's latexmk wrapper.
+A document can select the PythonTeX recipe automatically by putting this magic
+comment before its first non-comment line:
+
+```latex
+% !LW recipe = PythonTeX (trusted documents)
+```
+
+The showcase and bundled PythonTeX example include that comment.
 
 ```latex
 \documentclass{article}
@@ -445,7 +453,7 @@ custom package command will have a completion or MathJax preview.
 | Command | Purpose |
 | --- | --- |
 | `latex-workflow init [PROJECT]` | Create a minimal project; defaults to the current directory |
-| `latex-workflow open [PROJECT]` | Open the dedicated math editor; defaults to the current directory |
+| `latex-workflow open [PROJECT]` | Reuse the normal VSCodium window; defaults to the current directory |
 | `latex-workflow build DOCUMENT` | Build an ordinary document with latexmk |
 | `latex-workflow build --pythontex DOCUMENT` | Run the PythonTeX build sequence |
 | `latex-workflow figure edit NAME [--project DIR]` | Create/open a named SVG |
@@ -453,7 +461,7 @@ custom package command will have a completion or MathJax preview.
 | `latex-workflow plot [--project DIR]` | Generate the normal-distribution example PDF |
 | `latex-workflow doctor` | Report toolkit paths, tools, and key TeX files |
 | `latex-workflow setup` | Rerun macOS dependency/setup checks and smoke builds |
-| `latex-workflow editor-links` | Repair/create the dedicated editor's config links |
+| `latex-workflow editor-config` | Merge LaTeX additions into the normal editor; `editor-links` remains a compatibility alias |
 | `latex-workflow --help` | Display command help; subcommands also accept `--help` |
 
 Quote paths with spaces. `build` takes a filename; `open` and `init` take a
@@ -483,7 +491,7 @@ relative to that root unless marked otherwise.
 | `editor/math-source-preview/` | Source of the custom native-editor preview extension |
 | `extensions.txt` | Tested extension versions |
 | `config/Brewfile`, `bootstrap-macos.sh` | macOS dependencies and setup |
-| `~/.local/state/latex-workflow/vscodium/` | Dedicated VSCodium state; its User settings/tasks link to managed config |
+| `~/Library/Application Support/VSCodium/User/` | Normal editor settings, keybindings, and tasks with the LaTeX additions |
 | `~/.local/bin/latex-workflow`, `~/bin/latex-workflow` | Launcher and link already on your shell PATH |
 
 To sync changes between Macs, edit **chezmoi source**, then apply. For example:
@@ -499,10 +507,14 @@ The source counterpart of a deployed file is available with:
 chezmoi source-path ~/.local/share/latex-workflow/config/settings.json
 ```
 
-The editor settings/tasks sources are `.tmpl` files: chezmoi supplies the home
-directory for each device. Preserve those template expressions when editing
-paths. Changes made through the editor UI modify the deployed config; use your
-chezmoi workflow to reconcile/save them to source if you want them synced.
+The normal settings source template combines your preferences from
+`.chezmoitemplates/vscodium-preferences.json` with the toolkit feature defaults.
+The corresponding keybinding/task preferences are `vscodium-keybindings.json`
+and `vscodium-tasks.json` in that same source directory. Your current appearance
+was preserved in those preferences. To sync later UI preference changes, update
+that preferences JSON in chezmoi; edit the toolkit's `config/` files for shared
+LaTeX settings. The normal User templates render the combination on each Mac.
+Keep the templates when editing paths so each device uses its own home directory.
 
 After snippet edits, run **HyperSnips: Reload Snippets**. A full **Developer:
 Reload Window** can refresh extension state. Runtime changes to the custom
@@ -510,21 +522,23 @@ preview extension need its VSIX rebuilt/reinstalled via `latex-workflow setup`;
 editing extension source alone does not replace the installed extension.
 
 The macOS chezmoi hook may rerun setup when tracked toolkit source changes.
-Extension auto-updates are disabled in this dedicated instance; intentionally
-update `extensions.txt` and rerun setup when upgrading. The custom renderer uses
+The installer uses versions listed in `extensions.txt`; your normal editor's
+extension-update preferences are retained. Change the manifest when intentionally
+updating the setup versions. The custom renderer uses
 Workshop's bundled MathJax, so verify previews after a Workshop upgrade.
 
 Do not commit `.venv/`, `texmf/`, `extensions/`, `cache/`, or editor state.
 Chezmoi excludes these runtime files; they are recreated per device. Only the
 source, settings, templates, requirements, docs, and installer are tracked.
-Your ordinary coding editor and Linux shell files are separate. The installer
+TeX-specific shortcuts are limited to LaTeX files; Linux shell files are unchanged. The installer
 currently supports macOS; Linux support would need its own explicit integration.
 
 ## Troubleshooting
 
 | Symptom | What to check |
 | --- | --- |
-| None of the math shortcuts work | Open the project with `latex-workflow open`; check Helix mode and that the file language is LaTeX. |
+| PythonTeX is missing from Build with recipe | Run normal-window integration, reload the window, and check whether workspace settings override the global recipe list. |
+| None of the math shortcuts work | Reload the normal VSCodium window after setup; check Helix mode and that the file language is LaTeX. |
 | A symbol snippet does nothing | Put the cursor inside recognized math; check its boundary rule and whether it is manual. |
 | Tab just indents | For manual snippets, request/accept the matching suggestion first; Tab navigation requires an active snippet. |
 | Snippets rewrite normal typing | Check automatic triggers and boundaries; undo the expansion if needed. |

@@ -1,7 +1,7 @@
 # TeX-aware editing with Helix
 
-The dedicated editor uses **Helix for VS Code** (`jasew.vscode-helix-emulation`),
-not VSCodeVim. The ordinary coding editor is unchanged. TeX-aware commands come
+Your normal VSCodium uses **Helix for VS Code** (`jasew.vscode-helix-emulation`),
+not VSCodeVim. Its appearance and general preferences are retained. TeX-aware commands come
 from LaTeX Workshop, while Helix handles movement and selection-first editing.
 
 This is a useful subset of VimTeX-style functionality, not a VimTeX port. None
@@ -14,7 +14,7 @@ mapping. The differences are listed below.
 is **Control**, not Command. These custom chords apply only in `.tex` files
 (language ID `latex`) in Helix Normal/visual modes. They do not intercept Insert
 mode. The native Helix Space menu is preserved. User keybindings are managed at
-`config/keybindings.json` and linked into the dedicated editor's User directory.
+`config/keybindings.json` and merged into the normal editor's User keybindings.
 
 | Chord | Action |
 | --- | --- |
@@ -110,16 +110,16 @@ and figure tools continue to work alongside the native TeX-aware commands.
 ## Maintenance and compatibility
 
 - Helix 0.6.2 is the version already installed in your ordinary editor and is
-  now pinned in the dedicated editor's `extensions.txt`.
+  listed in the toolkit's `extensions.txt`.
 - `tools/install_editor.sh` installs Helix first, then removes VSCodeVim **only
-  from the dedicated extension directory**. It links the managed keybindings.
+  from the normal extension installation**. It merges the TeX keybindings.
 - `latex-workflow setup` calls the same installer on this Mac and future Macs.
-- Close existing dedicated LaTeX windows and reopen using `latex-workflow open`
-  after the switch; a running old window can retain extension/keybinding state.
+- Run **Developer: Reload Window** in your normal VSCodium window after setup.
+  `latex-workflow open` now reuses it; no isolated window is required.
 - This VS Code extension emulates Helix; it is not the standalone Helix editor
   and its selection behavior may differ. Check real editing behavior in the GUI.
-- Linux configuration and your ordinary VSCodium extension installation are
-  not changed by this macOS toolkit update.
+- Linux configuration is unchanged. Normal VSCodium receives the LaTeX
+  extensions and recipes, with your existing visual preferences preserved.
 
 References: [Helix for VS Code](https://github.com/jasonwilliams/vscode-helix),
 [Workshop environment commands](https://github.com/James-Yu/LaTeX-Workshop/wiki/Environments),

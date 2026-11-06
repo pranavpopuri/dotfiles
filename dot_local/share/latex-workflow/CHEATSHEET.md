@@ -10,7 +10,7 @@ latex-workflow init ~/Documents/notes/calculus
 latex-workflow open ~/Documents/notes/calculus
 ```
 
-Use the dedicated editor. **Esc** → Helix Normal mode; **i** → Insert mode.
+Use your normal VSCodium window; the launcher reuses it. **Esc** → Helix Normal mode; **i** → Insert mode.
 Custom shortcuts use **Control+L**, release, then the final key, in Normal/visual
 mode in LaTeX files. Native Helix Space-menu bindings remain available.
 
@@ -96,3 +96,6 @@ latex-workflow doctor
 
 Shared docs/config: `~/.local/share/latex-workflow/`. Change shared files through
 chezmoi and run **HyperSnips: Reload Snippets** after snippet edits.
+
+Both build recipes now appear in normal VSCodium: **LaTeX toolkit (latexmk)**
+and **PythonTeX (trusted documents)**. Reload the window after integration.

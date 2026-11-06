@@ -7,7 +7,7 @@ if [ "$(uname -s)" != Darwin ]; then
 fi
 root="$(cd "$(dirname "$0")" && pwd)"
 export PATH="$HOME/Library/TinyTeX/bin/universal-darwin:/Library/TeX/texbin:/opt/homebrew/bin:/usr/local/bin:$PATH"
-mkdir -p "$root/cache" "$root/extensions"
+mkdir -p "$root/cache"
 if ! command -v brew >/dev/null; then
     echo 'Install Homebrew first, then rerun latex-workflow setup.' >&2
     exit 1
@@ -44,7 +44,7 @@ if [ ! -f "$system_texmf/scripts/pythontex/pythontex.py" ]; then
 fi
 "$root/.venv/bin/python" "$root/tools/copy_pythontex.py" "$system_texmf"
 mktexlsr "$TEXMFHOME"
-# Install the math editor separately from the ordinary coding editor.
+# Add the LaTeX tools to the existing VSCodium installation.
 bash "$root/tools/install_editor.sh"
 "$root/.venv/bin/python" "$root/tools/workflow.py" doctor
 # A fresh temporary note project verifies that builds need no testing-repo files.

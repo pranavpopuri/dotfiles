@@ -1,0 +1,5 @@
+{{- $existing := include ".chezmoitemplates/vscodium-tasks.json" | fromJson -}}
+{{- $latex := includeTemplate "dot_local/share/latex-workflow/config/tasks.json.tmpl" . | fromJson -}}
+{{- $_ := set $existing "tasks" (concat ($existing.tasks | default list) $latex.tasks) -}}
+{{- $_ := set $existing "inputs" (concat ($existing.inputs | default list) $latex.inputs) -}}
+{{ $existing | toPrettyJson }}

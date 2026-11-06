@@ -6,9 +6,8 @@ activation rules, calculations, previews, figures, plotting, and troubleshooting
 
 This folder is deployed from chezmoi to `~/.local/share/latex-workflow`. Source,
 settings, snippets, extension code, templates, and requirements are tracked.
-Extension versions are listed in `extensions.txt`; automatic extension updates
-are disabled in this dedicated instance. Update that file and reapply chezmoi
-when intentionally upgrading. Python environments, downloaded TeX packages, installed extensions, caches,
+Extension versions are listed in `extensions.txt`; the ordinary editor's extension-update preferences are retained. Update that file and reapply chezmoi
+when intentionally changing the setup versions. Python environments, downloaded TeX packages, VSCodium-installed extensions, caches,
 PDFs, and editor state are rebuilt on each device and are not committed.
 
 ## Use
@@ -28,13 +27,20 @@ The launcher is at `~/.local/bin/latex-workflow`, also linked from `~/bin`,
 which your existing chezmoi shell configuration already puts on PATH.
 `latex-workflow setup` reruns the macOS bootstrap.
 
-`open` starts a dedicated VSCodium instance with its settings under
-`~/.local/state/latex-workflow/vscodium`. Its settings, user tasks, and keybindings link to
-this toolkit's managed `config/` files. Its extensions live under this toolkit's
-`extensions/`. Your ordinary VSCodium settings, Helix extension, and other
-coding configuration remain separate. Projects need no toolkit scripts,
-Python environment, TeX tree, or `.vscode` configuration. Project-specific
-settings still override editor settings in the normal VS Code manner.
+`open` now reuses your **normal VSCodium window**. You can also open notes
+normally from VSCodium or Finder; a separate editor instance is no longer needed.
+Your existing theme, layout, font, general preferences, and other extensions are
+retained. Only LaTeX feature settings, TeX-scoped shortcuts, tasks, and the
+required math extensions are added. Normal VSCodium now offers both
+**LaTeX toolkit (latexmk)** and **PythonTeX (trusted documents)** build recipes.
+
+The feature defaults live in `config/`. Chezmoi combines them with your ordinary
+preferences in `.chezmoitemplates/vscodium-preferences.json` to render the normal
+VSCodium User settings. Tasks and keybindings use the same composition pattern.
+`latex-workflow setup` also merges the feature additions into the live normal
+editor config, preserving unrelated values. Runtime data and installed extensions
+use VSCodium's standard locations. The old isolated instance's files are unused.
+Projects need no toolkit copies, Python environment, or `.vscode` setup.
 
 ## Features
 
@@ -72,8 +78,8 @@ In Helix Normal/visual mode, use Control+L then the final key:
 
 See [TEX-EDITING.md](TEX-EDITING.md) for the native Workshop operations and the
 VimTeX features that are not implemented. Native Helix Space bindings remain
-intact. VSCodeVim is removed from the dedicated editor; the ordinary coding
-editor is unchanged.
+intact. Helix supplies the keyboard controls; the conflicting VSCodeVim extension
+introduced during earlier setup is removed from the normal extension install.
 
 ## Maintain and reproduce
 
@@ -88,7 +94,7 @@ if missing, and its upstream installer may request standard macOS PATH setup.
 PythonTeX is copied into the writable toolkit TeX tree from the system TeX
 installation because its TeX Live package is not relocatable in user mode.
 
-Do not commit `.venv/`, `texmf/`, `extensions/`, or `cache/` from the deployed
+Do not commit `.venv/`, `texmf/`, `cache/`, or editor state from the deployed
 folder. They are deliberately absent from chezmoi source. Source files for the
 preview extension remain tracked; the VSIX is rebuilt during setup. Its MathJax
 renderer uses LaTeX Workshop's bundled library, so a future Workshop change to

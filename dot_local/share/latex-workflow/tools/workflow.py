@@ -6,26 +6,12 @@ from pathlib import Path
 import shutil
 import subprocess
 import sys
-from datetime import datetime
 from tex_environment import ROOT, tex_environment
 
-EDITOR_STATE = Path.home() / '.local/state/latex-workflow/vscodium'
-EXTENSIONS = ROOT / 'extensions'
-
-
 def editor_links():
-    directory = EDITOR_STATE / 'User'
-    directory.mkdir(parents=True, exist_ok=True)
-    for name in ['settings.json', 'tasks.json', 'keybindings.json']:
-        source = ROOT / 'config' / name
-        destination = directory / name
-        if destination.is_symlink() and destination.resolve() == source.resolve():
-            continue
-        if destination.exists() or destination.is_symlink():
-            backup = destination.with_name(name + '.before-latex-workflow-' + datetime.now().strftime('%Y%m%d-%H%M%S-%f'))
-            destination.rename(backup)
-            print(f'Backed up prior dedicated-editor configuration to {backup}')
-        destination.symlink_to(source)
+    # Legacy command name retained for compatibility: merge, never replace UI settings.
+    from apply_editor_config import install
+    install()
 
 
 def main():
@@ -45,21 +31,20 @@ def main():
     plot.add_argument('--project', type=Path, default=Path.cwd())
     actions.add_parser('setup')
     actions.add_parser('doctor')
+    actions.add_parser('editor-config')
     actions.add_parser('editor-links')
     args = parser.parse_args()
     environment = tex_environment()
     python = ROOT / '.venv/bin/python'
     if args.action == 'setup':
         subprocess.run(['bash', str(ROOT / 'bootstrap-macos.sh')], check=True)
-    elif args.action == 'editor-links':
+    elif args.action in ('editor-config', 'editor-links'):
         editor_links()
     elif args.action == 'open':
-        editor_links()
         editor = shutil.which(os.environ.get('LATEX_WORKFLOW_EDITOR', 'codium'), path=environment['PATH'])
         if not editor:
             sys.exit('VSCodium is missing. Run latex-workflow setup.')
-        subprocess.run([editor, '--new-window', '--user-data-dir', str(EDITOR_STATE),
-                        '--extensions-dir', str(EXTENSIONS), str(args.project.expanduser().resolve())], check=True, env=environment)
+        subprocess.run([editor, '--reuse-window', str(args.project.expanduser().resolve())], check=True, env=environment)
     elif args.action == 'init':
         project = args.project.expanduser().resolve()
         project.mkdir(parents=True, exist_ok=True)
