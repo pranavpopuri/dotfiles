@@ -1,5 +1,7 @@
 # LaTeX workflow: practical guide
 
+Math input update: CAS and PythonTeX now accept mathematical LaTeX directly. See [Calculate using LaTeX](LATEX-MATH.md) for the current syntax, examples and supported notation. Existing SymPy examples remain compatible.
+
 This guide describes your installed **macOS** toolkit. Start with the daily-use
 sections, keep [CHEATSHEET.md](CHEATSHEET.md) nearby, and search
 [SNIPPETS.md](SNIPPETS.md) for the complete list of **115** configured snippets.

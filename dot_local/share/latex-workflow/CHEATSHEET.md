@@ -1,5 +1,7 @@
 # LaTeX workflow cheat sheet
 
+Math input update: CAS and PythonTeX now accept mathematical LaTeX directly. See [Calculate using LaTeX](LATEX-MATH.md) for the current syntax, examples and supported notation. Existing SymPy examples remain compatible.
+
 Full explanations: [GUIDE.md](GUIDE.md). Every configured snippet:
 [SNIPPETS.md](SNIPPETS.md).
 

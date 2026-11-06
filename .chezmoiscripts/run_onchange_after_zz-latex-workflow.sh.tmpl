@@ -38,6 +38,12 @@ set -euo pipefail
 # dot_local/share/latex-workflow/config/keybindings.json: {{ include "dot_local/share/latex-workflow/config/keybindings.json" | sha256sum }}
 # dot_local/share/latex-workflow/tools/install_editor.sh: {{ include "dot_local/share/latex-workflow/tools/install_editor.sh" | sha256sum }}
 # dot_local/share/latex-workflow/tools/apply_editor_config.py: {{ include "dot_local/share/latex-workflow/tools/apply_editor_config.py" | sha256sum }}
+# dot_local/share/latex-workflow/tools/latex_math.py: {{ include "dot_local/share/latex-workflow/tools/latex_math.py" | sha256sum }}
+# dot_local/share/latex-workflow/tools/latex_pythontex.py: {{ include "dot_local/share/latex-workflow/tools/latex_pythontex.py" | sha256sum }}
+# dot_local/share/latex-workflow/tools/test_latex_math.py: {{ include "dot_local/share/latex-workflow/tools/test_latex_math.py" | sha256sum }}
+# dot_local/share/latex-workflow/config/latex-macros.json: {{ include "dot_local/share/latex-workflow/config/latex-macros.json" | sha256sum }}
+# dot_local/share/latex-workflow/LATEX-MATH.md: {{ include "dot_local/share/latex-workflow/LATEX-MATH.md" | sha256sum }}
+# dot_local/share/latex-workflow/examples/latex-input-example.tex: {{ include "dot_local/share/latex-workflow/examples/latex-input-example.tex" | sha256sum }}
 bash "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/bootstrap-macos.sh"
 {{ else -}}
 #!/bin/sh

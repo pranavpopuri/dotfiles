@@ -1,5 +1,7 @@
 # Complete HyperSnips reference
 
+Math input update: CAS and PythonTeX now accept mathematical LaTeX directly. See [Calculate using LaTeX](LATEX-MATH.md) for the current syntax, examples and supported notation. Existing SymPy examples remain compatible.
+
 Practical instructions: [GUIDE.md](GUIDE.md). Daily summary: [CHEATSHEET.md](CHEATSHEET.md).
 
 This catalog contains **all 115 snippets** from `hsnips/latex.hsnips`.

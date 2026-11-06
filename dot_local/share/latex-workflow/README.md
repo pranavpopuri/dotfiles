@@ -1,5 +1,7 @@
 # Permanent LaTeX toolkit (macOS)
 
+Math input update: CAS and PythonTeX now accept mathematical LaTeX directly. See [Calculate using LaTeX](LATEX-MATH.md) for the current syntax, examples and supported notation. Existing SymPy examples remain compatible.
+
 **Start here:** [Practical guide](GUIDE.md) · [Cheat sheet](CHEATSHEET.md) ·
 [All 115 snippets](SNIPPETS.md). These describe the actual configured shortcuts,
 activation rules, calculations, previews, figures, plotting, and troubleshooting.

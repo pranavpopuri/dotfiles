@@ -1,0 +1,4 @@
+{
+  "dd": {"args": 0, "body": "d"},
+  "abs": {"args": 1, "body": "\\left|#1\\right|"}
+}

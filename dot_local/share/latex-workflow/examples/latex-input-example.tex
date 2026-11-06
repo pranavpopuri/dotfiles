@@ -1,0 +1,14 @@
+% !LW recipe = PythonTeX (trusted documents)
+\documentclass{article}
+\usepackage{amsmath,pythontex}
+\begin{document}
+\begin{sympycode}
+  answer2 = \int_0^1 x^2\,dx
+  double = \int_0^1\int_0^{1-x}xy\,dy\,dx
+  f(x) = x^2 + 1
+  value = f(3)
+\end{sympycode}
+\[\int_0^1 x^2\,dx = \sympy{answer2}\]
+\[\sympy{double},\quad \sympy{value}\]
+\[\sympy{factor: x^2-1}\]
+\end{document}

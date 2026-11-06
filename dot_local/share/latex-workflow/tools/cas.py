@@ -3,7 +3,7 @@ import ast
 import sys
 
 
-def calculate(source):
+def calculate_native(source):
     import sympy as sp
 
     names = {name: getattr(sp, name) for name in (
@@ -44,6 +44,23 @@ def calculate(source):
         raise ValueError("Use SymPy syntax, including ** for powers; raw LaTeX is not supported")
 
     return sp.latex(visit(ast.parse(source.strip(), mode="eval").body))
+
+
+def calculate(source):
+    import sympy as sp
+    from latex_math import evaluate_latex
+    source = source.strip()
+    if source.startswith('python:'):
+        return calculate_native(source[7:])
+    # Retain the existing explicit Python/SymPy function syntax.
+    if "\\" not in source and "^" not in source:
+        try:
+            tree = ast.parse(source, mode='eval')
+            if any(isinstance(node, ast.Call) for node in ast.walk(tree)):
+                return calculate_native(source)
+        except SyntaxError:
+            pass
+    return sp.latex(evaluate_latex(source))
 
 
 if __name__ == "__main__":
