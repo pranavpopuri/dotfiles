@@ -1,0 +1,94 @@
+[
+  {
+    "key": "ctrl+l b",
+    "command": "latex-workshop.build",
+    "when": "editorTextFocus && editorLangId == latex && (extension.helixKeymap.normalMode || extension.helixKeymap.visualMode || extension.helixKeymap.visualLineMode)"
+  },
+  {
+    "key": "ctrl+l v",
+    "command": "latex-workshop.view",
+    "when": "editorTextFocus && editorLangId == latex && (extension.helixKeymap.normalMode || extension.helixKeymap.visualMode || extension.helixKeymap.visualLineMode)"
+  },
+  {
+    "key": "ctrl+l s",
+    "command": "latex-workshop.synctex",
+    "when": "editorTextFocus && editorLangId == latex && (extension.helixKeymap.normalMode || extension.helixKeymap.visualMode || extension.helixKeymap.visualLineMode)"
+  },
+  {
+    "key": "ctrl+l m",
+    "command": "mathSourcePreview.toggle",
+    "when": "editorTextFocus && editorLangId == latex && (extension.helixKeymap.normalMode || extension.helixKeymap.visualMode || extension.helixKeymap.visualLineMode)"
+  },
+  {
+    "key": "ctrl+l p",
+    "command": "latex-workshop.toggleMathPreviewPanel",
+    "when": "editorTextFocus && editorLangId == latex && (extension.helixKeymap.normalMode || extension.helixKeymap.visualMode || extension.helixKeymap.visualLineMode)"
+  },
+  {
+    "key": "ctrl+l e",
+    "command": "latex-workshop.select-envcontent",
+    "when": "editorTextFocus && editorLangId == latex && (extension.helixKeymap.normalMode || extension.helixKeymap.visualMode || extension.helixKeymap.visualLineMode)"
+  },
+  {
+    "key": "ctrl+l a",
+    "command": "latex-workshop.select-env",
+    "when": "editorTextFocus && editorLangId == latex && (extension.helixKeymap.normalMode || extension.helixKeymap.visualMode || extension.helixKeymap.visualLineMode)"
+  },
+  {
+    "key": "ctrl+l r",
+    "command": "latex-workshop.multicursor-envname",
+    "when": "editorTextFocus && editorLangId == latex && (extension.helixKeymap.normalMode || extension.helixKeymap.visualMode || extension.helixKeymap.visualLineMode)"
+  },
+  {
+    "key": "ctrl+l n",
+    "command": "latex-workshop.select-envname",
+    "when": "editorTextFocus && editorLangId == latex && (extension.helixKeymap.normalMode || extension.helixKeymap.visualMode || extension.helixKeymap.visualLineMode)"
+  },
+  {
+    "key": "ctrl+l g",
+    "command": "latex-workshop.navigate-envpair",
+    "when": "editorTextFocus && editorLangId == latex && (extension.helixKeymap.normalMode || extension.helixKeymap.visualMode || extension.helixKeymap.visualLineMode)"
+  },
+  {
+    "key": "ctrl+l w",
+    "command": "latex-workshop.wrap-env",
+    "when": "editorTextFocus && editorLangId == latex && (extension.helixKeymap.normalMode || extension.helixKeymap.visualMode || extension.helixKeymap.visualLineMode)"
+  },
+  {
+    "key": "ctrl+l c",
+    "command": "latex-workshop.surround",
+    "when": "editorTextFocus && editorLangId == latex && (extension.helixKeymap.normalMode || extension.helixKeymap.visualMode || extension.helixKeymap.visualLineMode)"
+  },
+  {
+    "key": "ctrl+l t",
+    "command": "latex-workshop.toggle-equation-envname",
+    "when": "editorTextFocus && editorLangId == latex && (extension.helixKeymap.normalMode || extension.helixKeymap.visualMode || extension.helixKeymap.visualLineMode)"
+  },
+  {
+    "key": "ctrl+l z",
+    "command": "latex-workshop.close-env",
+    "when": "editorTextFocus && editorLangId == latex && (extension.helixKeymap.normalMode || extension.helixKeymap.visualMode || extension.helixKeymap.visualLineMode)"
+  },
+  {
+    "key": "ctrl+l h",
+    "command": "latex-workshop.select-section",
+    "when": "editorTextFocus && editorLangId == latex && (extension.helixKeymap.normalMode || extension.helixKeymap.visualMode || extension.helixKeymap.visualLineMode)"
+  },
+  {
+    "key": "ctrl+l o",
+    "command": "workbench.action.gotoSymbol",
+    "when": "editorTextFocus && editorLangId == latex && (extension.helixKeymap.normalMode || extension.helixKeymap.visualMode || extension.helixKeymap.visualLineMode)"
+  },
+  {
+    "key": "ctrl+l f",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Figure: edit/create SVG",
+    "when": "editorTextFocus && editorLangId == latex && (extension.helixKeymap.normalMode || extension.helixKeymap.visualMode || extension.helixKeymap.visualLineMode)"
+  },
+  {
+    "key": "ctrl+l x",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Figure: export PDF + LaTeX",
+    "when": "editorTextFocus && editorLangId == latex && (extension.helixKeymap.normalMode || extension.helixKeymap.visualMode || extension.helixKeymap.visualLineMode)"
+  }
+]

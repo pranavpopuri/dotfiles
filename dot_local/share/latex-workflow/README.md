@@ -29,7 +29,7 @@ which your existing chezmoi shell configuration already puts on PATH.
 `latex-workflow setup` reruns the macOS bootstrap.
 
 `open` starts a dedicated VSCodium instance with its settings under
-`~/.local/state/latex-workflow/vscodium`. Its settings and user tasks link to
+`~/.local/state/latex-workflow/vscodium`. Its settings, user tasks, and keybindings link to
 this toolkit's managed `config/` files. Its extensions live under this toolkit's
 `extensions/`. Your ordinary VSCodium settings, Helix extension, and other
 coding configuration remain separate. Projects need no toolkit scripts,
@@ -58,14 +58,22 @@ settings still override editor settings in the normal VS Code manner.
 - Optional PythonTeX recipe runs TeX/PythonTeX/TeX for trusted documents.
   PythonTeX executes embedded code; source previews do not execute it.
 
-In Vim Normal mode:
+In Helix Normal/visual mode, use Control+L then the final key:
 
-| Keys | Action |
+| Chord | Action |
 | --- | --- |
-| Space b / Space v / Space s | Build / view PDF / SyncTeX |
-| Space m / Space p | Toggle source rendering / larger math preview |
-| Space f / Space e | Edit a named SVG / export it |
-| ]e / [e | Search forward/backward for display equations |
+| Ctrl+L b / v / s | Build / PDF / SyncTeX |
+| Ctrl+L m / p | Source rendering / larger math preview |
+| Ctrl+L f / x | Edit SVG / export |
+| Ctrl+L e / a / r | Select environment contents / whole environment / paired names |
+| Ctrl+L g / w / c | Matching tag / wrap environment / wrap command |
+| Ctrl+L t / z / h / o | Display/named math toggle / close environment / select section / outline |
+| Alt+O / Alt+I | Expand/shrink LaTeX-aware selection |
+
+See [TEX-EDITING.md](TEX-EDITING.md) for the native Workshop operations and the
+VimTeX features that are not implemented. Native Helix Space bindings remain
+intact. VSCodeVim is removed from the dedicated editor; the ordinary coding
+editor is unchanged.
 
 ## Maintain and reproduce
 

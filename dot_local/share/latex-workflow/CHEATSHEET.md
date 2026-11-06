@@ -10,16 +10,25 @@ latex-workflow init ~/Documents/notes/calculus
 latex-workflow open ~/Documents/notes/calculus
 ```
 
-Use the dedicated editor. **Esc** → Normal mode; **i** → Insert mode.
-Space shortcuts below mean sequential keys in **Normal mode**.
+Use the dedicated editor. **Esc** → Helix Normal mode; **i** → Insert mode.
+Custom shortcuts use **Control+L**, release, then the final key, in Normal/visual
+mode in LaTeX files. Native Helix Space-menu bindings remain available.
 
-| Keys | Action |
+| Chord | Action |
 | --- | --- |
-| Space b / v / s | Build / view PDF / source-to-PDF SyncTeX |
-| Space m / p | Toggle in-source equations / larger math preview panel |
-| Space f / e | Create/edit named Inkscape SVG / export named SVG |
-| ]e / [e | Configured forward/backward display-equation search |
+| Ctrl+L b / v / s | Build / view PDF / source-to-PDF SyncTeX |
+| Ctrl+L m / p | Toggle source equations / larger math preview |
+| Ctrl+L f / x | Create/edit named SVG / export named SVG |
+| Ctrl+L e / a / r | Select environment contents / whole environment / paired names |
+| Ctrl+L g / w / c | Matching tag / wrap environment / wrap command |
+| Ctrl+L t / z | Display/named-equation toggle / close environment |
+| Ctrl+L h / o | Select section / navigate outline |
+| Alt+O / Alt+I | Expand/shrink LaTeX-aware selection |
 | Cmd+Shift+P | Command palette and fallback commands |
+
+See [TEX-EDITING.md](TEX-EDITING.md) for command details and VimTeX differences.
+VimTeX's `dse`/`dsc`/`dsd`, delimiter/fraction toggles, and counted motions are
+not installed. Selection-based Helix editing remains available.
 
 ## Type in Insert mode
 
@@ -64,8 +73,8 @@ Load `\input{math-macros.tex}` once in the preamble; `init` already arranges thi
 through `course-macros.tex`. Common notation: `\E`, `\Prob`, `\Var`, `\Cov`,
 `\grad`, `\dd`, `\norm{x}`, `\abs{x}`, `\asto`, `\pto`, `\dto`.
 
-**Inkscape:** Space f → name → draw → labels like `$\alpha$` → **Save** →
-Space e → same name → `\incfig{name}` → build. Keep `.svg`, `.pdf`, and
+**Inkscape:** Ctrl+L f → name → draw → labels like `$\alpha$` → **Save** →
+Ctrl+L x → same name → `\incfig{name}` → build. Keep `.svg`, `.pdf`, and
 `.pdf_tex`. Repeat Save+Export after edits; there is no automatic export watcher.
 
 **Python plots:** `latex-workflow plot --project /path/to/notes` generates

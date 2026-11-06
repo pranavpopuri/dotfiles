@@ -29,9 +29,9 @@ latex-workflow open ~/Documents/notes/calculus
 ```
 
 `init` creates `notes.tex`, `course-macros.tex`, and `figures/`. It keeps existing
-files of those names. Open `notes.tex`, press `i` to enter Vim Insert mode, and
-start writing. Press `Esc` for Normal mode, then Space followed by `b` to build.
-Space followed by `v` opens the PDF.
+files of those names. Open `notes.tex`, press `i` to enter Helix Insert mode, and
+start writing. Press `Esc` for Normal mode, then Ctrl+L followed by `b` to build.
+Ctrl+L followed by `v` opens the PDF.
 
 For existing notes, just use:
 
@@ -51,10 +51,11 @@ TeX command does not automatically inherit that search path.
 
 ## Understand the keys and snippet modes
 
-- **Space b** means press Space, release it, then press `b`; it is not a chord.
-  All the custom Space shortcuts below run in **Vim Normal mode**.
+- **Ctrl+L b** means press Control+L, release, then press `b`.
+  The custom chords run in **Helix Normal/visual mode** in LaTeX files.
+  Your native Helix Space menu and Insert-mode keys are preserved.
 - **Insert mode:** press `i` to type text and snippets. Press `Esc` to return to
-  Normal mode. Vim's `a`, `o`, and `O` also enter Insert mode in useful places.
+  Normal mode. Helix's `a`, `o`, and `O` also enter Insert mode in useful places.
 - **Automatic snippet:** expands as soon as its final trigger character is
   typed. You do not press Tab. Examples: `dm`, `xhat`, and the closing `cas`.
 - **Manual snippet:** type its trigger and accept its matching HyperSnips
@@ -78,46 +79,28 @@ when a keyboard binding conflicts with another extension or a macOS shortcut.
 
 ## Every custom editor shortcut
 
-Use these in Vim **Normal mode**, in the dedicated math editor:
+The dedicated editor now uses **Helix**, not VSCodeVim. All custom bindings and
+TeX-aware environment/section selections are documented in
+[TEX-EDITING.md](TEX-EDITING.md), including their differences from VimTeX.
 
-| Keys | Action | Command-palette equivalent |
-| --- | --- | --- |
-| Space b | Build with the default recipe | LaTeX Workshop: Build LaTeX project |
-| Space v | Open the PDF viewer | LaTeX Workshop: View LaTeX PDF |
-| Space s | Jump from source position to the PDF | LaTeX Workshop: SyncTeX from cursor |
-| Space m | Toggle rendered equations in the source editor | Math Source Preview: Toggle In-Source Rendering |
-| Space p | Toggle the larger math preview panel below the editor | LaTeX Workshop: Toggle math preview panel |
-| Space f | Prompt for a figure name, create/edit its SVG in Inkscape | Tasks: Run Task → Figure: edit/create SVG |
-| Space e | Prompt for a figure name, export its SVG as PDF+LaTeX | Tasks: Run Task → Figure: export PDF + LaTeX |
-| ]e | Run the configured forward display-equation search | A search, not a structural equation parser |
-| [e | Run the configured backward display-equation search | A search, not a structural equation parser |
-
-The equation-search bindings target `\[` and equation/align/gather environment
-openers; they do not target every `$...$` expression. Their configured pattern
-uses Vim-style syntax. If your VSCodeVim search interpretation does not match it,
-use `/` to search a literal environment opener; the exact binding is recorded in
-`config/settings.json` and this is a navigation limitation, not a build failure.
-
-Ordinary Vim navigation remains useful:
-
-| Keys | What they do |
+| Chord | Action |
 | --- | --- |
-| h / j / k / l | Move left/down/up/right |
-| w / b | Move to the next/previous word |
-| 0 / $ | Move to the start/end of the line |
-| gg / G | Move to the start/end of the document |
-| /text, then Enter | Search forward; `n` / `N` go to the next/previous match |
-| i / a | Insert before/after the cursor |
-| o / O | Open an editable line below/above |
-| v / V | Select characters/whole lines |
-| vi{ / va{ | Select inside braces / include the braces |
-| ci{ | Replace the content inside braces, then type |
-| yy / p | Copy a line / paste |
-| u / Ctrl+r | Undo / redo |
+| Ctrl+L b / v / s | Build / view PDF / source-to-PDF synchronization |
+| Ctrl+L m / p | Toggle source rendering / larger math preview |
+| Ctrl+L f / x | Create/edit an Inkscape figure / export it |
+| Ctrl+L e / a | Select environment contents / whole environment |
+| Ctrl+L r / n | Select both environment names / current name |
+| Ctrl+L g | Navigate matching begin/end at a tag |
+| Ctrl+L w / c | Wrap selection in environment / command |
+| Ctrl+L t | Display-delimiter/named-equation environment toggle |
+| Ctrl+L z | Close environment |
+| Ctrl+L h / o | Select section / navigate outline symbols |
+| Alt+O / Alt+I | Expand/shrink selection with the LaTeX syntax provider |
 
-The system clipboard is enabled. Ctrl+a and Ctrl+f are passed through to the
-editor rather than intercepted as Vim commands; their editor behavior can depend
-on macOS keybindings. Native Cmd-based editor shortcuts remain available.
+Use your regular Helix movement, selection, and change commands. Do not use
+Vim's operator-first sequences such as `ci{` or expect `vim.*` settings to bind
+Helix. The full VimTeX surround-delete, modifier/fraction toggle, and counted
+motion suite has not been implemented. Cmd+Shift+P opens the command palette.
 
 ## Write mathematics quickly
 
@@ -245,8 +228,8 @@ to reveal its original LaTeX, then move away to render it again. The stored file
 stays LaTeX. Incomplete or unsupported formulas stay visible as source; CAS
 input stays source until evaluated.
 
-- **Space m:** toggle in-source rendering for the dedicated editor.
-- **Space p:** open/close Workshop's larger live math preview panel below.
+- **Ctrl+L m:** toggle in-source rendering for the dedicated editor.
+- **Ctrl+L p:** open/close Workshop's larger live math preview panel below.
 - Hover on source math for a Workshop equation preview.
 
 Large fractions, matrices, and integrals should occupy a multiline display block:
@@ -299,7 +282,7 @@ conflicting definitions twice.
 
 ## Draw and insert an Inkscape figure
 
-1. In the LaTeX editor's Normal mode, press **Space f**.
+1. In the LaTeX editor's Normal mode, press **Ctrl+L f**.
 2. Enter a simple name such as `triangle`, without `.svg`. Names may contain
    letters, digits, hyphens, and underscores, and must start with a letter/digit.
 3. Inkscape opens `figures/triangle.svg` in the current project. A blank SVG is
@@ -308,12 +291,12 @@ conflicting definitions twice.
 4. For mathematical labels, enter literal LaTeX such as `$A$`, `$\alpha$`,
    or `$\vec{v}$` using the text tool. Inkscape may display the raw label text;
    LaTeX typesets it at document build time.
-5. **Save the SVG in Inkscape.** Return to VSCodium, press **Space e**, and enter
+5. **Save the SVG in Inkscape.** Return to VSCodium, press **Ctrl+L x**, and enter
    the same figure name.
 6. Export creates `figures/triangle.pdf` and `figures/triangle.pdf_tex`.
 7. Insert the figure with `\incfig{triangle}`, or accept the manual `svgfig`
    snippet at the start of a line to get a figure wrapper, caption, and label.
-8. Build the notes with **Space b**.
+8. Build the notes with **Ctrl+L b**.
 
 A minimal wrapper, in a document loading the shared macros:
 
@@ -485,9 +468,10 @@ relative to that root unless marked otherwise.
 
 | Path | What it controls |
 | --- | --- |
-| `GUIDE.md`, `CHEATSHEET.md`, `SNIPPETS.md` | This guide, daily reference, full snippet catalog |
+| `GUIDE.md`, `CHEATSHEET.md`, `SNIPPETS.md`, `TEX-EDITING.md` | Main guide, daily reference, snippets, and TeX-aware Helix commands |
 | `hsnips/latex.hsnips` | All snippet triggers, bodies, contexts, and CAS integration |
-| `config/settings.json` | Math editor settings, Vim bindings, preview macros, and build recipes |
+| `config/settings.json` | Math editor settings, preview macros, and build recipes |
+| `config/keybindings.json` | TeX-specific Helix-mode shortcuts |
 | `config/tasks.json` | Inkscape and Python plot task definitions |
 | `config/cspell.json` | Shared spelling vocabulary and exclusions |
 | `tex/latex/latex-workflow/math-macros.tex` | Shared actual-LaTeX notation and theorem definitions |
@@ -540,15 +524,15 @@ currently supports macOS; Linux support would need its own explicit integration.
 
 | Symptom | What to check |
 | --- | --- |
-| None of the math shortcuts work | Open the project with `latex-workflow open`; check Vim mode and that the file language is LaTeX. |
+| None of the math shortcuts work | Open the project with `latex-workflow open`; check Helix mode and that the file language is LaTeX. |
 | A symbol snippet does nothing | Put the cursor inside recognized math; check its boundary rule and whether it is manual. |
 | Tab just indents | For manual snippets, request/accept the matching suggestion first; Tab navigation requires an active snippet. |
 | Snippets rewrite normal typing | Check automatic triggers and boundaries; undo the expansion if needed. |
 | CAS does nothing | Include both markers and spaces: `cas EXPRESSION cas`. It triggers on the closing `s`, not on Tab. |
 | CAS reports an error | Use SymPy syntax, explicit `*` and `**`, supported functions, and balanced parentheses. Check the notification. |
 | A CAS calculation disappears or times out | The five-second limit stops lengthy evaluations; simplify the calculation or use a separate script/PythonTeX. Failed input should be preserved. |
-| Math no longer renders in source | Toggle Space m; move the caret out of the equation. Incomplete/unsupported math remains source. Check Output → Math Source Preview. |
-| Previews are small or overlap awkwardly | Give display equations several source lines, or use Space p / the PDF viewer. |
+| Math no longer renders in source | Toggle Ctrl+L m; move the caret out of the equation. Incomplete/unsupported math remains source. Check Output → Math Source Preview. |
+| Previews are small or overlap awkwardly | Give display equations several source lines, or use Ctrl+L p / the PDF viewer. |
 | A custom command works in PDF but not preview | Define it separately for Workshop and the local source renderer's MathJax macros. |
 | `\Var` or theorem/proof is undefined | Load the shared macros once in the preamble and build through the toolkit. |
 | A figure is stale | Save in Inkscape and export again; opening/editing is not export. |

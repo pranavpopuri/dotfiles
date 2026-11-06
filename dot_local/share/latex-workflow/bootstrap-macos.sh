@@ -44,15 +44,8 @@ if [ ! -f "$system_texmf/scripts/pythontex/pythontex.py" ]; then
 fi
 "$root/.venv/bin/python" "$root/tools/copy_pythontex.py" "$system_texmf"
 mktexlsr "$TEXMFHOME"
-# Use a dedicated editor instance so Helix and other coding preferences remain intact.
-editor_state="$HOME/.local/state/latex-workflow/vscodium"
-while IFS= read -r extension; do
-    [ -n "$extension" ] || continue
-    codium --user-data-dir "$editor_state" --extensions-dir "$root/extensions" --install-extension "$extension"
-done < "$root/extensions.txt"
-"$root/.venv/bin/python" "$root/tools/package_visual_extension.py"
-codium --user-data-dir "$editor_state" --extensions-dir "$root/extensions" --install-extension "$root/cache/math-source-preview.vsix" --force
-"$root/.venv/bin/python" "$root/tools/workflow.py" editor-links
+# Install the math editor separately from the ordinary coding editor.
+bash "$root/tools/install_editor.sh"
 "$root/.venv/bin/python" "$root/tools/workflow.py" doctor
 # A fresh temporary note project verifies that builds need no testing-repo files.
 check_project="$(mktemp -d "${TMPDIR:-/tmp}/latex-workflow-check.XXXXXX")"

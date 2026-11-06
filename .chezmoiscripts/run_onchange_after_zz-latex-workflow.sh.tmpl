@@ -35,6 +35,8 @@ set -euo pipefail
 # dot_local/share/latex-workflow/tools/test-source-preview.cjs: {{ include "dot_local/share/latex-workflow/tools/test-source-preview.cjs" | sha256sum }}
 # dot_local/share/latex-workflow/tools/tex_environment.py: {{ include "dot_local/share/latex-workflow/tools/tex_environment.py" | sha256sum }}
 # dot_local/share/latex-workflow/tools/workflow.py: {{ include "dot_local/share/latex-workflow/tools/workflow.py" | sha256sum }}
+# dot_local/share/latex-workflow/config/keybindings.json: {{ include "dot_local/share/latex-workflow/config/keybindings.json" | sha256sum }}
+# dot_local/share/latex-workflow/tools/install_editor.sh: {{ include "dot_local/share/latex-workflow/tools/install_editor.sh" | sha256sum }}
 bash "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/bootstrap-macos.sh"
 {{ else -}}
 #!/bin/sh

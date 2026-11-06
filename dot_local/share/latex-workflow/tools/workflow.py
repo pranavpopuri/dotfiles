@@ -16,7 +16,7 @@ EXTENSIONS = ROOT / 'extensions'
 def editor_links():
     directory = EDITOR_STATE / 'User'
     directory.mkdir(parents=True, exist_ok=True)
-    for name in ['settings.json', 'tasks.json']:
+    for name in ['settings.json', 'tasks.json', 'keybindings.json']:
         source = ROOT / 'config' / name
         destination = directory / name
         if destination.is_symlink() and destination.resolve() == source.resolve():

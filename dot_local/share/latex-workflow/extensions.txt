@@ -1,5 +1,5 @@
 draivin.hsnips@0.2.9
 draivin.hscopes@0.0.9
 james-yu.latex-workshop@10.20.0
-vscodevim.vim@1.32.4
+jasew.vscode-helix-emulation@0.6.2
 streetsidesoftware.code-spell-checker@4.10.0

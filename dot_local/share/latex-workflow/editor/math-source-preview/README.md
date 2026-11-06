@@ -2,7 +2,7 @@ Math Source Preview is a local extension for this project's native LaTeX editor.
 
 Inactive equations are displayed as SVG images. Move the caret into an equation
 to reveal the original source. All selections touching an equation reveal it;
-copying, saving, undo, HyperSnips, and Vim continue to use the original text.
+copying, saving, undo, HyperSnips, and Helix continue to use the original text.
 CAS expressions remain visible until they have been evaluated.
 
 Use **Math Source Preview: Toggle In-Source Rendering** to switch it off.
