@@ -1,0 +1,33 @@
+% Load in the preamble with \input{math-macros.tex}.
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx,import}
+\providecommand{\N}{\mathbb{N}}
+\providecommand{\R}{\mathbb{R}}
+\providecommand{\Q}{\mathbb{Q}}
+\providecommand{\Z}{\mathbb{Z}}
+\providecommand{\E}{\mathbb{E}}
+\providecommand{\Prob}{\mathbb{P}}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Cov}{Cov}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\diag}{diag}
+\providecommand{\grad}{\nabla}
+\providecommand{\dd}{\mathop{}\!\mathrm{d}}
+\providecommand{\given}{\mid}
+\providecommand{\norm}[1]{\left\lVert#1\right\rVert}
+\providecommand{\abs}[1]{\left\lvert#1\right\rvert}
+\providecommand{\ind}[1]{\mathbf{1}_{\{#1\}}}
+\providecommand{\asto}{\xrightarrow{\mathrm{a.s.}}}
+\providecommand{\pto}{\xrightarrow{\mathrm{P}}}
+\providecommand{\dto}{\xrightarrow{\mathrm{d}}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\providecommand{\incfig}[1]{%
+  \def\svgwidth{\columnwidth}%
+  \import{./figures/}{#1.pdf_tex}%
+}

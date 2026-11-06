@@ -1,0 +1,293 @@
+{
+  "hsnips.hsnipsPath": {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/hsnips" | toJson }},
+  "latex-workshop.latex.outDir": "%DIR%",
+  "latex-workshop.latex.recipe.default": "first",
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/.venv/bin/python" | toJson }},
+      "args": [
+        {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/tools/build_latex.py" | toJson }},
+        "%DOC_EXT%"
+      ]
+    },
+    {
+      "name": "pythontex-build",
+      "command": {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/.venv/bin/python" | toJson }},
+      "args": [
+        {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/tools/build_pythontex.py" | toJson }},
+        "%DOC_EXT%"
+      ]
+    }
+  ],
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "latexmk",
+      "tools": [
+        "latexmk"
+      ]
+    },
+    {
+      "name": "PythonTeX (trusted documents)",
+      "tools": [
+        "pythontex-build"
+      ]
+    }
+  ],
+  "latex-workshop.intellisense.package.enabled": true,
+  "latex-workshop.intellisense.package.extra": [
+    "amsmath",
+    "amssymb",
+    "amsthm",
+    "pgfplots"
+  ],
+  "latex-workshop.intellisense.update.aggressive.enabled": true,
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+  "vim.handleKeys": {
+    "<C-f>": false,
+    "<C-a>": false
+  },
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "b"
+      ],
+      "commands": [
+        "latex-workshop.build"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "v"
+      ],
+      "commands": [
+        "latex-workshop.view"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "s"
+      ],
+      "commands": [
+        "latex-workshop.synctex"
+      ]
+    },
+    {
+      "before": [
+        "]",
+        "e"
+      ],
+      "after": [
+        "/",
+        "\\",
+        "\\",
+        "\\",
+        "[",
+        "\\",
+        "|",
+        "\\",
+        "\\",
+        "b",
+        "e",
+        "g",
+        "i",
+        "n",
+        "{",
+        "\\",
+        "(",
+        "e",
+        "q",
+        "u",
+        "a",
+        "t",
+        "i",
+        "o",
+        "n",
+        "\\",
+        "|",
+        "a",
+        "l",
+        "i",
+        "g",
+        "n",
+        "\\",
+        "|",
+        "g",
+        "a",
+        "t",
+        "h",
+        "e",
+        "r",
+        "\\",
+        ")",
+        "\\",
+        "*",
+        "\\",
+        "?",
+        "}",
+        "<CR>"
+      ]
+    },
+    {
+      "before": [
+        "[",
+        "e"
+      ],
+      "after": [
+        "?",
+        "\\",
+        "\\",
+        "\\",
+        "[",
+        "\\",
+        "|",
+        "\\",
+        "\\",
+        "b",
+        "e",
+        "g",
+        "i",
+        "n",
+        "{",
+        "\\",
+        "(",
+        "e",
+        "q",
+        "u",
+        "a",
+        "t",
+        "i",
+        "o",
+        "n",
+        "\\",
+        "|",
+        "a",
+        "l",
+        "i",
+        "g",
+        "n",
+        "\\",
+        "|",
+        "g",
+        "a",
+        "t",
+        "h",
+        "e",
+        "r",
+        "\\",
+        ")",
+        "\\",
+        "*",
+        "\\",
+        "?",
+        "}",
+        "<CR>"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "m"
+      ],
+      "commands": [
+        "mathSourcePreview.toggle"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "p"
+      ],
+      "commands": [
+        "latex-workshop.toggleMathPreviewPanel"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f"
+      ],
+      "commands": [
+        {
+          "command": "workbench.action.tasks.runTask",
+          "args": [
+            "Figure: edit/create SVG"
+          ]
+        }
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "e"
+      ],
+      "commands": [
+        {
+          "command": "workbench.action.tasks.runTask",
+          "args": [
+            "Figure: export PDF + LaTeX"
+          ]
+        }
+      ]
+    }
+  ],
+  "[latex]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "other": "on",
+      "comments": "off",
+      "strings": "off"
+    },
+    "editor.suggest.snippetsPreventQuickSuggestions": false
+  },
+  "mathSourcePreview.enabled": true,
+  "mathSourcePreview.macros": {
+    "N": "\\mathbb{N}",
+    "R": "\\mathbb{R}",
+    "Q": "\\mathbb{Q}",
+    "Z": "\\mathbb{Z}",
+    "E": "\\mathbb{E}",
+    "Prob": "\\mathbb{P}",
+    "Var": "\\operatorname{Var}",
+    "Cov": "\\operatorname{Cov}",
+    "rank": "\\operatorname{rank}",
+    "diag": "\\operatorname{diag}",
+    "grad": "\\nabla",
+    "dd": "\\mathop{}\\!\\mathrm{d}",
+    "given": "\\mid",
+    "norm": [
+      "\\left\\lVert#1\\right\\rVert",
+      1
+    ],
+    "abs": [
+      "\\left\\lvert#1\\right\\rvert",
+      1
+    ],
+    "ind": [
+      "\\mathbf{1}_{\\{#1\\}}",
+      1
+    ],
+    "asto": "\\xrightarrow{\\mathrm{a.s.}}",
+    "pto": "\\xrightarrow{\\mathrm{P}}",
+    "dto": "\\xrightarrow{\\mathrm{d}}"
+  },
+  "latex-workshop.hover.preview.enabled": true,
+  "latex-workshop.hover.preview.maxLines": 100,
+  "latex-workshop.hover.preview.scale": 1.2,
+  "latex-workshop.hover.preview.newcommand.newcommandFile": {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/tex/latex/latex-workflow/math-preview-macros.tex" | toJson }},
+  "latex-workshop.mathpreviewpanel.editorGroup": "below",
+  "cSpell.import": [
+    {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/config/cspell.json" | toJson }}
+  ],
+  "window.title": "LaTeX \u00b7 ${rootName}${separator}${activeEditorShort}",
+  "editor.fontSize": 14,
+  "editor.lineHeight": 22,
+  "workbench.statusBar.visible": true,
+  "extensions.ignoreRecommendations": true,
+  "extensions.autoUpdate": false
+}

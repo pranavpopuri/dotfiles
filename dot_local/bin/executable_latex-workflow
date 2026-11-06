@@ -1,0 +1,11 @@
+#!/bin/bash
+set -euo pipefail
+root="${LATEX_WORKFLOW_HOME:-$HOME/.local/share/latex-workflow}"
+if [ "${1:-}" = setup ]; then
+    exec bash "$root/bootstrap-macos.sh"
+fi
+if [ ! -x "$root/.venv/bin/python" ]; then
+    echo "Run: bash \"$root/bootstrap-macos.sh\"" >&2
+    exit 1
+fi
+exec "$root/.venv/bin/python" "$root/tools/workflow.py" "$@"

@@ -1,0 +1,12 @@
+\documentclass{article}
+\input{math-macros.tex}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[axis lines=middle,xlabel=$x$,ylabel=$f(x)$,domain=-2:2,samples=101]
+\addplot[blue,thick]{x^2};
+\end{axis}
+\end{tikzpicture}
+\IfFileExists{figures/normal.pdf}{\includegraphics[width=\linewidth]{figures/normal.pdf}}{}
+\end{document}

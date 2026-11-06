@@ -1,0 +1,4 @@
+# Used only by the macOS LaTeX bootstrap; existing shared/Linux manifests stay unchanged.
+brew "python"
+cask "vscodium"
+cask "inkscape"

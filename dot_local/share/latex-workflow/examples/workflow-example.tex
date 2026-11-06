@@ -1,0 +1,18 @@
+\documentclass{article}
+\input{math-macros.tex}
+\begin{document}
+\section{Statistics and Calculus}
+For a random variable $X$, write $\E[X]$, $\Var(X)$, and $\Prob(X>0)$.
+The gradient is $\grad f$ and convergence in probability is $X_n\pto X$.
+\begin{theorem}
+For every real $x$, $x^2\geq 0$.
+\end{theorem}
+\begin{proof}
+If $x\geq 0$, multiply by $x$; otherwise apply the same argument to $-x$.
+\end{proof}
+\[
+\int_0^1\int_0^{1-x}xy\,\dd y\,\dd x=\frac{1}{24},
+\qquad
+f(x)=\begin{cases}x^2 & x\geq0,\\-x & x<0.\end{cases}
+\]
+\end{document}

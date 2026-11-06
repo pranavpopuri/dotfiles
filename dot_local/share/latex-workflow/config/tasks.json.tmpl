@@ -1,0 +1,68 @@
+{
+  "version": "2.0.0",
+  "inputs": [
+    {
+      "id": "figureName",
+      "type": "promptString",
+      "description": "Figure name (letters, digits, hyphens, underscores)",
+      "default": "diagram"
+    }
+  ],
+  "tasks": [
+    {
+      "label": "Figure: edit/create SVG",
+      "type": "process",
+      "command": {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/.venv/bin/python" | toJson }},
+      "args": [
+        {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/tools/figure.py" | toJson }},
+        "edit",
+        "${input:figureName}",
+        "--project",
+        "${workspaceFolder}"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "MPLCONFIGDIR": {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/cache/matplotlib" | toJson }}
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Figure: export PDF + LaTeX",
+      "type": "process",
+      "command": {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/.venv/bin/python" | toJson }},
+      "args": [
+        {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/tools/figure.py" | toJson }},
+        "export",
+        "${input:figureName}",
+        "--project",
+        "${workspaceFolder}"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "MPLCONFIGDIR": {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/cache/matplotlib" | toJson }}
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Plot: generate normal distribution",
+      "type": "process",
+      "command": {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/.venv/bin/python" | toJson }},
+      "args": [
+        {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/tools/plot_example.py" | toJson }},
+        "--project",
+        "${workspaceFolder}"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "MPLCONFIGDIR": {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/cache/matplotlib" | toJson }}
+        }
+      },
+      "problemMatcher": []
+    }
+  ]
+}

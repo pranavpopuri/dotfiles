@@ -1,0 +1,46 @@
+{
+  "name": "math-source-preview",
+  "displayName": "Math Source Preview (Local)",
+  "description": "Render equations in the native LaTeX editor and reveal source at the cursor.",
+  "version": "0.2.0",
+  "publisher": "local-math-workflow",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onLanguage:latex",
+    "onLanguage:tex"
+  ],
+  "extensionDependencies": [
+    "james-yu.latex-workshop"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "mathSourcePreview.toggle",
+        "title": "Math Source Preview: Toggle In-Source Rendering"
+      }
+    ],
+    "configuration": {
+      "title": "Math Source Preview",
+      "properties": {
+        "mathSourcePreview.enabled": {
+          "type": "boolean",
+          "default": false,
+          "scope": "resource",
+          "description": "Render inactive equations directly in the source editor."
+        },
+        "mathSourcePreview.macros": {
+          "type": "object",
+          "default": {},
+          "scope": "resource",
+          "description": "MathJax macros used for source rendering."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+set -euo pipefail
+# Rebuild only when toolkit source changes. Runtime environments are not tracked.
+# dot_local/share/latex-workflow/README.md: {{ include "dot_local/share/latex-workflow/README.md" | sha256sum }}
+# dot_local/share/latex-workflow/bootstrap-macos.sh: {{ include "dot_local/share/latex-workflow/bootstrap-macos.sh" | sha256sum }}
+# dot_local/share/latex-workflow/config/Brewfile: {{ include "dot_local/share/latex-workflow/config/Brewfile" | sha256sum }}
+# dot_local/share/latex-workflow/config/cspell.json: {{ include "dot_local/share/latex-workflow/config/cspell.json" | sha256sum }}
+# dot_local/share/latex-workflow/config/settings.json.tmpl: {{ include "dot_local/share/latex-workflow/config/settings.json.tmpl" | sha256sum }}
+# dot_local/share/latex-workflow/config/tasks.json.tmpl: {{ include "dot_local/share/latex-workflow/config/tasks.json.tmpl" | sha256sum }}
+# dot_local/share/latex-workflow/editor/math-source-preview/README.md: {{ include "dot_local/share/latex-workflow/editor/math-source-preview/README.md" | sha256sum }}
+# dot_local/share/latex-workflow/editor/math-source-preview/extension.js: {{ include "dot_local/share/latex-workflow/editor/math-source-preview/extension.js" | sha256sum }}
+# dot_local/share/latex-workflow/editor/math-source-preview/fragments.js: {{ include "dot_local/share/latex-workflow/editor/math-source-preview/fragments.js" | sha256sum }}
+# dot_local/share/latex-workflow/editor/math-source-preview/package.json: {{ include "dot_local/share/latex-workflow/editor/math-source-preview/package.json" | sha256sum }}
+# dot_local/share/latex-workflow/editor/math-source-preview/worker.js: {{ include "dot_local/share/latex-workflow/editor/math-source-preview/worker.js" | sha256sum }}
+# dot_local/share/latex-workflow/examples/figures/triangle.svg: {{ include "dot_local/share/latex-workflow/examples/figures/triangle.svg" | sha256sum }}
+# dot_local/share/latex-workflow/examples/figures-example.tex: {{ include "dot_local/share/latex-workflow/examples/figures-example.tex" | sha256sum }}
+# dot_local/share/latex-workflow/examples/plots-example.tex: {{ include "dot_local/share/latex-workflow/examples/plots-example.tex" | sha256sum }}
+# dot_local/share/latex-workflow/examples/pythontex-example.tex: {{ include "dot_local/share/latex-workflow/examples/pythontex-example.tex" | sha256sum }}
+# dot_local/share/latex-workflow/examples/workflow-example.tex: {{ include "dot_local/share/latex-workflow/examples/workflow-example.tex" | sha256sum }}
+# dot_local/share/latex-workflow/extensions.txt: {{ include "dot_local/share/latex-workflow/extensions.txt" | sha256sum }}
+# dot_local/share/latex-workflow/hsnips/latex.hsnips: {{ include "dot_local/share/latex-workflow/hsnips/latex.hsnips" | sha256sum }}
+# dot_local/share/latex-workflow/templates/course-macros.tex: {{ include "dot_local/share/latex-workflow/templates/course-macros.tex" | sha256sum }}
+# dot_local/share/latex-workflow/templates/notes.tex: {{ include "dot_local/share/latex-workflow/templates/notes.tex" | sha256sum }}
+# dot_local/share/latex-workflow/tex/latex/latex-workflow/math-macros.tex: {{ include "dot_local/share/latex-workflow/tex/latex/latex-workflow/math-macros.tex" | sha256sum }}
+# dot_local/share/latex-workflow/tex/latex/latex-workflow/math-preview-macros.tex: {{ include "dot_local/share/latex-workflow/tex/latex/latex-workflow/math-preview-macros.tex" | sha256sum }}
+# dot_local/share/latex-workflow/tools/build_latex.py: {{ include "dot_local/share/latex-workflow/tools/build_latex.py" | sha256sum }}
+# dot_local/share/latex-workflow/tools/build_pythontex.py: {{ include "dot_local/share/latex-workflow/tools/build_pythontex.py" | sha256sum }}
+# dot_local/share/latex-workflow/tools/cas.py: {{ include "dot_local/share/latex-workflow/tools/cas.py" | sha256sum }}
+# dot_local/share/latex-workflow/tools/copy_pythontex.py: {{ include "dot_local/share/latex-workflow/tools/copy_pythontex.py" | sha256sum }}
+# dot_local/share/latex-workflow/tools/figure.py: {{ include "dot_local/share/latex-workflow/tools/figure.py" | sha256sum }}
+# dot_local/share/latex-workflow/tools/package_visual_extension.py: {{ include "dot_local/share/latex-workflow/tools/package_visual_extension.py" | sha256sum }}
+# dot_local/share/latex-workflow/tools/plot_example.py: {{ include "dot_local/share/latex-workflow/tools/plot_example.py" | sha256sum }}
+# dot_local/share/latex-workflow/tools/requirements-math.txt: {{ include "dot_local/share/latex-workflow/tools/requirements-math.txt" | sha256sum }}
+# dot_local/share/latex-workflow/tools/test-source-preview.cjs: {{ include "dot_local/share/latex-workflow/tools/test-source-preview.cjs" | sha256sum }}
+# dot_local/share/latex-workflow/tools/tex_environment.py: {{ include "dot_local/share/latex-workflow/tools/tex_environment.py" | sha256sum }}
+# dot_local/share/latex-workflow/tools/workflow.py: {{ include "dot_local/share/latex-workflow/tools/workflow.py" | sha256sum }}
+bash "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/bootstrap-macos.sh"
+{{ else -}}
+#!/bin/sh
+exit 0
+{{ end -}}

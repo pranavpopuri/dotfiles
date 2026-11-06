@@ -1,0 +1,14 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb}
+\usepackage{pythontex}
+\begin{document}
+\section{Double Integrals}
+\begin{sympycode}
+x, y = symbols('x y')
+I = Integral(x*y, (y, 0, 1-x), (x, 0, 1))
+result = I.doit()
+\end{sympycode}
+\[
+\sympy{I} = \sympy{result} \approx \sympy{N(result, 8)}
+\]
+\end{document}
