@@ -67,5 +67,6 @@
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "git.ignoreMissingGitWarning": true,
-  "git.openRepositoryInParentFolders": "always"
+  "git.openRepositoryInParentFolders": "always",
+  "mathSourcePreview.scale": 1.25
 }

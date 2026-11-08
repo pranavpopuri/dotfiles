@@ -2,3 +2,4 @@ sympy==1.14.0
 Pygments>=2.18,<3
 matplotlib>=3.9,<4
 antlr4-python3-runtime==4.11.1
+latex2sympy2_extended==1.11.0

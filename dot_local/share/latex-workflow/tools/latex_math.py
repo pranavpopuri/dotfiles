@@ -111,6 +111,28 @@ def binding(name, scope, protected=()):
     return None
 
 
+def indexed_symbols(expression, parser):
+    """Give mathematical subscripts index semantics, rather than opaque names.
+
+    The upstream converter returns Symbol('x_i'); a Sum cannot see i inside
+    that name. IndexedBase preserves that dependency for sums and derivatives.
+    """
+    if not isinstance(expression, sp.Basic):
+        if isinstance(expression, sp.MatrixBase):
+            return expression.applyfunc(lambda item: indexed_symbols(item, parser))
+        return expression
+    replacements = {}
+    for symbol in expression.atoms(sp.Symbol):
+        base, separator, subscript = symbol.name.partition('_')
+        if not separator or not subscript:
+            continue
+        if subscript.startswith('{') and subscript.endswith('}'):
+            subscript = subscript[1:-1]
+        indices = tuple(parser(part.strip()) for part in split_top(subscript, ','))
+        replacements[symbol] = sp.IndexedBase(base)[indices]
+    return expression.xreplace(replacements)
+
+
 def parse_math(source, scope=None, protected=()):
     scope = scope or {}
     if not isinstance(source, str) or not source.strip(): raise MathInputError('Enter a mathematical expression.')
@@ -141,21 +163,15 @@ def parse_math(source, scope=None, protected=()):
         return {'det':matrix.det,'trace':matrix.trace,'rank':matrix.rank}[matrix_operator[1]]()
     if '\\begin' in text or '\\end' in text:
         raise MathInputError('This mathematical environment/embedded matrix operation is not supported by the scalar parser.')
-    unknown = set(re.findall(r'\\([A-Za-z]+)',text)) - COMMANDS
-    if unknown:
-        raise MathInputError('Unregistered LaTeX command(s): '+', '.join('\\'+name for name in sorted(unknown))+'. Define a computational alias in config/latex-macros.json.')
-    # x(y) and f(x) have multiple interpretations. Require multiplication or a definition.
-    calls = re.findall(r'(?<![A-Za-z\\])([A-Za-z])\s*\(',text)
-    for name in calls:
-        if not isinstance(scope.get(name),(sp.Lambda,FunctionClass)):
-            raise MathInputError(f'{name}(...) is ambiguous: use \\cdot for multiplication, or define {name}(x) in sympycode first.')
     try:
-        from sympy.parsing.latex import parse_latex
-        expression=parse_latex(text,strict=True,backend='antlr')
+        from latex2sympy2_extended import latex2sympy
+        from latex2sympy2_extended.latex2sympy2 import ConversionConfig
+        expression = latex2sympy(text, conversion_config=ConversionConfig(lowercase_symbols=False))
+        expression = indexed_symbols(expression, latex2sympy)
     except ImportError as error:
-        raise MathInputError('LaTeX parsing dependency is missing. Run latex-workflow setup (antlr4-python3-runtime 4.11).') from error
+        raise MathInputError('Install latex2sympy2_extended in the workflow Python environment.') from error
     except Exception as error:
-        raise MathInputError('Cannot interpret this complete LaTeX expression: '+str(error)) from error
+        raise MathInputError('Cannot interpret this LaTeX expression: '+str(error)) from error
     constants={sp.Symbol('pi'):sp.pi,sp.Symbol('EulerConstant'):sp.E,sp.Symbol('ImaginaryConstant'):sp.I}
     expression=expression.subs(constants, simultaneous=True)
     # Expand only explicitly defined mathematical functions, never arbitrary Python functions.
@@ -163,7 +179,10 @@ def parse_math(source, scope=None, protected=()):
         name=call.func.__name__
         function=scope.get(name)
         if isinstance(function,sp.Lambda): expression=expression.subs(call,function(*call.args))
-    substitutions={symbol:value for symbol in expression.free_symbols if (value:=binding(symbol.name,scope,protected)) is not None}
+    labels = {item.base.label for item in expression.atoms(sp.Indexed)}
+    substitutions={symbol:value for symbol in expression.free_symbols
+                   if isinstance(symbol, sp.Symbol) and symbol not in labels
+                   and (value:=binding(symbol.name,scope,protected)) is not None}
     if substitutions: expression=expression.subs(substitutions, simultaneous=True)
     return expression
 

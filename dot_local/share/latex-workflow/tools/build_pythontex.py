@@ -22,10 +22,29 @@ if not driver.exists():
 command = [pdflatex, '-interaction=nonstopmode', '-halt-on-error', '-file-line-error', '-synctex=1', source.name]
 locks=ROOT/'cache/pythontex-locks'
 locks.mkdir(parents=True,exist_ok=True)
+transcript = source.with_suffix('.pythontex-build.log')
+
+
+def run_phase(arguments, log, publish=False):
+    result = subprocess.run(arguments, cwd=source.parent, env=environment,
+                            stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                            text=True)
+    log.write(result.stdout)
+    log.flush()
+    # Workshop parses all stdout as one TeX log. Intermediate passes can
+    # legitimately lack PythonTeX output, so publish only the final pass.
+    # Failures remain visible and stop the build immediately.
+    if publish or result.returncode:
+        print(result.stdout, end='')
+    if result.returncode:
+        sys.exit(result.returncode)
+
+
 with (locks/(hashlib.sha256(str(source).encode()).hexdigest()+'.lock')).open('w') as lock:
     fcntl.flock(lock,fcntl.LOCK_EX)
-    subprocess.run(command,cwd=source.parent,env=environment,check=True)
-    code=source.with_suffix('.pytxcode')
-    code.write_text(transform(code.read_text()))
-    subprocess.run([str(python),str(driver),'--interpreter','python:python',source.name],cwd=source.parent,env=environment,check=True)
-    subprocess.run(command,cwd=source.parent,env=environment,check=True)
+    with transcript.open('w') as log:
+        run_phase(command, log)
+        code=source.with_suffix('.pytxcode')
+        code.write_text(transform(code.read_text()))
+        run_phase([str(python),str(driver),'--interpreter','python:python',source.name], log)
+        run_phase(command, log, publish=True)

@@ -44,6 +44,35 @@ editor config, preserving unrelated values. Runtime data and installed extension
 use VSCodium's standard locations. The old isolated instance's files are unused.
 Projects need no toolkit copies, Python environment, or `.vscode` setup.
 
+## Where to put configs and templates
+
+Paths below are relative to `~/.local/share/latex-workflow/` unless stated
+otherwise. For changes that should survive chezmoi updates and sync to another
+Mac, edit the corresponding tracked file with `chezmoi edit` or in the chezmoi
+source directory, then run `chezmoi apply`.
+
+| Location | What belongs here |
+| --- | --- |
+| `templates/` | Starter documents: `notes.tex` and `course-macros.tex`. `latex-workflow init` copies these two files into a project, keeping any existing files. Template edits affect future projects; additional template files are not copied automatically. |
+| `hsnips/latex.hsnips` | Your LaTeX HyperSnips expansions and automatic math snippets. See [the snippet catalog](SNIPPETS.md). |
+| `config/settings.json` | Shared LaTeX editor settings, build recipes, and source-preview settings. |
+| `config/keybindings.json` | LaTeX keyboard shortcuts. |
+| `config/tasks.json` | Editor tasks for builds, figures, and plotting. |
+| `config/cspell.json` | Spell-check settings and custom words. |
+| `config/latex-macros.json` | Computational aliases for custom LaTeX commands used in CAS and PythonTeX calculations. |
+| `tex/latex/latex-workflow/` | Shared TeX files, including `math-macros.tex` and `math-preview-macros.tex`, available through the toolkit build environment. |
+| `config/Brewfile` | macOS dependencies installed by the toolkit setup. |
+| Your project folder | Project-specific `course-macros.tex`, document sources, bibliography files, and a `figures/` folder for that project's artwork. |
+
+Your ordinary VSCodium settings live in
+`~/Library/Application Support/VSCodium/User/`. Keep general editor preferences
+in the chezmoi source template `.chezmoitemplates/vscodium-preferences.json`;
+the toolkit's `config/` files supply the LaTeX additions. After changing those
+additions, `latex-workflow editor-config` merges them into the live editor config.
+
+The `.venv/`, `texmf/`, `cache/`, and `extensions/` folders contain generated or
+installed runtime files; put your own shared TeX sources in `tex/`.
+
 ## Features
 
 - HyperSnips: type `cas integrate(x*y,(y,0,1-x),(x,0,1)) cas` inside math;

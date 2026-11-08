@@ -1,68 +1,67 @@
-# Calculate using LaTeX
+# Calculate from written LaTeX
 
-The normal VSCodium workflow accepts the same mathematical LaTeX in CAS snippets and embedded PythonTeX calculations. Existing explicit SymPy code still works.
+Choose **PythonTeX (trusted documents)** or run
+`latex-workflow build --pythontex document.tex`.
+Include `\usepackage{pythontex}` in the preamble.
 
-## Calculate once
-
-Inside math mode, type the whole trigger, including the closing `cas`:
-
-```tex
-cas \int_0^1 x^2\,dx cas
-```
-
-The CAS snippet inserts `\frac{1}{3}`. That result becomes ordinary document text.
-
-## Recalculate when building
-
-Choose **PythonTeX (trusted documents)**. Include `\usepackage{pythontex}` in the preamble.
-
-```tex
-\[
-  \int_0^1 x^2\,dx = \sympy{\int_0^1 x^2\,dx}
-\]
-```
-
-The expression is written in LaTeX; `\sympy` prints its calculated result.
-
-Named calculations work too; no symbol declarations are needed:
+Paste the mathematical expression into a `sympycode` assignment. Use standard
+SymPy operations on the saved value, then insert the result using `\sympy`:
 
 ```tex
 \begin{sympycode}
-  answer2 = \int_0^1 x^2\,dx
-  a = 2
-  area = \int_0^a x\,dx
-  f(x) = x^2 + 1
-  value = f(3)
+  answer = \left(\frac{6}{\sum_{i=1}^{n} x_i^6}\right)^{\frac{1}{5}}
+  result = simplify(answer)
+  polynomial = x^3+x^2+1
+  second_derivative = diff(polynomial, Symbol('x'), 2)
 \end{sympycode}
 
-\[ \sympy{answer2},\quad \sympy{area},\quad \sympy{value} \]
+\[ \sympy{result},\qquad \sympy{second_derivative} \]
 ```
 
-Use `value = f(3)` as native Python after defining `f`; the mathematical definition creates a callable SymPy Lambda. Keep one mathematical assignment per line. Uniform block indentation is accepted; multiline Python remains Python. For long LaTeX expressions, keep the assignment on one source line.
+You can also paste a multiline display into an assignment:
 
-## Operations
+```tex
+\begin{sympycode}
+  area = \[
+    \int_0^1 x^2\,dx
+  \]
+  decimal = N(area, 8)
+\end{sympycode}
+\[ \sympy{area} \approx \sympy{decimal} \]
+```
 
-These prefixes work in both CAS and `\sympy{...}` or assignment input:
+Both inline calculations and named LaTeX operations are supported:
 
-| Input | Meaning |
-|---|---|
-| `factor: x^2-1` | Factor |
-| `expand: (x+1)^3` | Expand |
-| `simplify: \sin^2(x)+\cos^2(x)` | Simplify |
-| `solve x: x^2=1` | Solve for x |
-| `numeric 8: \pi` | Eight significant digits |
-| `hold: \int_0^1 x^2\,dx` | Keep the unevaluated integral |
+```tex
+\begin{sympycode}
+  factored = factor: x^2-1
+  roots = solve x: x^2=1
+  integral = \int_0^1 x^2\,dx
+\end{sympycode}
+\[ \sympy{factored},\quad \sympy{roots},\quad \sympy{integral} \]
+```
 
-Ordinary input is evaluated and simplified. Standard fractions, powers, Greek variables, integrals, derivatives, limits, sums and products use SymPy's supported LaTeX grammar. Standalone `matrix`, `pmatrix`, `bmatrix`, and `smallmatrix` are supported, along with `\det{...}`, `\operatorname{trace}{...}` and `\operatorname{rank}{...}` on a matrix or previously named matrix.
+`evaluate:`, `simplify:`, `expand:`, `factor:`, `solve x:`, `numeric 8:` and
+`hold:` prefixes are available. Native SymPy code remains available for
+substitutions, differentiation variables, lists of observations and other
+operations. Calculations refresh when building with the PythonTeX recipe.
 
-## Meaning and limits
+The conversion backend is the upstream `latex2sympy2_extended` library rather
+than SymPy's experimental LaTeX parser. A binding adapter represents subscripts
+as indexed SymPy values so `\sum_{i=1}^n x_i^6` preserves its dependence on `i`.
+For finite limits, the sum expands into the individual indexed observations.
+For a numerical answer, supply numerical observations and bounds.
 
-LaTeX describes appearance, so not every LaTeX document has a unique computational interpretation. This is a mathematical-input layer, not a full TeX engine. Unsupported commands and ambiguous undefined `f(x)` raise errors. Write `x\cdot(y+1)` for multiplication. Define functions before calling them. Use `\pi` for the constant, `\mathrm{e}` for Euler's constant, and `\mathrm{i}` for the imaginary unit; plain e and i are variables.
+A barred variable is a distinct constant symbol unless given an explicit
+functional dependence. The sample expression above contains no free scalar
+`x`, so differentiating it with respect to scalar `x` gives zero. To
+calculate a different derivative, specify the variable or indexed observation.
 
-Named calculation values can be used in later expressions. Integration variables remain bound even if the same name has a saved value. Displaying a named stored result preserves its saved form, so an existing native `Integral(...)` output does not suddenly evaluate itself.
+The backend supports a mathematical LaTeX grammar, not arbitrary TeX programs.
+Preamble macros do not automatically have computational meanings; existing
+aliases in `config/latex-macros.json` still apply. Unsupported input produces a
+build error. Use braces around compound exponents: `^{\frac{1}{5}}`.
 
-TeX `\newcommand` definitions are not automatically executed by the parser. Register computational aliases in `config/latex-macros.json`, in the permanent toolkit and chezmoi source. Entries are strings or `{ "args": 1, "body": "...#1..." }` objects. `\dd` and `\abs{...}` are supplied. Arbitrary TeX formatting, custom semantic operators, and matrix arithmetic embedded inside scalar expressions need explicit support; errors leave CAS input intact.
-
-Legacy `integrate(...)`, `Matrix(...)`, `.subs(...)`, and other existing supported SymPy calls remain available. CAS also accepts `python:` to explicitly choose its existing restricted SymPy syntax. In external Python scripts, import `evaluate_latex` from the toolkit's `tools/latex_math.py`; this integration does not modify SymPy globally.
-
-Only run PythonTeX for trusted documents: its blocks execute Python.
+Installation is provided by `tools/install_latex_cas.py`. It installs the
+packaged dependency, runs regression tests, backs up previous toolkit files,
+and restores those files if the installed tests fail.
