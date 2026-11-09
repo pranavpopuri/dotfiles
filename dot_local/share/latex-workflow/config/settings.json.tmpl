@@ -1,4 +1,37 @@
 {
+  "files.watcherExclude": {"**/.latex-build/**": true},
+  "mathSourcePreview.activePreview": true,
+  "latex-workshop.latex.watch.pdf.delay": 0,
+  "latex-workshop.view.pdf.reload.transition": "none",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 0,
+  "latex-workshop.latex.autoBuild.run": "onFileChange",
+  "latex-workshop.latex.autoBuild.interval": 0,
+  "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
+  "latex-workshop.message.error.show": false,
+  "latex-workshop.message.warning.show": false,
+  "latex-workshop.synctex.afterBuild.enabled": false,
+  "latex-workshop.view.pdf.viewer": "external",
+  "latex-workshop.view.pdf.external.viewer.command": {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/.venv/bin/python" | toJson }},
+  "latex-workshop.view.pdf.external.viewer.args": [
+    {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/tools/pdf_preview.py" | toJson }},
+    "view",
+    "%PDF%",
+    "--editor",
+    "codium"
+  ],
+  "latex-workshop.view.pdf.external.synctex.command": {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/.venv/bin/python" | toJson }},
+  "latex-workshop.view.pdf.external.synctex.args": [
+    {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/tools/pdf_preview.py" | toJson }},
+    "sync",
+    "%PDF%",
+    "--line",
+    "%LINE%",
+    "--tex",
+    "%TEX%",
+    "--editor",
+    "codium"
+  ],
   "files.exclude": {"**/*.synctex(busy)": true, "**/*.synctex.gz(busy)": true},
   "hsnips.hsnipsPath": {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/hsnips" | toJson }},
   "latex-workshop.latex.outDir": "%DIR%",
@@ -9,7 +42,7 @@
       "command": {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/.venv/bin/python" | toJson }},
       "args": [
         {{ joinPath .chezmoi.homeDir ".local/share/latex-workflow/tools/build_latex.py" | toJson }},
-        "%DOC_EXT%"
+        "%DOC_EXT%", "--preview", "--editor", "codium"
       ]
     },
     {

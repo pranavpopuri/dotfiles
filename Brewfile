@@ -104,8 +104,6 @@ brew "nasm"
 brew "ncdu"
 # Incremental parsing library
 brew "tree-sitter"
-# Ambitious Vim-fork focused on extensibility and agility
-brew "neovim"
 # Small build system for use with gyp or CMake
 brew "ninja"
 # Port scanning utility for large networks

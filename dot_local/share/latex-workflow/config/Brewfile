@@ -2,3 +2,8 @@
 brew "python"
 cask "vscodium"
 cask "inkscape"
+
+# External PDF preview with source/PDF navigation.
+tap "homebrew-zathura/zathura"
+brew "homebrew-zathura/zathura/zathura", args: ["with-synctex"]
+brew "homebrew-zathura/zathura/zathura-pdf-poppler"

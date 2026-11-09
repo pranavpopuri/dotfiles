@@ -44,6 +44,10 @@ set -euo pipefail
 # dot_local/share/latex-workflow/config/latex-macros.json: {{ include "dot_local/share/latex-workflow/config/latex-macros.json" | sha256sum }}
 # dot_local/share/latex-workflow/LATEX-MATH.md: {{ include "dot_local/share/latex-workflow/LATEX-MATH.md" | sha256sum }}
 # dot_local/share/latex-workflow/examples/latex-input-example.tex: {{ include "dot_local/share/latex-workflow/examples/latex-input-example.tex" | sha256sum }}
+# dot_local/share/latex-workflow/tools/pdf_preview.py: {{ include "dot_local/share/latex-workflow/tools/pdf_preview.py" | sha256sum }}
+# dot_local/share/latex-workflow/tools/setup_zathura.sh: {{ include "dot_local/share/latex-workflow/tools/setup_zathura.sh" | sha256sum }}
+# dot_local/share/latex-workflow/LIVE-PDF.md: {{ include "dot_local/share/latex-workflow/LIVE-PDF.md" | sha256sum }}
+# dot_local/share/latex-workflow/editor/math-source-preview/layout.js: {{ include "dot_local/share/latex-workflow/editor/math-source-preview/layout.js" | sha256sum }}
 bash "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/bootstrap-macos.sh"
 {{ else -}}
 #!/bin/sh

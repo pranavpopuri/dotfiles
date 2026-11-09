@@ -12,6 +12,8 @@ if ! command -v brew >/dev/null; then
     echo 'Install Homebrew first, then rerun latex-workflow setup.' >&2
     exit 1
 fi
+# Prepare the external viewer's formula trust before bundle resolves dependencies.
+bash "$root/tools/setup_zathura.sh"
 if ! brew bundle check --file="$root/config/Brewfile" >/dev/null 2>&1; then
     brew bundle --file="$root/config/Brewfile"
 fi

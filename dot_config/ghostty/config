@@ -1,6 +1,6 @@
 # Ghostty Configuration
 
-# Font (Nerd Font required for Neovim icons)
+# Font
 font-family = "Menlo"
 font-size = 14
 font-feature = +liga

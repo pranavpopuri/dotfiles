@@ -122,17 +122,41 @@ def merge_settings(text, defaults):
     changes['cSpell.import'] = list(dict.fromkeys(current.get('cSpell.import', []) + defaults.get('cSpell.import', [])))
     if '[latex]' in defaults:
         changes['[latex]'] = {**defaults['[latex]'], **current.get('[latex]', {})}
+    changes['files.watcherExclude'] = {**current.get('files.watcherExclude', {}), **defaults.get('files.watcherExclude', {})}
+    # Live preview settings are explicit workflow choices and must be updated.
+    live_keys = {
+        'files.watcherExclude',
+        'mathSourcePreview.activePreview',
+        'latex-workshop.latex.watch.pdf.delay',
+        'latex-workshop.view.pdf.reload.transition',
+        'files.autoSave', 'files.autoSaveDelay',
+        'latex-workshop.latex.recipe.default', 'latex-workshop.latex.outDir',
+        'latex-workshop.latex.autoBuild.run', 'latex-workshop.latex.autoBuild.interval',
+        'latex-workshop.latex.autoBuild.cleanAndRetry.enabled',
+        'latex-workshop.message.error.show', 'latex-workshop.message.warning.show',
+        'latex-workshop.synctex.afterBuild.enabled', 'latex-workshop.view.pdf.viewer',
+        'latex-workshop.view.pdf.external.viewer.command',
+        'latex-workshop.view.pdf.external.viewer.args',
+        'latex-workshop.view.pdf.external.synctex.command',
+        'latex-workshop.view.pdf.external.synctex.args',
+    }
     # Preserve intentional user choices for existing feature scalars/macros.
     for key in changes.keys() & current.keys():
-        if key not in ['latex-workshop.latex.tools', 'latex-workshop.latex.recipes', 'cSpell.import', '[latex]', 'hsnips.hsnipsPath']:
+        if key not in live_keys and key not in ['latex-workshop.latex.tools', 'latex-workshop.latex.recipes', 'cSpell.import', '[latex]', 'hsnips.hsnipsPath']:
             changes[key] = current[key]
     return patch_object(text, changes)
 
 
-def install():
+def install_user():
     USER.mkdir(parents=True, exist_ok=True)
     backup = ROOT / 'cache' / ('normal-editor-before-' + datetime.now().strftime('%Y%m%d-%H%M%S-%f'))
     feature_settings = json.loads((ROOT / 'config/settings.json').read_text())
+    editor = 'code' if USER.parent.name == 'Code' else 'codium'
+    for key in ('latex-workshop.view.pdf.external.viewer.args', 'latex-workshop.view.pdf.external.synctex.args'):
+        feature_settings[key][-1] = editor
+    for tool in feature_settings['latex-workshop.latex.tools']:
+        if tool['name'] == 'toolkit-latexmk':
+            tool['args'][-1] = editor
     outputs = {}
     settings = USER / 'settings.json'
     outputs[settings] = merge_settings(settings.read_text() if settings.exists() else '{}\n', feature_settings)
@@ -158,7 +182,21 @@ def install():
         if destination.exists():
             (backup / destination.name).write_bytes(destination.read_bytes())
         destination.write_text(content)
-    print('LaTeX features merged into normal VSCodium: ' + str(USER))
+    print('LaTeX features merged into: ' + str(USER))
+
+
+def install():
+    global USER
+    if os.environ.get('LATEX_WORKFLOW_EDITOR_USER'):
+        install_user()
+        return
+    users = [Path.home() / 'Library/Application Support/VSCodium/User']
+    code_user = Path.home() / 'Library/Application Support/Code/User'
+    if code_user.is_dir():
+        users.append(code_user)
+    for user in users:
+        USER = user
+        install_user()
 
 
 if __name__ == '__main__':

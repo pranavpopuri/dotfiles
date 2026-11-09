@@ -2,7 +2,7 @@
   "name": "math-source-preview",
   "displayName": "Math Source Preview (Local)",
   "description": "Render equations in the native LaTeX editor and reveal source at the cursor.",
-  "version": "0.2.0",
+  "version": "0.2.12",
   "publisher": "local-math-workflow",
   "engines": {
     "vscode": "^1.85.0"
@@ -39,6 +39,20 @@
           "default": {},
           "scope": "resource",
           "description": "MathJax macros used for source rendering."
+        },
+        "mathSourcePreview.scale": {
+          "type": "number",
+          "default": 1.2,
+          "minimum": 0.25,
+          "maximum": 2,
+          "scope": "resource",
+          "description": "Math font size relative to the editor font size. Equations shrink further when needed to fit existing source rows."
+        },
+        "mathSourcePreview.activePreview": {
+          "type": "boolean",
+          "default": true,
+          "scope": "resource",
+          "description": "Show a rendered preview beside the equation being edited, while keeping its source visible."
         }
       }
     }
