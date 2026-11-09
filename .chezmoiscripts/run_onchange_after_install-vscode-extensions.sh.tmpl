@@ -1,0 +1,29 @@
+#!/bin/bash
+set -e
+
+# VS Code extensions. This is a run_onchange_ script, so chezmoi re-runs it
+# whenever the list below changes. Regenerate with: code --list-extensions
+
+if ! command -v code >/dev/null 2>&1; then
+	echo "code not found, skipping VS Code extension install" >&2
+	exit 0
+fi
+
+extensions=(
+	ms-vscode-remote.remote-containers
+	jasew.vscode-helix-emulation
+	ms-vscode-remote.remote-ssh
+	kdarkhan.mips
+	llvm-vs-code-extensions.vscode-clangd
+	ms-python.debugpy
+	ms-python.python
+	ms-python.vscode-python-envs
+	navernoedenis.gruvbox-material-theme
+	yzhang.markdown-all-in-one
+	rust-lang.rust-analyzer
+)
+
+for extension in "${extensions[@]}"; do
+	code --install-extension "$extension"
+	code --profile Desktop --install-extension "$extension"
+done

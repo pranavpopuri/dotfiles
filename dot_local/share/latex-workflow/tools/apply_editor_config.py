@@ -1,4 +1,4 @@
-"""Merge only LaTeX workflow additions into the normal macOS VSCodium settings."""
+"""Merge only LaTeX workflow additions into the normal macOS VS Code settings."""
 from pathlib import Path
 from datetime import datetime
 import json
@@ -6,7 +6,7 @@ import os
 import re
 from tex_environment import ROOT
 
-USER = Path(os.environ.get('LATEX_WORKFLOW_EDITOR_USER', str(Path.home() / 'Library/Application Support/VSCodium/User')))
+USER = Path(os.environ.get('LATEX_WORKFLOW_EDITOR_USER', str(Path.home() / 'Library/Application Support/Code/User')))
 
 
 def clean_jsonc(text, trailing=True):
@@ -151,7 +151,7 @@ def install_user():
     USER.mkdir(parents=True, exist_ok=True)
     backup = ROOT / 'cache' / ('normal-editor-before-' + datetime.now().strftime('%Y%m%d-%H%M%S-%f'))
     feature_settings = json.loads((ROOT / 'config/settings.json').read_text())
-    editor = 'code' if USER.parent.name == 'Code' else 'codium'
+    editor = os.environ.get('LATEX_WORKFLOW_EDITOR', 'code')
     for key in ('latex-workshop.view.pdf.external.viewer.args', 'latex-workshop.view.pdf.external.synctex.args'):
         feature_settings[key][-1] = editor
     for tool in feature_settings['latex-workshop.latex.tools']:
@@ -190,10 +190,11 @@ def install():
     if os.environ.get('LATEX_WORKFLOW_EDITOR_USER'):
         install_user()
         return
-    users = [Path.home() / 'Library/Application Support/VSCodium/User']
     code_user = Path.home() / 'Library/Application Support/Code/User'
-    if code_user.is_dir():
-        users.append(code_user)
+    users = [code_user]
+    profiles = code_user / 'profiles'
+    if profiles.is_dir():
+        users.extend(p for p in profiles.iterdir() if p.is_dir())
     for user in users:
         USER = user
         install_user()

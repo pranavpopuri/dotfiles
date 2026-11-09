@@ -46,7 +46,7 @@ if [ ! -f "$system_texmf/scripts/pythontex/pythontex.py" ]; then
 fi
 "$root/.venv/bin/python" "$root/tools/copy_pythontex.py" "$system_texmf"
 mktexlsr "$TEXMFHOME"
-# Add the LaTeX tools to the existing VSCodium installation.
+# Add the LaTeX tools to the existing VS Code installation.
 bash "$root/tools/install_editor.sh"
 "$root/.venv/bin/python" "$root/tools/workflow.py" doctor
 # A fresh temporary note project verifies that builds need no testing-repo files.

@@ -1,6 +1,6 @@
 # Automatic LaTeX PDF preview
 
-Edit notes in VS Code or VSCodium using the existing Helix bindings and snippets.
+Edit notes in VS Code using the existing Helix bindings and snippets.
 The editor saves with no configured delay; file changes trigger the toolkit
 latexmk recipe without an added build interval. The first successful build opens Zathura. Keep it beside the
 editor: subsequent successful builds update the same window automatically.
@@ -22,7 +22,7 @@ project or profile settings can override user settings.
 Chezmoi tracks the shared settings template, build/preview helpers, Zathura
 preferences, Homebrew dependencies and setup hook. VS Code user settings are
 merged by the toolkit's editor-config command when that editor is installed;
-VSCodium also has its existing chezmoi user-settings template.
+VS Code also has its existing chezmoi user-settings template.
 
 
 Builds use a stable snapshot of the main source file, so typing does not keep

@@ -1,6 +1,6 @@
 # TeX-aware editing with Helix
 
-Your normal VSCodium uses **Helix for VS Code** (`jasew.vscode-helix-emulation`),
+Your normal VS Code uses **Helix for VS Code** (`jasew.vscode-helix-emulation`),
 not VSCodeVim. Its appearance and general preferences are retained. TeX-aware commands come
 from LaTeX Workshop, while Helix handles movement and selection-first editing.
 
@@ -114,11 +114,11 @@ and figure tools continue to work alongside the native TeX-aware commands.
 - `tools/install_editor.sh` installs Helix first, then removes VSCodeVim **only
   from the normal extension installation**. It merges the TeX keybindings.
 - `latex-workflow setup` calls the same installer on this Mac and future Macs.
-- Run **Developer: Reload Window** in your normal VSCodium window after setup.
+- Run **Developer: Reload Window** in your normal VS Code window after setup.
   `latex-workflow open` now reuses it; no isolated window is required.
 - This VS Code extension emulates Helix; it is not the standalone Helix editor
   and its selection behavior may differ. Check real editing behavior in the GUI.
-- Linux configuration is unchanged. Normal VSCodium receives the LaTeX
+- Linux configuration is unchanged. Normal VS Code receives the LaTeX
   extensions and recipes, with your existing visual preferences preserved.
 
 References: [Helix for VS Code](https://github.com/jasonwilliams/vscode-helix),

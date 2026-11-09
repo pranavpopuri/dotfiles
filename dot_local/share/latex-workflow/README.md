@@ -9,7 +9,7 @@ activation rules, calculations, previews, figures, plotting, and troubleshooting
 This folder is deployed from chezmoi to `~/.local/share/latex-workflow`. Source,
 settings, snippets, extension code, templates, and requirements are tracked.
 Extension versions are listed in `extensions.txt`; the ordinary editor's extension-update preferences are retained. Update that file and reapply chezmoi
-when intentionally changing the setup versions. Python environments, downloaded TeX packages, VSCodium-installed extensions, caches,
+when intentionally changing the setup versions. Python environments, downloaded TeX packages, VS Code-installed extensions, caches,
 PDFs, and editor state are rebuilt on each device and are not committed.
 
 ## Use
@@ -29,19 +29,19 @@ The launcher is at `~/.local/bin/latex-workflow`, also linked from `~/bin`,
 which your existing chezmoi shell configuration already puts on PATH.
 `latex-workflow setup` reruns the macOS bootstrap.
 
-`open` now reuses your **normal VSCodium window**. You can also open notes
-normally from VSCodium or Finder; a separate editor instance is no longer needed.
+`open` now reuses your **normal VS Code window**. You can also open notes
+normally from VS Code or Finder; a separate editor instance is no longer needed.
 Your existing theme, layout, font, general preferences, and other extensions are
 retained. Only LaTeX feature settings, TeX-scoped shortcuts, tasks, and the
-required math extensions are added. Normal VSCodium now offers both
+required math extensions are added. Normal VS Code now offers both
 **LaTeX toolkit (latexmk)** and **PythonTeX (trusted documents)** build recipes.
 
 The feature defaults live in `config/`. Chezmoi combines them with your ordinary
-preferences in `.chezmoitemplates/vscodium-preferences.json` to render the normal
-VSCodium User settings. Tasks and keybindings use the same composition pattern.
+preferences in `.chezmoitemplates/vscode-preferences.json` to render the normal
+VS Code User settings. Tasks and keybindings use the same composition pattern.
 `latex-workflow setup` also merges the feature additions into the live normal
 editor config, preserving unrelated values. Runtime data and installed extensions
-use VSCodium's standard locations. The old isolated instance's files are unused.
+use VS Code's standard locations. The old isolated instance's files are unused.
 Projects need no toolkit copies, Python environment, or `.vscode` setup.
 
 ## Where to put configs and templates
@@ -64,9 +64,9 @@ source directory, then run `chezmoi apply`.
 | `config/Brewfile` | macOS dependencies installed by the toolkit setup. |
 | Your project folder | Project-specific `course-macros.tex`, document sources, bibliography files, and a `figures/` folder for that project's artwork. |
 
-Your ordinary VSCodium settings live in
-`~/Library/Application Support/VSCodium/User/`. Keep general editor preferences
-in the chezmoi source template `.chezmoitemplates/vscodium-preferences.json`;
+Your ordinary VS Code settings live in
+`~/Library/Application Support/Code/User/`. Keep general editor preferences
+in the chezmoi source template `.chezmoitemplates/vscode-preferences.json`;
 the toolkit's `config/` files supply the LaTeX additions. After changing those
 additions, `latex-workflow editor-config` merges them into the live editor config.
 

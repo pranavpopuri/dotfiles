@@ -1,6 +1,6 @@
 # Used only by the macOS LaTeX bootstrap; existing shared/Linux manifests stay unchanged.
 brew "python"
-cask "vscodium"
+cask "visual-studio-code"
 cask "inkscape"
 
 # External PDF preview with source/PDF navigation.

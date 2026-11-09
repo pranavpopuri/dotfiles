@@ -41,7 +41,7 @@ For existing notes, just use:
 latex-workflow open /path/to/your/notes
 ```
 
-**The workflow now runs in your normal VSCodium window.** You may open the folder
+**The workflow now runs in your normal VS Code window.** You may open the folder
 normally or use the launcher, which reuses that window. Your appearance and
 general settings are retained; LaTeX features are added to the normal config.
 Individual note projects need no toolkit copy, virtual environment, or editor settings.
@@ -81,7 +81,7 @@ when a keyboard binding conflicts with another extension or a macOS shortcut.
 
 ## Every custom editor shortcut
 
-Your normal VSCodium uses **Helix** for modal controls; VSCodeVim is removed to avoid conflicts. All custom bindings and
+Your normal VS Code uses **Helix** for modal controls; VSCodeVim is removed to avoid conflicts. All custom bindings and
 TeX-aware environment/section selections are documented in
 [TEX-EDITING.md](TEX-EDITING.md), including their differences from VimTeX.
 
@@ -230,7 +230,7 @@ to reveal its original LaTeX, then move away to render it again. The stored file
 stays LaTeX. Incomplete or unsupported formulas stay visible as source; CAS
 input stays source until evaluated.
 
-- **Ctrl+L m:** toggle in-source rendering for the normal VSCodium editor.
+- **Ctrl+L m:** toggle in-source rendering for the normal VS Code editor.
 - **Ctrl+L p:** open/close Workshop's larger live math preview panel below.
 - Hover on source math for a Workshop equation preview.
 
@@ -293,7 +293,7 @@ conflicting definitions twice.
 4. For mathematical labels, enter literal LaTeX such as `$A$`, `$\alpha$`,
    or `$\vec{v}$` using the text tool. Inkscape may display the raw label text;
    LaTeX typesets it at document build time.
-5. **Save the SVG in Inkscape.** Return to VSCodium, press **Ctrl+L x**, and enter
+5. **Save the SVG in Inkscape.** Return to VS Code, press **Ctrl+L x**, and enter
    the same figure name.
 6. Export creates `figures/triangle.pdf` and `figures/triangle.pdf_tex`.
 7. Insert the figure with `\incfig{triangle}`, or accept the manual `svgfig`
@@ -455,7 +455,7 @@ custom package command will have a completion or MathJax preview.
 | Command | Purpose |
 | --- | --- |
 | `latex-workflow init [PROJECT]` | Create a minimal project; defaults to the current directory |
-| `latex-workflow open [PROJECT]` | Reuse the normal VSCodium window; defaults to the current directory |
+| `latex-workflow open [PROJECT]` | Reuse the normal VS Code window; defaults to the current directory |
 | `latex-workflow build DOCUMENT` | Build an ordinary document with latexmk |
 | `latex-workflow build --pythontex DOCUMENT` | Run the PythonTeX build sequence |
 | `latex-workflow figure edit NAME [--project DIR]` | Create/open a named SVG |
@@ -493,7 +493,7 @@ relative to that root unless marked otherwise.
 | `editor/math-source-preview/` | Source of the custom native-editor preview extension |
 | `extensions.txt` | Tested extension versions |
 | `config/Brewfile`, `bootstrap-macos.sh` | macOS dependencies and setup |
-| `~/Library/Application Support/VSCodium/User/` | Normal editor settings, keybindings, and tasks with the LaTeX additions |
+| `~/Library/Application Support/Code/User/` | Normal editor settings, keybindings, and tasks with the LaTeX additions |
 | `~/.local/bin/latex-workflow`, `~/bin/latex-workflow` | Launcher and link already on your shell PATH |
 
 To sync changes between Macs, edit **chezmoi source**, then apply. For example:
@@ -510,9 +510,9 @@ chezmoi source-path ~/.local/share/latex-workflow/config/settings.json
 ```
 
 The normal settings source template combines your preferences from
-`.chezmoitemplates/vscodium-preferences.json` with the toolkit feature defaults.
-The corresponding keybinding/task preferences are `vscodium-keybindings.json`
-and `vscodium-tasks.json` in that same source directory. Your current appearance
+`.chezmoitemplates/vscode-preferences.json` with the toolkit feature defaults.
+The corresponding keybinding/task preferences are `vscode-keybindings.json`
+and `vscode-tasks.json` in that same source directory. Your current appearance
 was preserved in those preferences. To sync later UI preference changes, update
 that preferences JSON in chezmoi; edit the toolkit's `config/` files for shared
 LaTeX settings. The normal User templates render the combination on each Mac.
@@ -540,7 +540,7 @@ currently supports macOS; Linux support would need its own explicit integration.
 | Symptom | What to check |
 | --- | --- |
 | PythonTeX is missing from Build with recipe | Run normal-window integration, reload the window, and check whether workspace settings override the global recipe list. |
-| None of the math shortcuts work | Reload the normal VSCodium window after setup; check Helix mode and that the file language is LaTeX. |
+| None of the math shortcuts work | Reload the normal VS Code window after setup; check Helix mode and that the file language is LaTeX. |
 | A symbol snippet does nothing | Put the cursor inside recognized math; check its boundary rule and whether it is manual. |
 | Tab just indents | For manual snippets, request/accept the matching suggestion first; Tab navigation requires an active snippet. |
 | Snippets rewrite normal typing | Check automatic triggers and boundaries; undo the expansion if needed. |

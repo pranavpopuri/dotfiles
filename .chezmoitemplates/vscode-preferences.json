@@ -68,5 +68,6 @@
   "git.enableSmartCommit": true,
   "git.ignoreMissingGitWarning": true,
   "git.openRepositoryInParentFolders": "always",
-  "mathSourcePreview.scale": 1.25
+  "mathSourcePreview.scale": 1.25,
+  "workbench.experimental.modernUI": false
 }

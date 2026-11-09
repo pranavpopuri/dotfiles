@@ -1,0 +1,4 @@
+{{- $settings := include ".chezmoitemplates/vscode-preferences.json" | fromJson -}}
+{{- $latex := includeTemplate "dot_local/share/latex-workflow/config/settings.json.tmpl" . | fromJson -}}
+{{- $settings = mergeOverwrite $settings $latex -}}
+{{ $settings | toPrettyJson }}

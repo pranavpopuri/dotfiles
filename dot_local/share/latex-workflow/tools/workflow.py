@@ -41,9 +41,9 @@ def main():
     elif args.action in ('editor-config', 'editor-links'):
         editor_links()
     elif args.action == 'open':
-        editor = shutil.which(os.environ.get('LATEX_WORKFLOW_EDITOR', 'codium'), path=environment['PATH'])
+        editor = shutil.which(os.environ.get('LATEX_WORKFLOW_EDITOR', 'code'), path=environment['PATH'])
         if not editor:
-            sys.exit('VSCodium is missing. Run latex-workflow setup.')
+            sys.exit('VS Code is missing. Run latex-workflow setup.')
         subprocess.run([editor, '--reuse-window', str(args.project.expanduser().resolve())], check=True, env=environment)
     elif args.action == 'init':
         project = args.project.expanduser().resolve()
@@ -66,7 +66,7 @@ def main():
         subprocess.run([str(python), str(ROOT / 'tools/plot_example.py'), '--project', str(args.project)], check=True, env=environment)
     elif args.action == 'doctor':
         checks = {}
-        for command in ['pdflatex', 'latexmk', 'codium', 'inkscape']:
+        for command in ['pdflatex', 'latexmk', 'code', 'inkscape']:
             checks[command] = shutil.which(command, path=environment['PATH']) or 'MISSING'
         for package in ['pythontex.sty', 'pgfplots.sty', 'math-macros.tex']:
             checks[package] = subprocess.run(['kpsewhich', package], env=environment, text=True, capture_output=True).stdout.strip() or 'MISSING'
