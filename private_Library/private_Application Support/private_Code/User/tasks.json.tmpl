@@ -1,5 +1,68 @@
-{{- $existing := include ".chezmoitemplates/vscode-tasks.json" | fromJson -}}
-{{- $latex := includeTemplate "dot_local/share/latex-workflow/config/tasks.json.tmpl" . | fromJson -}}
-{{- $_ := set $existing "tasks" (concat ($existing.tasks | default list) $latex.tasks) -}}
-{{- $_ := set $existing "inputs" (concat ($existing.inputs | default list) $latex.inputs) -}}
-{{ $existing | toPrettyJson }}
+{
+  "inputs": [
+    {
+      "default": "diagram",
+      "description": "Figure name (letters, digits, hyphens, underscores)",
+      "id": "figureName",
+      "type": "promptString"
+    }
+  ],
+  "tasks": [
+    {
+      "args": [
+        "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/tools/figure.py",
+        "edit",
+        "${input:figureName}",
+        "--project",
+        "${workspaceFolder}"
+      ],
+      "command": "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/.venv/bin/python",
+      "label": "Figure: edit/create SVG",
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "MPLCONFIGDIR": "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/cache/matplotlib"
+        }
+      },
+      "problemMatcher": [],
+      "type": "process"
+    },
+    {
+      "args": [
+        "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/tools/figure.py",
+        "export",
+        "${input:figureName}",
+        "--project",
+        "${workspaceFolder}"
+      ],
+      "command": "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/.venv/bin/python",
+      "label": "Figure: export PDF + LaTeX",
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "MPLCONFIGDIR": "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/cache/matplotlib"
+        }
+      },
+      "problemMatcher": [],
+      "type": "process"
+    },
+    {
+      "args": [
+        "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/tools/plot_example.py",
+        "--project",
+        "${workspaceFolder}"
+      ],
+      "command": "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/.venv/bin/python",
+      "label": "Plot: generate normal distribution",
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "MPLCONFIGDIR": "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/cache/matplotlib"
+        }
+      },
+      "problemMatcher": [],
+      "type": "process"
+    }
+  ],
+  "version": "2.0.0"
+}

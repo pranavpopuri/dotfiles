@@ -5,7 +5,7 @@ root="$(cd "$(dirname "$0")/.." && pwd)"
 export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
 editor="${LATEX_WORKFLOW_EDITOR:-code}"
 mkdir -p "$root/cache"
-# Configure both the default profile and the established Desktop profile.
+# Keep the math workflow isolated in the LaTeX profile.
 install_extensions() {
     profile_args=("$@")
     while IFS= read -r extension; do
@@ -21,7 +21,6 @@ install_extensions() {
     "$root/.venv/bin/python" "$root/tools/package_visual_extension.py"
     "$editor" "${profile_args[@]}" --install-extension "$root/cache/math-source-preview.vsix" --force
 }
-install_extensions
-install_extensions --profile Desktop
+install_extensions --profile LaTeX
 "$root/.venv/bin/python" "$root/tools/workflow.py" editor-config
 echo 'LaTeX is integrated into normal VS Code. Run Developer: Reload Window.'

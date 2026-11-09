@@ -190,11 +190,7 @@ def install():
     if os.environ.get('LATEX_WORKFLOW_EDITOR_USER'):
         install_user()
         return
-    code_user = Path.home() / 'Library/Application Support/Code/User'
-    users = [code_user]
-    profiles = code_user / 'profiles'
-    if profiles.is_dir():
-        users.extend(p for p in profiles.iterdir() if p.is_dir())
+    users = [Path.home() / 'Library/Application Support/Code/User/profiles/4cb85cd0']
     for user in users:
         USER = user
         install_user()

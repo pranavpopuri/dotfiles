@@ -1,29 +1,57 @@
+{{ if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
-set -e
+set -euo pipefail
+export PATH="/opt/homebrew/bin:/usr/local/bin:$PATH"
+# Profile names, stable locations, and extension lists are tracked without machine state.
+python3 <<'PYTHON'
+from pathlib import Path
+import json
+import shutil
+import subprocess
+from datetime import datetime
 
-# VS Code extensions. This is a run_onchange_ script, so chezmoi re-runs it
-# whenever the list below changes. Regenerate with: code --list-extensions
-
-if ! command -v code >/dev/null 2>&1; then
-	echo "code not found, skipping VS Code extension install" >&2
-	exit 0
-fi
-
-extensions=(
-	ms-vscode-remote.remote-containers
-	jasew.vscode-helix-emulation
-	ms-vscode-remote.remote-ssh
-	kdarkhan.mips
-	llvm-vs-code-extensions.vscode-clangd
-	ms-python.debugpy
-	ms-python.python
-	ms-python.vscode-python-envs
-	navernoedenis.gruvbox-material-theme
-	yzhang.markdown-all-in-one
-	rust-lang.rust-analyzer
-)
-
-for extension in "${extensions[@]}"; do
-	code --install-extension "$extension"
-	code --profile Desktop --install-extension "$extension"
-done
+profiles = json.loads(r'''{{ include ".chezmoitemplates/vscode-profiles.json" }}''')
+user = Path.home() / 'Library/Application Support/Code/User'
+if not user.is_dir():
+    raise SystemExit('Apply VS Code user settings before registering profiles.')
+storage = user / 'globalStorage/storage.json'
+state = json.loads(storage.read_text()) if storage.exists() else {}
+registered = state.setdefault('userDataProfiles', [])
+for profile in profiles:
+    if profile['location'] is None:
+        continue
+    definition = {k: v for k, v in profile.items() if k != 'extensions'}
+    existing = next((p for p in registered if p.get('location') == definition['location']), None)
+    if existing is None:
+        registered.append(definition)
+    else:
+        existing.update(definition)
+rendered = json.dumps(state, indent=2) + '\n'
+if not storage.exists() or json.loads(storage.read_text()) != state:
+    storage.parent.mkdir(parents=True, exist_ok=True)
+    if storage.exists():
+        backup = Path.home() / 'vscode-migration-backups' / ('profiles-' + datetime.now().strftime('%Y%m%d-%H%M%S'))
+        backup.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(storage, backup / 'storage.json')
+    temporary = storage.with_suffix('.json.chezmoi-tmp')
+    temporary.write_text(rendered)
+    temporary.replace(storage)
+code = shutil.which('code')
+if not code:
+    print('VS Code CLI missing; profile registration saved, skipping extension installation.')
+    raise SystemExit(0)
+for profile in profiles:
+    args = [] if profile['location'] is None else ['--profile', profile['name']]
+    installed = set(subprocess.check_output([code, *args, '--list-extensions'], text=True).splitlines())
+    for extension in profile['extensions']:
+        if extension in installed:
+            continue
+        if extension == 'local-math-workflow.math-source-preview':
+            # The LaTeX bootstrap builds and installs this local VSIX.
+            continue
+        subprocess.run([code, *args, '--install-extension', extension], check=True)
+PYTHON
+{{ else -}}
+#!/bin/sh
+exit 0
+{{ end -}}

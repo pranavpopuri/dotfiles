@@ -510,9 +510,9 @@ chezmoi source-path ~/.local/share/latex-workflow/config/settings.json
 ```
 
 The normal settings source template combines your preferences from
-`.chezmoitemplates/vscode-preferences.json` with the toolkit feature defaults.
-The corresponding keybinding/task preferences are `vscode-keybindings.json`
-and `vscode-tasks.json` in that same source directory. Your current appearance
+`private_Library/private_Application Support/private_Code/User/profiles/4cb85cd0/settings.json.tmpl` with the toolkit feature defaults.
+The corresponding keybinding/task preferences are `keybindings.json.tmpl`
+and `tasks.json.tmpl` in that same source directory. Your current appearance
 was preserved in those preferences. To sync later UI preference changes, update
 that preferences JSON in chezmoi; edit the toolkit's `config/` files for shared
 LaTeX settings. The normal User templates render the combination on each Mac.

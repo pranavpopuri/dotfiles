@@ -1,3 +1,13 @@
+## VS Code profiles
+
+Chezmoi tracks Default, Dev, and LaTeX separately, including their settings,
+keybindings, tasks, and extension lists. Profile names and stable locations are
+in `.chezmoitemplates/vscode-profiles.json`; global storage and sign-ins remain
+local. Restart VS Code after restoring profiles on a fresh machine.
+
+`latex-workflow open` selects LaTeX. The toolkit installer and `editor-config`
+update only LaTeX, preserving Default and Dev preferences.
+
 # Permanent LaTeX toolkit (macOS)
 
 Math input update: CAS and PythonTeX now accept mathematical LaTeX directly. See [Calculate using LaTeX](LATEX-MATH.md) for the current syntax, examples and supported notation. Existing SymPy examples remain compatible.
@@ -37,7 +47,7 @@ required math extensions are added. Normal VS Code now offers both
 **LaTeX toolkit (latexmk)** and **PythonTeX (trusted documents)** build recipes.
 
 The feature defaults live in `config/`. Chezmoi combines them with your ordinary
-preferences in `.chezmoitemplates/vscode-preferences.json` to render the normal
+preferences in `private_Library/private_Application Support/private_Code/User/profiles/4cb85cd0/settings.json.tmpl` to render the normal
 VS Code User settings. Tasks and keybindings use the same composition pattern.
 `latex-workflow setup` also merges the feature additions into the live normal
 editor config, preserving unrelated values. Runtime data and installed extensions
@@ -66,7 +76,7 @@ source directory, then run `chezmoi apply`.
 
 Your ordinary VS Code settings live in
 `~/Library/Application Support/Code/User/`. Keep general editor preferences
-in the chezmoi source template `.chezmoitemplates/vscode-preferences.json`;
+in the chezmoi source template `private_Library/private_Application Support/private_Code/User/profiles/4cb85cd0/settings.json.tmpl`;
 the toolkit's `config/` files supply the LaTeX additions. After changing those
 additions, `latex-workflow editor-config` merges them into the live editor config.
 

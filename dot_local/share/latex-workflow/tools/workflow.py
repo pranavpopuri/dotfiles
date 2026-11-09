@@ -44,7 +44,7 @@ def main():
         editor = shutil.which(os.environ.get('LATEX_WORKFLOW_EDITOR', 'code'), path=environment['PATH'])
         if not editor:
             sys.exit('VS Code is missing. Run latex-workflow setup.')
-        subprocess.run([editor, '--reuse-window', str(args.project.expanduser().resolve())], check=True, env=environment)
+        subprocess.run([editor, '--profile', 'LaTeX', '--reuse-window', str(args.project.expanduser().resolve())], check=True, env=environment)
     elif args.action == 'init':
         project = args.project.expanduser().resolve()
         project.mkdir(parents=True, exist_ok=True)

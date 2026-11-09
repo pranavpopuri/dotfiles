@@ -1,0 +1,205 @@
+{
+  "[latex]": {
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "other": "on",
+      "strings": "off"
+    },
+    "editor.suggest.snippetsPreventQuickSuggestions": false
+  },
+  "breadcrumbs.enabled": false,
+  "cSpell.import": [
+    "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/config/cspell.json"
+  ],
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.accessibilitySupport": "off",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.codeLens": false,
+  "editor.cursorBlinking": "phase",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.foldingHighlight": false,
+  "editor.fontLigatures": false,
+  "editor.fontSize": 14,
+  "editor.formatOnPaste": true,
+  "editor.glyphMargin": false,
+  "editor.guides.highlightActiveIndentation": "always",
+  "editor.guides.indentation": true,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.inlayHints.enabled": "off",
+  "editor.lineHeight": 22,
+  "editor.lineNumbers": "on",
+  "editor.matchBrackets": "near",
+  "editor.minimap.enabled": false,
+  "editor.overviewRulerBorder": false,
+  "editor.padding.bottom": 14,
+  "editor.padding.top": 14,
+  "editor.parameterHints.enabled": false,
+  "editor.renderLineHighlight": "none",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.smoothScrolling": true,
+  "editor.stickyScroll.enabled": false,
+  "editor.suggestSelection": "first",
+  "explorer.autoReveal": false,
+  "explorer.compactFolders": false,
+  "explorer.openEditors.visible": 1,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 0,
+  "files.exclude": {
+    "**/*.synctex(busy)": true,
+    "**/*.synctex.gz(busy)": true
+  },
+  "files.watcherExclude": {
+    "**/.latex-build/**": true
+  },
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.ignoreMissingGitWarning": true,
+  "git.openRepositoryInParentFolders": "always",
+  "hsnips.hsnipsPath": "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/hsnips",
+  "latex-workshop.hover.preview.enabled": true,
+  "latex-workshop.hover.preview.maxLines": 100,
+  "latex-workshop.hover.preview.newcommand.newcommandFile": "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/tex/latex/latex-workflow/math-preview-macros.tex",
+  "latex-workshop.hover.preview.scale": 1.2,
+  "latex-workshop.intellisense.package.enabled": true,
+  "latex-workshop.intellisense.package.extra": [
+    "amsmath",
+    "amssymb",
+    "amsthm",
+    "pgfplots"
+  ],
+  "latex-workshop.intellisense.update.aggressive.enabled": true,
+  "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
+  "latex-workshop.latex.autoBuild.interval": 0,
+  "latex-workshop.latex.autoBuild.run": "onFileChange",
+  "latex-workshop.latex.outDir": "%DIR%",
+  "latex-workshop.latex.recipe.default": "first",
+  "latex-workshop.latex.recipes": [
+    {
+      "name": "LaTeX toolkit (latexmk)",
+      "tools": [
+        "toolkit-latexmk"
+      ]
+    },
+    {
+      "name": "PythonTeX (trusted documents)",
+      "tools": [
+        "toolkit-pythontex"
+      ]
+    }
+  ],
+  "latex-workshop.latex.tools": [
+    {
+      "args": [
+        "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/tools/build_latex.py",
+        "%DOC_EXT%",
+        "--preview",
+        "--editor",
+        "code"
+      ],
+      "command": "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/.venv/bin/python",
+      "name": "toolkit-latexmk"
+    },
+    {
+      "args": [
+        "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/tools/build_pythontex.py",
+        "%DOC_EXT%"
+      ],
+      "command": "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/.venv/bin/python",
+      "name": "toolkit-pythontex"
+    }
+  ],
+  "latex-workshop.latex.watch.pdf.delay": 0,
+  "latex-workshop.mathpreviewpanel.editorGroup": "below",
+  "latex-workshop.message.error.show": false,
+  "latex-workshop.message.warning.show": false,
+  "latex-workshop.selection.smart.latex.enabled": true,
+  "latex-workshop.synctex.afterBuild.enabled": false,
+  "latex-workshop.view.pdf.external.synctex.args": [
+    "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/tools/pdf_preview.py",
+    "sync",
+    "%PDF%",
+    "--line",
+    "%LINE%",
+    "--tex",
+    "%TEX%",
+    "--editor",
+    "code"
+  ],
+  "latex-workshop.view.pdf.external.synctex.command": "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/.venv/bin/python",
+  "latex-workshop.view.pdf.external.viewer.args": [
+    "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/tools/pdf_preview.py",
+    "view",
+    "%PDF%",
+    "--editor",
+    "code"
+  ],
+  "latex-workshop.view.pdf.external.viewer.command": "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/.venv/bin/python",
+  "latex-workshop.view.pdf.reload.transition": "none",
+  "latex-workshop.view.pdf.viewer": "external",
+  "mathSourcePreview.activePreview": true,
+  "mathSourcePreview.enabled": true,
+  "mathSourcePreview.macros": {
+    "Cov": "\\operatorname{Cov}",
+    "E": "\\mathbb{E}",
+    "N": "\\mathbb{N}",
+    "Prob": "\\mathbb{P}",
+    "Q": "\\mathbb{Q}",
+    "R": "\\mathbb{R}",
+    "Var": "\\operatorname{Var}",
+    "Z": "\\mathbb{Z}",
+    "abs": [
+      "\\left\\lvert#1\\right\\rvert",
+      1
+    ],
+    "asto": "\\xrightarrow{\\mathrm{a.s.}}",
+    "dd": "\\mathop{}\\!\\mathrm{d}",
+    "diag": "\\operatorname{diag}",
+    "dto": "\\xrightarrow{\\mathrm{d}}",
+    "given": "\\mid",
+    "grad": "\\nabla",
+    "ind": [
+      "\\mathbf{1}_{\\{#1\\}}",
+      1
+    ],
+    "norm": [
+      "\\left\\lVert#1\\right\\rVert",
+      1
+    ],
+    "pto": "\\xrightarrow{\\mathrm{P}}",
+    "rank": "\\operatorname{rank}"
+  },
+  "mathSourcePreview.scale": 1.25,
+  "security.workspace.trust.enabled": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
+  "terminal.integrated.fontLigatures.enabled": true,
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.inheritEnv": false,
+  "terminal.integrated.scrollback": 2000,
+  "update.mode": "manual",
+  "window.autoDetectHighContrast": false,
+  "window.commandCenter": false,
+  "window.titleBarStyle": "native",
+  "workbench.activityBar.location": "hidden",
+  "workbench.browser.showInTitleBar": false,
+  "workbench.colorCustomizations": {
+    "editorIndentGuide.activeBackground1": "#ff3700ea",
+    "editorIndentGuide.background1": "#a05f5f1d"
+  },
+  "workbench.editor.editorActionsLocation": "hidden",
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  "workbench.editor.showTabs": "none",
+  "workbench.experimental.modernUI": false,
+  "workbench.iconTheme": null,
+  "workbench.layoutControl.enabled": false,
+  "workbench.startupEditor": "none",
+  "workbench.statusBar.visible": false,
+  "workbench.tree.enableStickyScroll": false,
+  "workbench.tree.indent": 12,
+  "workbench.tree.renderIndentGuides": "always",
+  "zenMode.centerLayout": false,
+  "zenMode.fullScreen": false,
+  "zenMode.showTabs": "none",
+  "workbench.colorTheme": "Gruvbox Material Neovim Dark"
+}
