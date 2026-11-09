@@ -1,0 +1,1633 @@
+[
+  {
+    "name": "Default",
+    "location": null,
+    "state": {
+      "workbench.view.extensions.state.hidden": [
+        {
+          "id": "workbench.views.extensions.installed.empty",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.installed",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.workspaceRecommendations",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.popular",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.otherRecommendations",
+          "isHidden": false
+        },
+        {
+          "id": "extensions.recommendedList",
+          "isHidden": true
+        },
+        {
+          "id": "workbench.views.extensions.enabled",
+          "isHidden": true
+        },
+        {
+          "id": "workbench.views.extensions.disabled",
+          "isHidden": true
+        },
+        {
+          "id": "workbench.views.extensions.marketplace",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.searchInstalled",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.searchEnabled",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.searchDisabled",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.searchOutdated",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.searchBuiltin",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.searchWorkspaceUnsupported",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.builtinFeatureExtensions",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.builtinThemeExtensions",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.builtinProgrammingLanguageExtensions",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.untrustedUnsupportedExtensions",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.untrustedPartiallySupportedExtensions",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.virtualUnsupportedExtensions",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.virtualPartiallySupportedExtensions",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.deprecatedExtensions",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.searchRecentlyUpdated",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.remote.installed",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.web.installed",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.mcp.installed",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.mcp.default.marketplace",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.mcp.marketplace",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.marketplaceAccess",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.mcp.default.welcomeView",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.mcp.welcomeView",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.local.installed",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.agentPlugins.installed",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.agentPlugins.default.marketplace",
+          "isHidden": true
+        },
+        {
+          "id": "workbench.views.extensions.restartRequired",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.agentPlugins.marketplace",
+          "isHidden": false
+        }
+      ],
+      "workbench.view.sync.state.hidden": [
+        {
+          "id": "workbench.views.sync.merges",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.sync.remoteActivity",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.sync.machines",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.sync.localActivity",
+          "isHidden": true
+        },
+        {
+          "id": "workbench.views.sync.troubleshoot",
+          "isHidden": true
+        }
+      ],
+      "menu.hiddenCommands": {
+        "ViewTitle": [
+          "outline.collapse"
+        ]
+      },
+      "workbench.scm.views.state.hidden": [
+        {
+          "id": "workbench.scm.repositories",
+          "isHidden": true
+        },
+        {
+          "id": "workbench.scm",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.commits",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.repositories",
+          "isHidden": true
+        },
+        {
+          "id": "gitlens.views.fileHistory",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.lineHistory",
+          "isHidden": true
+        },
+        {
+          "id": "gitlens.views.branches",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.remotes",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.stashes",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.tags",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.contributors",
+          "isHidden": true
+        },
+        {
+          "id": "gitlens.views.searchAndCompare",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.worktrees",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.scm.sync",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.scm.history",
+          "isHidden": false
+        }
+      ],
+      "workbench.explorer.views.state.hidden": [
+        {
+          "id": "outline",
+          "isHidden": false
+        },
+        {
+          "id": "timeline",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.explorer.openEditorsView",
+          "isHidden": true
+        },
+        {
+          "id": "workbench.explorer.emptyView",
+          "isHidden": true
+        },
+        {
+          "id": "npm",
+          "isHidden": true
+        },
+        {
+          "id": "commitViewProvider",
+          "isHidden": false
+        },
+        {
+          "id": "compareCommitViewProvider",
+          "isHidden": false
+        },
+        {
+          "id": "solutionExplorer",
+          "isHidden": false
+        },
+        {
+          "id": "rustDependencies",
+          "isHidden": false
+        },
+        {
+          "id": "mavenProjects",
+          "isHidden": false
+        },
+        {
+          "id": "latex-workshop-commands",
+          "isHidden": false
+        },
+        {
+          "id": "mermaidChart",
+          "isHidden": false
+        },
+        {
+          "id": "latex-workshop-structure",
+          "isHidden": false
+        },
+        {
+          "id": "mermaidWebview",
+          "isHidden": false
+        },
+        {
+          "id": "latex-workshop-snippet-view",
+          "isHidden": false
+        },
+        {
+          "id": "dataworkspace.views.main",
+          "isHidden": false
+        },
+        {
+          "id": "objectExplorer",
+          "isHidden": false
+        },
+        {
+          "id": "queryHistory",
+          "isHidden": false
+        },
+        {
+          "id": "python-projects",
+          "isHidden": false
+        },
+        {
+          "id": "jupyter-data-wrangler-operations-view",
+          "isHidden": false
+        },
+        {
+          "id": "cmake.projectStatus",
+          "isHidden": false
+        },
+        {
+          "id": "snarferBrowser",
+          "isHidden": false
+        },
+        {
+          "id": "env-managers",
+          "isHidden": false
+        },
+        {
+          "id": "jupyter-data-wrangler-summary-view",
+          "isHidden": false
+        },
+        {
+          "id": "cmake.outline",
+          "isHidden": false
+        },
+        {
+          "id": "uploadBrowser",
+          "isHidden": false
+        },
+        {
+          "id": "jupyter-data-wrangler-cleaning-steps-view",
+          "isHidden": false
+        },
+        {
+          "id": "cmake.pinnedCommands",
+          "isHidden": false
+        },
+        {
+          "id": "data-viewer-filters-view",
+          "isHidden": false
+        },
+        {
+          "id": "data-viewer-sorts-view",
+          "isHidden": false
+        },
+        {
+          "id": "rustSyntaxTree",
+          "isHidden": false
+        },
+        {
+          "id": "cSpellInfoView",
+          "isHidden": false
+        },
+        {
+          "id": "cSpellRegExpView",
+          "isHidden": false
+        },
+        {
+          "id": "gradleTasksView",
+          "isHidden": false
+        },
+        {
+          "id": "queryResult",
+          "isHidden": false
+        },
+        {
+          "id": "gradleDefaultProjectsView",
+          "isHidden": false
+        },
+        {
+          "id": "recentTasksView",
+          "isHidden": false
+        },
+        {
+          "id": "gradleDaemonsView",
+          "isHidden": false
+        },
+        {
+          "id": "jupyter-data-wrangler-code-preview-view",
+          "isHidden": false
+        },
+        {
+          "id": "jupyterViewVariables",
+          "isHidden": false
+        },
+        {
+          "id": "cSpellIssuesViewByFile",
+          "isHidden": false
+        },
+        {
+          "id": "cSpellIssuesViewByIssue",
+          "isHidden": false
+        },
+        {
+          "id": "cell-tag",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.explorer.fileView",
+          "isHidden": false
+        },
+        {
+          "id": "liveshare.session.explorer",
+          "isHidden": false
+        },
+        {
+          "id": "leetCodeExplorer",
+          "isHidden": false
+        },
+        {
+          "id": "liveshare.session",
+          "isHidden": false
+        },
+        {
+          "id": "liveshare.help",
+          "isHidden": false
+        },
+        {
+          "id": "liveshare.devtools",
+          "isHidden": false
+        },
+        {
+          "id": "javaProjectExplorer",
+          "isHidden": false
+        },
+        {
+          "id": "clangd.typeHierarchyView",
+          "isHidden": false
+        },
+        {
+          "id": "clangd.memoryUsage",
+          "isHidden": false
+        },
+        {
+          "id": "clangd.ast",
+          "isHidden": false
+        },
+        {
+          "id": "deepmlProblems",
+          "isHidden": false
+        },
+        {
+          "id": "colab-server-content-view",
+          "isHidden": false
+        },
+        {
+          "id": "todo-tree-view",
+          "isHidden": false
+        },
+        {
+          "id": "colab-server-resource-view",
+          "isHidden": false
+        },
+        {
+          "id": "latex-workshop-math-symbols",
+          "isHidden": false
+        },
+        {
+          "id": "backgroundTasks",
+          "isHidden": false
+        },
+        {
+          "id": "cmake.bookmarks",
+          "isHidden": false
+        },
+        {
+          "id": "deepmlResults",
+          "isHidden": false
+        },
+        {
+          "id": "registers",
+          "isHidden": false
+        },
+        {
+          "id": "cmake.initializing",
+          "isHidden": false
+        },
+        {
+          "id": "claudeVSCodeSidebarSecondary",
+          "isHidden": false
+        },
+        {
+          "id": "claudeVSCodeSidebar",
+          "isHidden": false
+        },
+        {
+          "id": "claudeVSCodeSessionsList",
+          "isHidden": false
+        }
+      ]
+    }
+  },
+  {
+    "name": "Dev",
+    "location": "-4a6f74ca",
+    "state": {
+      "workbench.scm.views.state.hidden": [
+        {
+          "id": "workbench.scm.repositories",
+          "isHidden": true
+        },
+        {
+          "id": "workbench.scm",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.repositories",
+          "isHidden": true
+        },
+        {
+          "id": "gitlens.views.commits",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.branches",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.remotes",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.stashes",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.tags",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.worktrees",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.contributors",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.scm.history",
+          "isHidden": false
+        }
+      ],
+      "workbench.view.sync.state.hidden": [
+        {
+          "id": "workbench.views.sync.conflicts",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.sync.remoteActivity",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.sync.machines",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.sync.localActivity",
+          "isHidden": true
+        },
+        {
+          "id": "workbench.views.sync.troubleshoot",
+          "isHidden": true
+        },
+        {
+          "id": "workbench.views.sync.externalActivity",
+          "isHidden": false
+        }
+      ],
+      "workbench.explorer.views.state.hidden": [
+        {
+          "id": "workbench.explorer.openEditorsView",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.explorer.fileView",
+          "isHidden": false
+        },
+        {
+          "id": "outline",
+          "isHidden": true
+        },
+        {
+          "id": "timeline",
+          "isHidden": false
+        },
+        {
+          "id": "npm",
+          "isHidden": true
+        },
+        {
+          "id": "commitViewProvider",
+          "isHidden": false
+        },
+        {
+          "id": "compareCommitViewProvider",
+          "isHidden": false
+        },
+        {
+          "id": "solutionExplorer",
+          "isHidden": false
+        },
+        {
+          "id": "liveshare.session.explorer",
+          "isHidden": false
+        },
+        {
+          "id": "javaProjectExplorer",
+          "isHidden": false
+        },
+        {
+          "id": "mavenProjects",
+          "isHidden": true
+        },
+        {
+          "id": "jupyterViewVariables",
+          "isHidden": false
+        },
+        {
+          "id": "workspaceEnvironments",
+          "isHidden": false
+        },
+        {
+          "id": "pythonEnvironments",
+          "isHidden": false
+        },
+        {
+          "id": "cell-tag",
+          "isHidden": false
+        },
+        {
+          "id": "cmake.projectStatus",
+          "isHidden": false
+        },
+        {
+          "id": "liveshare.session",
+          "isHidden": false
+        },
+        {
+          "id": "cmake.outline",
+          "isHidden": false
+        },
+        {
+          "id": "liveshare.help",
+          "isHidden": false
+        },
+        {
+          "id": "cmake.pinnedCommands",
+          "isHidden": false
+        },
+        {
+          "id": "liveshare.devtools",
+          "isHidden": false
+        },
+        {
+          "id": "vscode-spotify-playlists",
+          "isHidden": false
+        },
+        {
+          "id": "vscode-spotify-tracks",
+          "isHidden": false
+        },
+        {
+          "id": "gradleTasksView",
+          "isHidden": false
+        },
+        {
+          "id": "snarferBrowser",
+          "isHidden": false
+        },
+        {
+          "id": "gradleDefaultProjectsView",
+          "isHidden": false
+        },
+        {
+          "id": "uploadBrowser",
+          "isHidden": false
+        },
+        {
+          "id": "recentTasksView",
+          "isHidden": false
+        },
+        {
+          "id": "gradleDaemonsView",
+          "isHidden": false
+        },
+        {
+          "id": "marquee",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.explorer.emptyView",
+          "isHidden": true
+        },
+        {
+          "id": "outline-map-view",
+          "isHidden": false
+        },
+        {
+          "id": "outline-map-workspace",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.scm.repositories",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.scm",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.view.search",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.home",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.drafts",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.workspaces",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.account",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.graph",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.graphDetails",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.commitDetails",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.pullRequest",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.lineHistory",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.fileHistory",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.timeline",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.searchAndCompare",
+          "isHidden": false
+        },
+        {
+          "id": "fileAnchors",
+          "isHidden": false
+        },
+        {
+          "id": "workspaceAnchors",
+          "isHidden": false
+        },
+        {
+          "id": "epicAnchors",
+          "isHidden": false
+        },
+        {
+          "id": "copilot-chat-requests",
+          "isHidden": false
+        },
+        {
+          "id": "meerkat-sidebar",
+          "isHidden": false
+        },
+        {
+          "id": "dockerContainers",
+          "isHidden": false
+        },
+        {
+          "id": "dockerImages",
+          "isHidden": false
+        },
+        {
+          "id": "dockerRegistries",
+          "isHidden": false
+        },
+        {
+          "id": "dockerNetworks",
+          "isHidden": false
+        },
+        {
+          "id": "dockerVolumes",
+          "isHidden": false
+        },
+        {
+          "id": "vscode-docker.views.dockerContexts",
+          "isHidden": false
+        },
+        {
+          "id": "vscode-docker.views.help",
+          "isHidden": false
+        },
+        {
+          "id": "extension.vsKubernetesExplorer",
+          "isHidden": false
+        },
+        {
+          "id": "extension.vsKubernetesHelmRepoExplorer",
+          "isHidden": false
+        },
+        {
+          "id": "kubernetes.cloudExplorer",
+          "isHidden": false
+        },
+        {
+          "id": "meerkat-bottom-panel",
+          "isHidden": false
+        },
+        {
+          "id": "copilot-chat",
+          "isHidden": false
+        },
+        {
+          "id": "mermaidChart",
+          "isHidden": false
+        },
+        {
+          "id": "mermaidWebview",
+          "isHidden": false
+        },
+        {
+          "id": "foundProjects",
+          "isHidden": false
+        },
+        {
+          "id": "run-config",
+          "isHidden": false
+        },
+        {
+          "id": "rustDependencies",
+          "isHidden": true
+        },
+        {
+          "id": "latex-workshop-commands",
+          "isHidden": false
+        },
+        {
+          "id": "latex-workshop-structure",
+          "isHidden": false
+        },
+        {
+          "id": "latex-workshop-snippet-view",
+          "isHidden": false
+        },
+        {
+          "id": "preview_mermaidChart",
+          "isHidden": false
+        },
+        {
+          "id": "preview_mermaidWebview",
+          "isHidden": false
+        },
+        {
+          "id": "leetCodeExplorer",
+          "isHidden": false
+        },
+        {
+          "id": "leetnotionExplorer",
+          "isHidden": false
+        },
+        {
+          "id": "treeLocalHistoryExplorer",
+          "isHidden": false
+        },
+        {
+          "id": "objectExplorer",
+          "isHidden": true
+        },
+        {
+          "id": "queryHistory",
+          "isHidden": true
+        },
+        {
+          "id": "claudeVSCodeSidebarSecondary",
+          "isHidden": false
+        },
+        {
+          "id": "claudeVSCodeSidebar",
+          "isHidden": false
+        },
+        {
+          "id": "claudeVSCodeSessionsList",
+          "isHidden": false
+        },
+        {
+          "id": "clangd.typeHierarchyView",
+          "isHidden": false
+        },
+        {
+          "id": "clangd.memoryUsage",
+          "isHidden": false
+        },
+        {
+          "id": "clangd.ast",
+          "isHidden": false
+        },
+        {
+          "id": "python-projects",
+          "isHidden": false
+        },
+        {
+          "id": "env-managers",
+          "isHidden": false
+        },
+        {
+          "id": "registers",
+          "isHidden": false
+        },
+        {
+          "id": "QuestionExplorer",
+          "isHidden": false
+        },
+        {
+          "id": "dataworkspace.views.main",
+          "isHidden": false
+        },
+        {
+          "id": "backgroundTasks",
+          "isHidden": false
+        },
+        {
+          "id": "queryResult",
+          "isHidden": false
+        },
+        {
+          "id": "todo-tree-view",
+          "isHidden": false
+        }
+      ],
+      "workbench.view.extensions.state.hidden": [
+        {
+          "id": "workbench.views.extensions.installed",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.searchOutdated",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.workspaceRecommendations",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.popular",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.searchRecentlyUpdated",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.otherRecommendations",
+          "isHidden": false
+        },
+        {
+          "id": "extensions.recommendedList",
+          "isHidden": true
+        },
+        {
+          "id": "workbench.views.extensions.enabled",
+          "isHidden": true
+        },
+        {
+          "id": "workbench.views.extensions.disabled",
+          "isHidden": true
+        },
+        {
+          "id": "workbench.views.extensions.marketplace",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.searchInstalled",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.searchEnabled",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.searchDisabled",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.searchBuiltin",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.searchWorkspaceUnsupported",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.builtinFeatureExtensions",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.builtinThemeExtensions",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.builtinProgrammingLanguageExtensions",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.untrustedUnsupportedExtensions",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.untrustedPartiallySupportedExtensions",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.virtualUnsupportedExtensions",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.virtualPartiallySupportedExtensions",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.deprecatedExtensions",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.local.installed",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.remote.installed",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.web.installed",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.mcp.installed",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.mcp.marketplace",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.mcp.default.marketplace",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.marketplaceAccess",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.mcp.default.welcomeView",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.mcp.welcomeView",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.agentPlugins.installed",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.agentPlugins.default.marketplace",
+          "isHidden": true
+        },
+        {
+          "id": "workbench.views.extensions.restartRequired",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.agentPlugins.marketplace",
+          "isHidden": false
+        }
+      ],
+      "menu.hiddenCommands": {
+        "ViewTitle": [
+          "openEditors.newUntitledFile",
+          "workbench.action.files.saveAll",
+          "openEditors.closeAll"
+        ]
+      }
+    }
+  },
+  {
+    "name": "LaTeX",
+    "location": "4cb85cd0",
+    "state": {
+      "workbench.explorer.views.state.hidden": [
+        {
+          "id": "outline",
+          "isHidden": false
+        },
+        {
+          "id": "timeline",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.explorer.openEditorsView",
+          "isHidden": true
+        },
+        {
+          "id": "workbench.explorer.emptyView",
+          "isHidden": true
+        },
+        {
+          "id": "npm",
+          "isHidden": true
+        },
+        {
+          "id": "commitViewProvider",
+          "isHidden": false
+        },
+        {
+          "id": "compareCommitViewProvider",
+          "isHidden": false
+        },
+        {
+          "id": "solutionExplorer",
+          "isHidden": false
+        },
+        {
+          "id": "rustDependencies",
+          "isHidden": false
+        },
+        {
+          "id": "mavenProjects",
+          "isHidden": false
+        },
+        {
+          "id": "latex-workshop-commands",
+          "isHidden": false
+        },
+        {
+          "id": "mermaidChart",
+          "isHidden": false
+        },
+        {
+          "id": "latex-workshop-structure",
+          "isHidden": false
+        },
+        {
+          "id": "mermaidWebview",
+          "isHidden": false
+        },
+        {
+          "id": "latex-workshop-snippet-view",
+          "isHidden": false
+        },
+        {
+          "id": "dataworkspace.views.main",
+          "isHidden": false
+        },
+        {
+          "id": "objectExplorer",
+          "isHidden": false
+        },
+        {
+          "id": "queryHistory",
+          "isHidden": false
+        },
+        {
+          "id": "python-projects",
+          "isHidden": false
+        },
+        {
+          "id": "jupyter-data-wrangler-operations-view",
+          "isHidden": false
+        },
+        {
+          "id": "cmake.projectStatus",
+          "isHidden": false
+        },
+        {
+          "id": "snarferBrowser",
+          "isHidden": false
+        },
+        {
+          "id": "env-managers",
+          "isHidden": false
+        },
+        {
+          "id": "jupyter-data-wrangler-summary-view",
+          "isHidden": false
+        },
+        {
+          "id": "cmake.outline",
+          "isHidden": false
+        },
+        {
+          "id": "uploadBrowser",
+          "isHidden": false
+        },
+        {
+          "id": "jupyter-data-wrangler-cleaning-steps-view",
+          "isHidden": false
+        },
+        {
+          "id": "cmake.pinnedCommands",
+          "isHidden": false
+        },
+        {
+          "id": "data-viewer-filters-view",
+          "isHidden": false
+        },
+        {
+          "id": "data-viewer-sorts-view",
+          "isHidden": false
+        },
+        {
+          "id": "rustSyntaxTree",
+          "isHidden": false
+        },
+        {
+          "id": "cSpellInfoView",
+          "isHidden": false
+        },
+        {
+          "id": "cSpellRegExpView",
+          "isHidden": false
+        },
+        {
+          "id": "gradleTasksView",
+          "isHidden": false
+        },
+        {
+          "id": "queryResult",
+          "isHidden": false
+        },
+        {
+          "id": "gradleDefaultProjectsView",
+          "isHidden": false
+        },
+        {
+          "id": "recentTasksView",
+          "isHidden": false
+        },
+        {
+          "id": "gradleDaemonsView",
+          "isHidden": false
+        },
+        {
+          "id": "jupyter-data-wrangler-code-preview-view",
+          "isHidden": false
+        },
+        {
+          "id": "jupyterViewVariables",
+          "isHidden": false
+        },
+        {
+          "id": "cSpellIssuesViewByFile",
+          "isHidden": false
+        },
+        {
+          "id": "cSpellIssuesViewByIssue",
+          "isHidden": false
+        },
+        {
+          "id": "cell-tag",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.explorer.fileView",
+          "isHidden": false
+        },
+        {
+          "id": "liveshare.session.explorer",
+          "isHidden": false
+        },
+        {
+          "id": "leetCodeExplorer",
+          "isHidden": false
+        },
+        {
+          "id": "liveshare.session",
+          "isHidden": false
+        },
+        {
+          "id": "liveshare.help",
+          "isHidden": false
+        },
+        {
+          "id": "liveshare.devtools",
+          "isHidden": false
+        },
+        {
+          "id": "javaProjectExplorer",
+          "isHidden": false
+        },
+        {
+          "id": "clangd.typeHierarchyView",
+          "isHidden": false
+        },
+        {
+          "id": "clangd.memoryUsage",
+          "isHidden": false
+        },
+        {
+          "id": "clangd.ast",
+          "isHidden": false
+        },
+        {
+          "id": "deepmlProblems",
+          "isHidden": false
+        },
+        {
+          "id": "colab-server-content-view",
+          "isHidden": false
+        },
+        {
+          "id": "todo-tree-view",
+          "isHidden": false
+        },
+        {
+          "id": "colab-server-resource-view",
+          "isHidden": false
+        },
+        {
+          "id": "latex-workshop-math-symbols",
+          "isHidden": false
+        },
+        {
+          "id": "backgroundTasks",
+          "isHidden": false
+        },
+        {
+          "id": "cmake.bookmarks",
+          "isHidden": false
+        },
+        {
+          "id": "deepmlResults",
+          "isHidden": false
+        },
+        {
+          "id": "registers",
+          "isHidden": false
+        },
+        {
+          "id": "cmake.initializing",
+          "isHidden": false
+        },
+        {
+          "id": "claudeVSCodeSidebarSecondary",
+          "isHidden": false
+        },
+        {
+          "id": "claudeVSCodeSidebar",
+          "isHidden": false
+        },
+        {
+          "id": "claudeVSCodeSessionsList",
+          "isHidden": false
+        }
+      ],
+      "workbench.scm.views.state.hidden": [
+        {
+          "id": "workbench.scm.repositories",
+          "isHidden": true
+        },
+        {
+          "id": "workbench.scm",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.commits",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.repositories",
+          "isHidden": true
+        },
+        {
+          "id": "gitlens.views.fileHistory",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.lineHistory",
+          "isHidden": true
+        },
+        {
+          "id": "gitlens.views.branches",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.remotes",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.stashes",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.tags",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.contributors",
+          "isHidden": true
+        },
+        {
+          "id": "gitlens.views.searchAndCompare",
+          "isHidden": false
+        },
+        {
+          "id": "gitlens.views.worktrees",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.scm.sync",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.scm.history",
+          "isHidden": false
+        }
+      ],
+      "workbench.view.extensions.state.hidden": [
+        {
+          "id": "workbench.views.extensions.installed.empty",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.installed",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.workspaceRecommendations",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.popular",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.otherRecommendations",
+          "isHidden": false
+        },
+        {
+          "id": "extensions.recommendedList",
+          "isHidden": true
+        },
+        {
+          "id": "workbench.views.extensions.enabled",
+          "isHidden": true
+        },
+        {
+          "id": "workbench.views.extensions.disabled",
+          "isHidden": true
+        },
+        {
+          "id": "workbench.views.extensions.marketplace",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.searchInstalled",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.searchEnabled",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.searchDisabled",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.searchOutdated",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.searchBuiltin",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.searchWorkspaceUnsupported",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.builtinFeatureExtensions",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.builtinThemeExtensions",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.builtinProgrammingLanguageExtensions",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.untrustedUnsupportedExtensions",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.untrustedPartiallySupportedExtensions",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.virtualUnsupportedExtensions",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.virtualPartiallySupportedExtensions",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.deprecatedExtensions",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.searchRecentlyUpdated",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.remote.installed",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.web.installed",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.mcp.installed",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.mcp.default.marketplace",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.mcp.marketplace",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.marketplaceAccess",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.mcp.default.welcomeView",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.mcp.welcomeView",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.extensions.local.installed",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.agentPlugins.installed",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.agentPlugins.default.marketplace",
+          "isHidden": true
+        },
+        {
+          "id": "workbench.views.extensions.restartRequired",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.agentPlugins.marketplace",
+          "isHidden": false
+        }
+      ],
+      "workbench.view.sync.state.hidden": [
+        {
+          "id": "workbench.views.sync.merges",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.sync.remoteActivity",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.sync.machines",
+          "isHidden": false
+        },
+        {
+          "id": "workbench.views.sync.localActivity",
+          "isHidden": true
+        },
+        {
+          "id": "workbench.views.sync.troubleshoot",
+          "isHidden": true
+        }
+      ],
+      "menu.hiddenCommands": {
+        "ViewTitle": [
+          "outline.collapse"
+        ]
+      }
+    }
+  }
+]

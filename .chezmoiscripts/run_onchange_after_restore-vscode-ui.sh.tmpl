@@ -1,0 +1,43 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+set -euo pipefail
+python3 <<'PYTHON'
+from pathlib import Path
+import json
+import sqlite3
+from datetime import datetime
+
+profiles = json.loads(r'''{{ include ".chezmoitemplates/vscode-ui-state.json" }}''')
+user = Path.home() / 'Library/Application Support/Code/User'
+for profile in profiles:
+    directory = user if profile['location'] is None else user / 'profiles' / profile['location']
+    path = directory / 'globalStorage/state.vscdb'
+    path.parent.mkdir(parents=True, exist_ok=True)
+    connection = sqlite3.connect(path)
+    connection.execute('CREATE TABLE IF NOT EXISTS ItemTable (key TEXT UNIQUE ON CONFLICT REPLACE, value BLOB)')
+    changes = {}
+    for key, desired in profile['state'].items():
+        row = connection.execute('SELECT value FROM ItemTable WHERE key = ?', (key,)).fetchone()
+        current = json.loads(row[0]) if row else None
+        restored = desired
+        if isinstance(desired, list) and isinstance(current, list):
+            by_id = {item['id']: item for item in desired}
+            restored = [{**item, **by_id.get(item.get('id'), {})} for item in current]
+            existing_ids = {item.get('id') for item in current}
+            restored.extend(item for item in desired if item['id'] not in existing_ids)
+        if current != restored:
+            changes[key] = json.dumps(restored, separators=(',', ':'))
+    if changes:
+        backup = Path.home() / 'vscode-migration-backups' / ('ui-' + datetime.now().strftime('%Y%m%d-%H%M%S')) / profile['name']
+        backup.mkdir(parents=True, exist_ok=True)
+        with sqlite3.connect(backup / 'state.vscdb') as saved:
+            connection.backup(saved)
+        with connection:
+            connection.executemany('INSERT OR REPLACE INTO ItemTable (key, value) VALUES (?, ?)', changes.items())
+        print('Restored UI visibility for ' + profile['name'] + '. Restart VS Code if it is open.')
+    connection.close()
+PYTHON
+{{ else -}}
+#!/bin/sh
+exit 0
+{{ end -}}

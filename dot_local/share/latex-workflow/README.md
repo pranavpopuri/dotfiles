@@ -3,7 +3,10 @@
 Chezmoi tracks Default, Dev, and LaTeX separately, including their settings,
 keybindings, tasks, and extension lists. Profile names and stable locations are
 in `.chezmoitemplates/vscode-profiles.json`; global storage and sign-ins remain
-local. Restart VS Code after restoring profiles on a fresh machine.
+local. Hidden toolbar actions and view visibility are tracked separately in
+`.chezmoitemplates/vscode-ui-state.json`. Close VS Code before applying UI state
+so its running windows cannot overwrite the restored choices. Restart VS Code
+after restoring profiles on a fresh machine.
 
 `latex-workflow open` selects LaTeX. The toolkit installer and `editor-config`
 update only LaTeX, preserving Default and Dev preferences.
