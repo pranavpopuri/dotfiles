@@ -1,122 +1,122 @@
 {
-  "[latex]": {
-    "editor.quickSuggestions": {
-      "comments": "off",
-      "other": "on",
-      "strings": "off"
+  "[latex]"{{ .chezmoi.pathListSeparator }} {
+    "editor.quickSuggestions"{{ .chezmoi.pathListSeparator }} {
+      "comments"{{ .chezmoi.pathListSeparator }} "off",
+      "other"{{ .chezmoi.pathListSeparator }} "on",
+      "strings"{{ .chezmoi.pathListSeparator }} "off"
     },
-    "editor.suggest.snippetsPreventQuickSuggestions": false
+    "editor.suggest.snippetsPreventQuickSuggestions"{{ .chezmoi.pathListSeparator }} false
   },
-  "breadcrumbs.enabled": false,
-  "cSpell.import": [
-    "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/config/cspell.json"
+  "breadcrumbs.enabled"{{ .chezmoi.pathListSeparator }} false,
+  "cSpell.import"{{ .chezmoi.pathListSeparator }} [
+    "{{ .chezmoi.commandDir }}{{ .chezmoi.pathSeparator }}config{{ .chezmoi.pathSeparator }}cspell.{{ .chezmoi.config.format }}"
   ],
-  "diffEditor.ignoreTrimWhitespace": false,
-  "editor.accessibilitySupport": "off",
-  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
-  "editor.codeLens": false,
-  "editor.cursorBlinking": "phase",
-  "editor.cursorSmoothCaretAnimation": "on",
-  "editor.foldingHighlight": false,
-  "editor.fontLigatures": false,
-  "editor.fontSize": 14,
-  "editor.formatOnPaste": true,
-  "editor.glyphMargin": false,
-  "editor.guides.highlightActiveIndentation": "always",
-  "editor.guides.indentation": true,
-  "editor.hideCursorInOverviewRuler": true,
-  "editor.inlayHints.enabled": "off",
-  "editor.lineHeight": 22,
-  "editor.lineNumbers": "on",
-  "editor.matchBrackets": "near",
-  "editor.minimap.enabled": false,
-  "editor.overviewRulerBorder": false,
-  "editor.padding.bottom": 14,
-  "editor.padding.top": 14,
-  "editor.parameterHints.enabled": false,
-  "editor.renderLineHighlight": "none",
-  "editor.scrollbar.horizontal": "hidden",
-  "editor.smoothScrolling": true,
-  "editor.stickyScroll.enabled": false,
-  "editor.suggestSelection": "first",
-  "explorer.autoReveal": false,
-  "explorer.compactFolders": false,
-  "explorer.openEditors.visible": 1,
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 0,
-  "files.exclude": {
-    "**/*.synctex(busy)": true,
-    "**/*.synctex.gz(busy)": true
+  "diffEditor.ignoreTrimWhitespace"{{ .chezmoi.pathListSeparator }} false,
+  "editor.accessibilitySupport"{{ .chezmoi.pathListSeparator }} "off",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType"{{ .chezmoi.pathListSeparator }} true,
+  "editor.codeLens"{{ .chezmoi.pathListSeparator }} false,
+  "editor.cursorBlinking"{{ .chezmoi.pathListSeparator }} "phase",
+  "editor.cursorSmoothCaretAnimation"{{ .chezmoi.pathListSeparator }} "on",
+  "editor.foldingHighlight"{{ .chezmoi.pathListSeparator }} false,
+  "editor.fontLigatures"{{ .chezmoi.pathListSeparator }} false,
+  "editor.fontSize"{{ .chezmoi.pathListSeparator }} 14,
+  "editor.formatOnPaste"{{ .chezmoi.pathListSeparator }} true,
+  "editor.glyphMargin"{{ .chezmoi.pathListSeparator }} false,
+  "editor.guides.highlightActiveIndentation"{{ .chezmoi.pathListSeparator }} "always",
+  "editor.guides.indentation"{{ .chezmoi.pathListSeparator }} true,
+  "editor.hideCursorInOverviewRuler"{{ .chezmoi.pathListSeparator }} true,
+  "editor.inlayHints.enabled"{{ .chezmoi.pathListSeparator }} "off",
+  "editor.lineHeight"{{ .chezmoi.pathListSeparator }} 22,
+  "editor.lineNumbers"{{ .chezmoi.pathListSeparator }} "on",
+  "editor.matchBrackets"{{ .chezmoi.pathListSeparator }} "near",
+  "editor.minimap.enabled"{{ .chezmoi.pathListSeparator }} false,
+  "editor.overviewRulerBorder"{{ .chezmoi.pathListSeparator }} false,
+  "editor.padding.bottom"{{ .chezmoi.pathListSeparator }} 14,
+  "editor.padding.top"{{ .chezmoi.pathListSeparator }} 14,
+  "editor.parameterHints.enabled"{{ .chezmoi.pathListSeparator }} false,
+  "editor.renderLineHighlight"{{ .chezmoi.pathListSeparator }} "none",
+  "editor.scrollbar.horizontal"{{ .chezmoi.pathListSeparator }} "hidden",
+  "editor.smoothScrolling"{{ .chezmoi.pathListSeparator }} true,
+  "editor.stickyScroll.enabled"{{ .chezmoi.pathListSeparator }} false,
+  "editor.suggestSelection"{{ .chezmoi.pathListSeparator }} "first",
+  "explorer.autoReveal"{{ .chezmoi.pathListSeparator }} false,
+  "explorer.compactFolders"{{ .chezmoi.pathListSeparator }} false,
+  "explorer.openEditors.visible"{{ .chezmoi.pathListSeparator }} 1,
+  "files.autoSave"{{ .chezmoi.pathListSeparator }} "afterDelay",
+  "files.autoSaveDelay"{{ .chezmoi.pathListSeparator }} 0,
+  "files.exclude"{{ .chezmoi.pathListSeparator }} {
+    "**{{ .chezmoi.pathSeparator }}*.synctex(busy)"{{ .chezmoi.pathListSeparator }} true,
+    "**{{ .chezmoi.pathSeparator }}*.synctex.gz(busy)"{{ .chezmoi.pathListSeparator }} true
   },
-  "files.watcherExclude": {
-    "**/.latex-build/**": true
+  "files.watcherExclude"{{ .chezmoi.pathListSeparator }} {
+    "**{{ .chezmoi.pathSeparator }}.latex-build{{ .chezmoi.pathSeparator }}**"{{ .chezmoi.pathListSeparator }} true
   },
-  "git.autofetch": true,
-  "git.confirmSync": false,
-  "git.enableSmartCommit": true,
-  "git.ignoreMissingGitWarning": true,
-  "git.openRepositoryInParentFolders": "always",
-  "hsnips.hsnipsPath": "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/hsnips",
-  "latex-workshop.hover.preview.enabled": true,
-  "latex-workshop.hover.preview.maxLines": 100,
-  "latex-workshop.hover.preview.newcommand.newcommandFile": "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/tex/latex/latex-workflow/math-preview-macros.tex",
-  "latex-workshop.hover.preview.scale": 1.2,
-  "latex-workshop.intellisense.package.enabled": true,
-  "latex-workshop.intellisense.package.extra": [
+  "{{ .chezmoi.config.git.command }}.autofetch"{{ .chezmoi.pathListSeparator }} true,
+  "{{ .chezmoi.config.git.command }}.confirmSync"{{ .chezmoi.pathListSeparator }} false,
+  "{{ .chezmoi.config.git.command }}.enableSmartCommit"{{ .chezmoi.pathListSeparator }} true,
+  "{{ .chezmoi.config.git.command }}.ignoreMissingGitWarning"{{ .chezmoi.pathListSeparator }} true,
+  "{{ .chezmoi.config.git.command }}.openRepositoryInParentFolders"{{ .chezmoi.pathListSeparator }} "always",
+  "hsnips.hsnipsPath"{{ .chezmoi.pathListSeparator }} "{{ .chezmoi.commandDir }}{{ .chezmoi.pathSeparator }}hsnips",
+  "latex-workshop.hover.preview.enabled"{{ .chezmoi.pathListSeparator }} true,
+  "latex-workshop.hover.preview.maxLines"{{ .chezmoi.pathListSeparator }} 100,
+  "latex-workshop.hover.preview.newcommand.newcommandFile"{{ .chezmoi.pathListSeparator }} "{{ .chezmoi.commandDir }}{{ .chezmoi.pathSeparator }}tex{{ .chezmoi.pathSeparator }}latex{{ .chezmoi.pathSeparator }}latex-workflow{{ .chezmoi.pathSeparator }}math-preview-macros.tex",
+  "latex-workshop.hover.preview.scale"{{ .chezmoi.pathListSeparator }} 1.2,
+  "latex-workshop.intellisense.package.enabled"{{ .chezmoi.pathListSeparator }} true,
+  "latex-workshop.intellisense.package.extra"{{ .chezmoi.pathListSeparator }} [
     "amsmath",
     "amssymb",
     "amsthm",
     "pgfplots"
   ],
-  "latex-workshop.intellisense.update.aggressive.enabled": true,
-  "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": false,
-  "latex-workshop.latex.autoBuild.interval": 0,
-  "latex-workshop.latex.autoBuild.run": "onFileChange",
-  "latex-workshop.latex.outDir": "%DIR%",
-  "latex-workshop.latex.recipe.default": "first",
-  "latex-workshop.latex.recipes": [
+  "latex-workshop.intellisense.update.aggressive.enabled"{{ .chezmoi.pathListSeparator }} true,
+  "latex-workshop.latex.autoBuild.cleanAndRetry.enabled"{{ .chezmoi.pathListSeparator }} false,
+  "latex-workshop.latex.autoBuild.interval"{{ .chezmoi.pathListSeparator }} 0,
+  "latex-workshop.latex.autoBuild.run"{{ .chezmoi.pathListSeparator }} "onFileChange",
+  "latex-workshop.latex.outDir"{{ .chezmoi.pathListSeparator }} "%DIR%",
+  "latex-workshop.latex.recipe.default"{{ .chezmoi.pathListSeparator }} "first",
+  "latex-workshop.latex.recipes"{{ .chezmoi.pathListSeparator }} [
     {
-      "name": "LaTeX toolkit (latexmk)",
-      "tools": [
+      "name"{{ .chezmoi.pathListSeparator }} "LaTeX toolkit (latexmk)",
+      "tools"{{ .chezmoi.pathListSeparator }} [
         "toolkit-latexmk"
       ]
     },
     {
-      "name": "PythonTeX (trusted documents)",
-      "tools": [
+      "name"{{ .chezmoi.pathListSeparator }} "PythonTeX (trusted documents)",
+      "tools"{{ .chezmoi.pathListSeparator }} [
         "toolkit-pythontex"
       ]
     }
   ],
-  "latex-workshop.latex.tools": [
+  "latex-workshop.latex.tools"{{ .chezmoi.pathListSeparator }} [
     {
-      "args": [
-        "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/tools/build_latex.py",
+      "args"{{ .chezmoi.pathListSeparator }} [
+        "{{ .chezmoi.commandDir }}{{ .chezmoi.pathSeparator }}tools{{ .chezmoi.pathSeparator }}build_latex.py",
         "%DOC_EXT%",
         "--preview",
         "--editor",
         "code"
       ],
-      "command": "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/.venv/bin/python",
-      "name": "toolkit-latexmk"
+      "command"{{ .chezmoi.pathListSeparator }} "{{ .chezmoi.commandDir }}{{ .chezmoi.pathSeparator }}.venv{{ .chezmoi.pathSeparator }}bin{{ .chezmoi.pathSeparator }}python",
+      "name"{{ .chezmoi.pathListSeparator }} "toolkit-latexmk"
     },
     {
-      "args": [
-        "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/tools/build_pythontex.py",
+      "args"{{ .chezmoi.pathListSeparator }} [
+        "{{ .chezmoi.commandDir }}{{ .chezmoi.pathSeparator }}tools{{ .chezmoi.pathSeparator }}build_pythontex.py",
         "%DOC_EXT%"
       ],
-      "command": "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/.venv/bin/python",
-      "name": "toolkit-pythontex"
+      "command"{{ .chezmoi.pathListSeparator }} "{{ .chezmoi.commandDir }}{{ .chezmoi.pathSeparator }}.venv{{ .chezmoi.pathSeparator }}bin{{ .chezmoi.pathSeparator }}python",
+      "name"{{ .chezmoi.pathListSeparator }} "toolkit-pythontex"
     }
   ],
-  "latex-workshop.latex.watch.pdf.delay": 0,
-  "latex-workshop.mathpreviewpanel.editorGroup": "below",
-  "latex-workshop.message.error.show": false,
-  "latex-workshop.message.warning.show": false,
-  "latex-workshop.selection.smart.latex.enabled": true,
-  "latex-workshop.synctex.afterBuild.enabled": false,
-  "latex-workshop.view.pdf.external.synctex.args": [
-    "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/tools/pdf_preview.py",
+  "latex-workshop.latex.watch.pdf.delay"{{ .chezmoi.pathListSeparator }} 0,
+  "latex-workshop.mathpreviewpanel.editorGroup"{{ .chezmoi.pathListSeparator }} "below",
+  "latex-workshop.message.error.show"{{ .chezmoi.pathListSeparator }} false,
+  "latex-workshop.message.{{ .chezmoi.config.{{ .chezmoi.command }}.secrets }}.show"{{ .chezmoi.pathListSeparator }} false,
+  "latex-workshop.selection.smart.latex.enabled"{{ .chezmoi.pathListSeparator }} true,
+  "latex-workshop.synctex.afterBuild.enabled"{{ .chezmoi.pathListSeparator }} false,
+  "latex-workshop.view.pdf.external.synctex.args"{{ .chezmoi.pathListSeparator }} [
+    "{{ .chezmoi.commandDir }}{{ .chezmoi.pathSeparator }}tools{{ .chezmoi.pathSeparator }}pdf_preview.py",
     "sync",
     "%PDF%",
     "--line",
@@ -126,80 +126,1114 @@
     "--editor",
     "code"
   ],
-  "latex-workshop.view.pdf.external.synctex.command": "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/.venv/bin/python",
-  "latex-workshop.view.pdf.external.viewer.args": [
-    "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/tools/pdf_preview.py",
+  "latex-workshop.view.pdf.external.synctex.command"{{ .chezmoi.pathListSeparator }} "{{ .chezmoi.commandDir }}{{ .chezmoi.pathSeparator }}.venv{{ .chezmoi.pathSeparator }}bin{{ .chezmoi.pathSeparator }}python",
+  "latex-workshop.view.pdf.external.viewer.args"{{ .chezmoi.pathListSeparator }} [
+    "{{ .chezmoi.commandDir }}{{ .chezmoi.pathSeparator }}tools{{ .chezmoi.pathSeparator }}pdf_preview.py",
     "view",
     "%PDF%",
     "--editor",
     "code"
   ],
-  "latex-workshop.view.pdf.external.viewer.command": "{{ .chezmoi.homeDir }}/.local/share/latex-workflow/.venv/bin/python",
-  "latex-workshop.view.pdf.reload.transition": "none",
-  "latex-workshop.view.pdf.viewer": "external",
-  "mathSourcePreview.activePreview": true,
-  "mathSourcePreview.enabled": true,
-  "mathSourcePreview.macros": {
-    "Cov": "\\operatorname{Cov}",
-    "E": "\\mathbb{E}",
-    "N": "\\mathbb{N}",
-    "Prob": "\\mathbb{P}",
-    "Q": "\\mathbb{Q}",
-    "R": "\\mathbb{R}",
-    "Var": "\\operatorname{Var}",
-    "Z": "\\mathbb{Z}",
-    "abs": [
+  "latex-workshop.view.pdf.external.viewer.command"{{ .chezmoi.pathListSeparator }} "{{ .chezmoi.commandDir }}{{ .chezmoi.pathSeparator }}.venv{{ .chezmoi.pathSeparator }}bin{{ .chezmoi.pathSeparator }}python",
+  "latex-workshop.view.pdf.reload.transition"{{ .chezmoi.pathListSeparator }} "none",
+  "latex-workshop.view.pdf.viewer"{{ .chezmoi.pathListSeparator }} "external",
+  "mathSourcePreview.activePreview"{{ .chezmoi.pathListSeparator }} true,
+  "mathSourcePreview.enabled"{{ .chezmoi.pathListSeparator }} true,
+  "mathSourcePreview.macros"{{ .chezmoi.pathListSeparator }} {
+    "Cov"{{ .chezmoi.pathListSeparator }} "\\operatorname{Cov}",
+    "E"{{ .chezmoi.pathListSeparator }} "\\mathbb{E}",
+    "N"{{ .chezmoi.pathListSeparator }} "\\mathbb{N}",
+    "Prob"{{ .chezmoi.pathListSeparator }} "\\mathbb{P}",
+    "Q"{{ .chezmoi.pathListSeparator }} "\\mathbb{Q}",
+    "R"{{ .chezmoi.pathListSeparator }} "\\mathbb{R}",
+    "Var"{{ .chezmoi.pathListSeparator }} "\\operatorname{Var}",
+    "Z"{{ .chezmoi.pathListSeparator }} "\\mathbb{Z}",
+    "abs"{{ .chezmoi.pathListSeparator }} [
       "\\left\\lvert#1\\right\\rvert",
       1
     ],
-    "asto": "\\xrightarrow{\\mathrm{a.s.}}",
-    "dd": "\\mathop{}\\!\\mathrm{d}",
-    "diag": "\\operatorname{diag}",
-    "dto": "\\xrightarrow{\\mathrm{d}}",
-    "given": "\\mid",
-    "grad": "\\nabla",
-    "ind": [
-      "\\mathbf{1}_{\\{#1\\}}",
+    "asto"{{ .chezmoi.pathListSeparator }} "\\xrightarrow{\\mathrm{a.s.{{ "}}" }}",
+    "dd"{{ .chezmoi.pathListSeparator }} "\\mathop{}\\!\\mathrm{d}",
+    "diag"{{ .chezmoi.pathListSeparator }} "\\operatorname{diag}",
+    "dto"{{ .chezmoi.pathListSeparator }} "\\xrightarrow{\\mathrm{d{{ "}}" }}",
+    "given"{{ .chezmoi.pathListSeparator }} "\\mid",
+    "grad"{{ .chezmoi.pathListSeparator }} "\\nabla",
+    "ind"{{ .chezmoi.pathListSeparator }} [
+      "\\mathbf{1}_{\\{#1\\{{ "}}" }}",
       1
     ],
-    "norm": [
+    "norm"{{ .chezmoi.pathListSeparator }} [
       "\\left\\lVert#1\\right\\rVert",
       1
     ],
-    "pto": "\\xrightarrow{\\mathrm{P}}",
-    "rank": "\\operatorname{rank}"
+    "pto"{{ .chezmoi.pathListSeparator }} "\\xrightarrow{\\mathrm{P{{ "}}" }}",
+    "rank"{{ .chezmoi.pathListSeparator }} "\\operatorname{rank}"
   },
-  "mathSourcePreview.scale": 1.25,
-  "security.workspace.trust.enabled": false,
-  "terminal.integrated.enableMultiLinePasteWarning": "never",
-  "terminal.integrated.fontFamily": "FiraCode Nerd Font Mono",
-  "terminal.integrated.fontLigatures.enabled": true,
-  "terminal.integrated.fontSize": 14,
-  "terminal.integrated.inheritEnv": false,
-  "terminal.integrated.scrollback": 2000,
-  "update.mode": "manual",
-  "window.autoDetectHighContrast": false,
-  "window.commandCenter": false,
-  "window.titleBarStyle": "native",
-  "workbench.activityBar.location": "hidden",
-  "workbench.browser.showInTitleBar": false,
-  "workbench.colorCustomizations": {
-    "editorIndentGuide.activeBackground1": "#ff3700ea",
-    "editorIndentGuide.background1": "#a05f5f1d"
+  "mathSourcePreview.scale"{{ .chezmoi.pathListSeparator }} 1.25,
+  "security.workspace.trust.enabled"{{ .chezmoi.pathListSeparator }} false,
+  "terminal.integrated.enableMultiLinePasteWarning"{{ .chezmoi.pathListSeparator }} "never",
+  "terminal.integrated.fontFamily"{{ .chezmoi.pathListSeparator }} "FiraCode Nerd Font Mono",
+  "terminal.integrated.fontLigatures.enabled"{{ .chezmoi.pathListSeparator }} true,
+  "terminal.integrated.fontSize"{{ .chezmoi.pathListSeparator }} 14,
+  "terminal.integrated.inheritEnv"{{ .chezmoi.pathListSeparator }} false,
+  "terminal.integrated.scrollback"{{ .chezmoi.pathListSeparator }} 2000,
+  "update.mode"{{ .chezmoi.pathListSeparator }} "manual",
+  "window.autoDetectHighContrast"{{ .chezmoi.pathListSeparator }} false,
+  "window.commandCenter"{{ .chezmoi.pathListSeparator }} false,
+  "window.titleBarStyle"{{ .chezmoi.pathListSeparator }} "native",
+  "workbench.activityBar.location"{{ .chezmoi.pathListSeparator }} "hidden",
+  "workbench.browser.showInTitleBar"{{ .chezmoi.pathListSeparator }} false,
+  "workbench.colorCustomizations"{{ .chezmoi.pathListSeparator }} {
+    "editorIndentGuide.activeBackground1"{{ .chezmoi.pathListSeparator }} "#ff3700ea",
+    "editorIndentGuide.background1"{{ .chezmoi.pathListSeparator }} "#a05f5f1d"
   },
-  "workbench.editor.editorActionsLocation": "hidden",
-  "workbench.editor.enablePreviewFromQuickOpen": true,
-  "workbench.editor.showTabs": "none",
-  "workbench.experimental.modernUI": false,
-  "workbench.iconTheme": null,
-  "workbench.layoutControl.enabled": false,
-  "workbench.startupEditor": "none",
-  "workbench.statusBar.visible": false,
-  "workbench.tree.enableStickyScroll": false,
-  "workbench.tree.indent": 12,
-  "workbench.tree.renderIndentGuides": "always",
-  "zenMode.centerLayout": false,
-  "zenMode.fullScreen": false,
-  "zenMode.showTabs": "none",
-  "workbench.colorTheme": "Gruvbox Material Dark"
+  "workbench.editor.editorActionsLocation"{{ .chezmoi.pathListSeparator }} "hidden",
+  "workbench.editor.enablePreviewFromQuickOpen"{{ .chezmoi.pathListSeparator }} true,
+  "workbench.editor.showTabs"{{ .chezmoi.pathListSeparator }} "none",
+  "workbench.experimental.modernUI"{{ .chezmoi.pathListSeparator }} false,
+  "workbench.iconTheme"{{ .chezmoi.pathListSeparator }} null,
+  "workbench.layoutControl.enabled"{{ .chezmoi.pathListSeparator }} false,
+  "workbench.startupEditor"{{ .chezmoi.pathListSeparator }} "none",
+  "workbench.statusBar.visible"{{ .chezmoi.pathListSeparator }} false,
+  "workbench.tree.enableStickyScroll"{{ .chezmoi.pathListSeparator }} false,
+  "workbench.tree.indent"{{ .chezmoi.pathListSeparator }} 12,
+  "workbench.tree.renderIndentGuides"{{ .chezmoi.pathListSeparator }} "always",
+  "zenMode.centerLayout"{{ .chezmoi.pathListSeparator }} false,
+  "zenMode.fullScreen"{{ .chezmoi.pathListSeparator }} false,
+  "zenMode.showTabs"{{ .chezmoi.pathListSeparator }} "none",
+  "workbench.colorTheme"{{ .chezmoi.pathListSeparator }} "Gruvbox Material Dark",
+
+  "conceal.revealOn"{{ .chezmoi.pathListSeparator }} "cursor",
+  "conceal.adjustCursorMovement"{{ .chezmoi.pathListSeparator }} false,
+  "conceal.substitutions"{{ .chezmoi.pathListSeparator }} [
+    {
+      "language"{{ .chezmoi.pathListSeparator }} [
+        "latex",
+        "tex"
+      ],
+      "substitutions"{{ .chezmoi.pathListSeparator }} [
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\alpha",
+          "pretty"{{ .chezmoi.pathListSeparator }} "α",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\beta",
+          "pretty"{{ .chezmoi.pathListSeparator }} "β",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\gamma",
+          "pretty"{{ .chezmoi.pathListSeparator }} "γ",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\delta",
+          "pretty"{{ .chezmoi.pathListSeparator }} "δ",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\epsilon",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ϵ",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\varepsilon",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ε",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\zeta",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ζ",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\eta",
+          "pretty"{{ .chezmoi.pathListSeparator }} "η",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\theta",
+          "pretty"{{ .chezmoi.pathListSeparator }} "θ",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\iota",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ι",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\kappa",
+          "pretty"{{ .chezmoi.pathListSeparator }} "κ",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\lambda",
+          "pretty"{{ .chezmoi.pathListSeparator }} "λ",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mu",
+          "pretty"{{ .chezmoi.pathListSeparator }} "μ",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\{{ .chezmoi.config.interpreters.nu.command }}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ν",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\xi",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ξ",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\pi",
+          "pretty"{{ .chezmoi.pathListSeparator }} "π",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\rho",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ρ",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\sigma",
+          "pretty"{{ .chezmoi.pathListSeparator }} "σ",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\tau",
+          "pretty"{{ .chezmoi.pathListSeparator }} "τ",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\upsilon",
+          "pretty"{{ .chezmoi.pathListSeparator }} "υ",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\phi",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ϕ",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\varphi",
+          "pretty"{{ .chezmoi.pathListSeparator }} "φ",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\chi",
+          "pretty"{{ .chezmoi.pathListSeparator }} "χ",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\psi",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ψ",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\omega",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ω",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\Gamma",
+          "pretty"{{ .chezmoi.pathListSeparator }} "Γ",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\Delta",
+          "pretty"{{ .chezmoi.pathListSeparator }} "Δ",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\Theta",
+          "pretty"{{ .chezmoi.pathListSeparator }} "Θ",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\Lambda",
+          "pretty"{{ .chezmoi.pathListSeparator }} "Λ",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\Xi",
+          "pretty"{{ .chezmoi.pathListSeparator }} "Ξ",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\Pi",
+          "pretty"{{ .chezmoi.pathListSeparator }} "Π",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\Sigma",
+          "pretty"{{ .chezmoi.pathListSeparator }} "Σ",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\Phi",
+          "pretty"{{ .chezmoi.pathListSeparator }} "Φ",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\Psi",
+          "pretty"{{ .chezmoi.pathListSeparator }} "Ψ",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\Omega",
+          "pretty"{{ .chezmoi.pathListSeparator }} "Ω",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\int",
+          "pretty"{{ .chezmoi.pathListSeparator }} "∫",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\iint",
+          "pretty"{{ .chezmoi.pathListSeparator }} "∬",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\iiint",
+          "pretty"{{ .chezmoi.pathListSeparator }} "∭",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\oint",
+          "pretty"{{ .chezmoi.pathListSeparator }} "∮",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\sum",
+          "pretty"{{ .chezmoi.pathListSeparator }} "∑",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\prod",
+          "pretty"{{ .chezmoi.pathListSeparator }} "∏",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\forall",
+          "pretty"{{ .chezmoi.pathListSeparator }} "∀",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\exists",
+          "pretty"{{ .chezmoi.pathListSeparator }} "∃",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\nexists",
+          "pretty"{{ .chezmoi.pathListSeparator }} "∄",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\leq",
+          "pretty"{{ .chezmoi.pathListSeparator }} "≤",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\geq",
+          "pretty"{{ .chezmoi.pathListSeparator }} "≥",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\neq",
+          "pretty"{{ .chezmoi.pathListSeparator }} "≠",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\approx",
+          "pretty"{{ .chezmoi.pathListSeparator }} "≈",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\sim",
+          "pretty"{{ .chezmoi.pathListSeparator }} "∼",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\equiv",
+          "pretty"{{ .chezmoi.pathListSeparator }} "≡",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\ll",
+          "pretty"{{ .chezmoi.pathListSeparator }} "≪",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\gg",
+          "pretty"{{ .chezmoi.pathListSeparator }} "≫",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\in",
+          "pretty"{{ .chezmoi.pathListSeparator }} "∈",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\notin",
+          "pretty"{{ .chezmoi.pathListSeparator }} "∉",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\subset",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⊂",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\subseteq",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⊆",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\subsetneq",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⊊",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\nsubseteq",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⊈",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\supset",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⊃",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\supseteq",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⊇",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\supsetneq",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⊋",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\nsupseteq",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⊉",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\cup",
+          "pretty"{{ .chezmoi.pathListSeparator }} "∪",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\cap",
+          "pretty"{{ .chezmoi.pathListSeparator }} "∩",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\bigcup",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⋃",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\bigcap",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⋂",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\times",
+          "pretty"{{ .chezmoi.pathListSeparator }} "×",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\cdot",
+          "pretty"{{ .chezmoi.pathListSeparator }} "·",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\pm",
+          "pretty"{{ .chezmoi.pathListSeparator }} "±",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mp",
+          "pretty"{{ .chezmoi.pathListSeparator }} "∓",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\sqrt",
+          "pretty"{{ .chezmoi.pathListSeparator }} "√",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\infty",
+          "pretty"{{ .chezmoi.pathListSeparator }} "∞",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\bot",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⊥",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\perp",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⊥",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\top",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⊤",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\land",
+          "pretty"{{ .chezmoi.pathListSeparator }} "∧",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\lor",
+          "pretty"{{ .chezmoi.pathListSeparator }} "∨",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\lnot",
+          "pretty"{{ .chezmoi.pathListSeparator }} "¬",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\neg",
+          "pretty"{{ .chezmoi.pathListSeparator }} "¬",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\setminus",
+          "pretty"{{ .chezmoi.pathListSeparator }} "∖",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\circ",
+          "pretty"{{ .chezmoi.pathListSeparator }} "∘",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mid",
+          "pretty"{{ .chezmoi.pathListSeparator }} "∣",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\partial",
+          "pretty"{{ .chezmoi.pathListSeparator }} "∂",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\nabla",
+          "pretty"{{ .chezmoi.pathListSeparator }} "∇",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\oplus",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⊕",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\otimes",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⊗",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\leftarrow",
+          "pretty"{{ .chezmoi.pathListSeparator }} "←",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\longleftarrow",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⟵",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\Leftarrow",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⇐",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\Longleftarrow",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⟸",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\impliedby",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⇐",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\rightarrow",
+          "pretty"{{ .chezmoi.pathListSeparator }} "→",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\longrightarrow",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⟶",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\Rightarrow",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⇒",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\Longrightarrow",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⟹",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\implies",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⇒",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\iff",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⇔",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\leftrightarrow",
+          "pretty"{{ .chezmoi.pathListSeparator }} "↔",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\Leftrightarrow",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⇔",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\uparrow",
+          "pretty"{{ .chezmoi.pathListSeparator }} "↑",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\downarrow",
+          "pretty"{{ .chezmoi.pathListSeparator }} "↓",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\to",
+          "pretty"{{ .chezmoi.pathListSeparator }} "→",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\gets",
+          "pretty"{{ .chezmoi.pathListSeparator }} "←",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\langle",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⟨",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\rangle",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⟩",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\vert",
+          "pretty"{{ .chezmoi.pathListSeparator }} "|",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\lvert",
+          "pretty"{{ .chezmoi.pathListSeparator }} "|",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\rvert",
+          "pretty"{{ .chezmoi.pathListSeparator }} "|",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\Vert",
+          "pretty"{{ .chezmoi.pathListSeparator }} "‖",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\lVert",
+          "pretty"{{ .chezmoi.pathListSeparator }} "‖",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\rVert",
+          "pretty"{{ .chezmoi.pathListSeparator }} "‖",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\lfloor",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⌊",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\rfloor",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⌋",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\lceil",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⌈",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\rceil",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⌉",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\ast",
+          "pretty"{{ .chezmoi.pathListSeparator }} "∗",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\star",
+          "pretty"{{ .chezmoi.pathListSeparator }} "⋆",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\prime",
+          "pretty"{{ .chezmoi.pathListSeparator }} "′",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\varnothing",
+          "pretty"{{ .chezmoi.pathListSeparator }} "∅",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\emptyset",
+          "pretty"{{ .chezmoi.pathListSeparator }} "∅",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\ell",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℓ",
+          "post"{{ .chezmoi.pathListSeparator }} "(?![a-zA-Z])"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathbb\\{A\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝔸"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathbb\\{B\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝔹"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathbb\\{C\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℂ"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathbb\\{D\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝔻"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathbb\\{E\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝔼"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathbb\\{F\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝔽"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathbb\\{G\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝔾"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathbb\\{H\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℍ"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathbb\\{I\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝕀"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathbb\\{J\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝕁"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathbb\\{K\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝕂"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathbb\\{L\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝕃"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathbb\\{M\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝕄"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathbb\\{N\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℕ"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathbb\\{O\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝕆"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathbb\\{P\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℙ"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathbb\\{Q\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℚ"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathbb\\{R\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℝ"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathbb\\{S\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝕊"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathbb\\{T\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝕋"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathbb\\{U\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝕌"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathbb\\{V\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝕍"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathbb\\{W\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝕎"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathbb\\{X\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝕏"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathbb\\{Y\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝕐"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathbb\\{Z\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℤ"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathcal\\{A\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒜"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathcal\\{B\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℬ"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathcal\\{C\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒞"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathcal\\{D\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒟"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathcal\\{E\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℰ"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathcal\\{F\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℱ"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathcal\\{G\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒢"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathcal\\{H\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℋ"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathcal\\{I\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℐ"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathcal\\{J\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒥"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathcal\\{K\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒦"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathcal\\{L\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℒ"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathcal\\{M\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℳ"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathcal\\{N\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒩"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathcal\\{O\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒪"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathcal\\{P\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒫"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathcal\\{Q\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒬"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathcal\\{R\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℛ"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathcal\\{S\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒮"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathcal\\{T\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒯"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathcal\\{U\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒰"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathcal\\{V\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒱"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathcal\\{W\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒲"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathcal\\{X\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒳"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathcal\\{Y\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒴"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathcal\\{Z\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒵"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathscr\\{A\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒜"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathscr\\{B\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℬ"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathscr\\{C\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒞"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathscr\\{D\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒟"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathscr\\{E\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℰ"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathscr\\{F\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℱ"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathscr\\{G\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒢"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathscr\\{H\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℋ"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathscr\\{I\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℐ"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathscr\\{J\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒥"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathscr\\{K\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒦"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathscr\\{L\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℒ"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathscr\\{M\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℳ"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathscr\\{N\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒩"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathscr\\{O\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒪"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathscr\\{P\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒫"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathscr\\{Q\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒬"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathscr\\{R\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℛ"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathscr\\{S\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒮"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathscr\\{T\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒯"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathscr\\{U\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒰"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathscr\\{V\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒱"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathscr\\{W\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒲"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathscr\\{X\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒳"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathscr\\{Y\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒴"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathscr\\{Z\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝒵"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathfrak\\{A\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝔄"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathfrak\\{B\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝔅"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathfrak\\{C\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℭ"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathfrak\\{D\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝔇"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathfrak\\{E\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝔈"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathfrak\\{F\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝔉"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathfrak\\{G\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝔊"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathfrak\\{H\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℌ"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathfrak\\{I\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℑ"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathfrak\\{J\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝔍"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathfrak\\{K\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝔎"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathfrak\\{L\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝔏"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathfrak\\{M\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝔐"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathfrak\\{N\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝔑"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathfrak\\{O\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝔒"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathfrak\\{P\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝔓"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathfrak\\{Q\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝔔"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathfrak\\{R\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℜ"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathfrak\\{S\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝔖"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathfrak\\{T\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝔗"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathfrak\\{U\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝔘"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathfrak\\{V\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝔙"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathfrak\\{W\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝔚"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathfrak\\{X\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝔛"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathfrak\\{Y\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "𝔜"
+        },
+        {
+          "ugly"{{ .chezmoi.pathListSeparator }} "\\\\mathfrak\\{Z\\}",
+          "pretty"{{ .chezmoi.pathListSeparator }} "ℨ"
+        }
+      ]
+    }
+  ]
 }

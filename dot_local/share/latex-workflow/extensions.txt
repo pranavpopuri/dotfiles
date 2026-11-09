@@ -3,3 +3,4 @@ draivin.hscopes@0.0.9
 james-yu.latex-workshop@10.20.0
 jasew.vscode-helix-emulation@0.6.2
 streetsidesoftware.code-spell-checker@4.10.0
+BRBoer.vsc-conceal

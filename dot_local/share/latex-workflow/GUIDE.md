@@ -88,7 +88,7 @@ TeX-aware environment/section selections are documented in
 | Chord | Action |
 | --- | --- |
 | Ctrl+L b / v / s | Build / view PDF / source-to-PDF synchronization |
-| Ctrl+L m / p | Toggle source rendering / larger math preview |
+| Ctrl+L m / p | Toggle symbol concealment / larger math preview |
 | Ctrl+L f / x | Create/edit an Inkscape figure / export it |
 | Ctrl+L e / a | Select environment contents / whole environment |
 | Ctrl+L r / n | Select both environment names / current name |
@@ -222,32 +222,25 @@ CAS simplifies expressions; it does not preserve every domain qualification in
 the output or constitute a proof. For example, `(x**2-1)/(x-1)` simplifies to
 `x+1`, but the original still excludes `x=1`.
 
-## Read rendered equations while editing
+## Read concealed symbols while editing
 
-The local **Math Source Preview** extension displays inactive equations as SVG
-images inside the native editor. Place the caret or a selection in an equation
-to reveal its original LaTeX, then move away to render it again. The stored file
-stays LaTeX. Incomplete or unsupported formulas stay visible as source; CAS
-input stays source until evaluated.
+Conceal displays LaTeX commands as Unicode symbols, such as `\alpha` → α
+and `\sum` → ∑. Only the symbol touching the cursor reveals its original source. Your stored
+LaTeX stays unchanged. Substitutions are configured in `config/settings.json`.
+These rules apply throughout LaTeX files, including comments and macro definitions.
 
-- **Ctrl+L m:** toggle in-source rendering for the normal VS Code editor.
+- **Ctrl+L m:** toggle symbol concealment in Helix normal/selection modes.
 - **Ctrl+L p:** open/close Workshop's larger live math preview panel below.
 - Hover on source math for a Workshop equation preview.
 
-Large fractions, matrices, and integrals should occupy a multiline display block:
+Conceal substitutes symbols while Math Source Preview renders full equations.
+Inactive equations appear rendered; the equation being edited keeps its source
+visible, with symbol concealment and a rendered preview beside it. Both features
+are enabled. The renderer source, packaging, and macros are retained.
 
-```latex
-\[
-  \int_0^1 \frac{x^2}{1+x^2}\,\dd x
-\]
-```
-
-Decorations cannot change the editor's line layout, so a tall equation squeezed
-onto one source line will have a smaller preview. The renderer uses MathJax,
-not a complete TeX installation: special packages or course macros can work in
-the PDF while requiring explicit preview macro definitions. The built PDF is
-the authoritative typeset output. The two preview systems have separate macro
-configuration; maintenance locations are listed below.
+Run `bash tools/install_editor.sh` outside the restricted agent environment to
+install Conceal and apply the settings, then run **Developer: Reload Window**.
+The PDF remains the authoritative typeset output.
 
 ## Course notation and theorem environments
 

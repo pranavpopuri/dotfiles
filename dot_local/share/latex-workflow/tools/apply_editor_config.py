@@ -127,6 +127,8 @@ def merge_settings(text, defaults):
     live_keys = {
         'files.watcherExclude',
         'mathSourcePreview.activePreview',
+        'mathSourcePreview.enabled',
+        'conceal.revealOn', 'conceal.adjustCursorMovement', 'conceal.substitutions',
         'latex-workshop.latex.watch.pdf.delay',
         'latex-workshop.view.pdf.reload.transition',
         'files.autoSave', 'files.autoSaveDelay',

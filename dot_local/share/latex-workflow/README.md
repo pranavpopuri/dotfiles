@@ -97,9 +97,9 @@ installed runtime files; put your own shared TeX sources in `tex/`.
 - `\input{math-macros.tex}` loads shared course macros through the toolkit
   build tools. New projects load it via `course-macros.tex`, which is yours
   to customize. A project's own file of the same name takes precedence.
-- Math Source Preview renders inactive equations in the native editor and
-  reveals source around the cursor. Large formulas should use multiline
-  display blocks. MathJax previews do not replace final PDF verification.
+- Conceal displays LaTeX commands as Unicode symbols and reveals source for
+  the symbol touching the cursor. Full equation rendering is enabled alongside symbol concealment.
+  Workshop hover/panel previews remain available.
 - Spell checking skips math and TeX commands; package completion is enabled.
 - Inkscape figure tasks edit SVGs and export PDF+LaTeX. Put math labels such
   as `$\alpha$` in the SVG, save, export, and insert `\incfig{diagram}`.
@@ -113,7 +113,7 @@ In Helix Normal/visual mode, use Control+L then the final key:
 | Chord | Action |
 | --- | --- |
 | Ctrl+L b / v / s | Build / PDF / SyncTeX |
-| Ctrl+L m / p | Source rendering / larger math preview |
+| Ctrl+L m / p | Symbol concealment / larger math preview |
 | Ctrl+L f / x | Edit SVG / export |
 | Ctrl+L e / a / r | Select environment contents / whole environment / paired names |
 | Ctrl+L g / w / c | Matching tag / wrap environment / wrap command |

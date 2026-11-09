@@ -16,7 +16,7 @@
   },
   {
     "key": "ctrl+l m",
-    "command": "mathSourcePreview.toggle",
+    "command": "conceal.togglePrettySymbols",
     "when": "editorTextFocus && editorLangId == latex && (extension.helixKeymap.normalMode || extension.helixKeymap.visualMode || extension.helixKeymap.visualLineMode)"
   },
   {

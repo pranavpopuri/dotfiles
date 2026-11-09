@@ -21,7 +21,7 @@ mode. The native Helix Space menu is preserved. User keybindings are managed at
 | Ctrl+L b | Build using the default recipe |
 | Ctrl+L v | Open PDF |
 | Ctrl+L s | Source-to-PDF SyncTeX |
-| Ctrl+L m | Toggle in-source equation rendering |
+| Ctrl+L m | Toggle symbol concealment |
 | Ctrl+L p | Toggle larger math preview panel |
 | Ctrl+L f | Create/edit named Inkscape figure |
 | Ctrl+L x | Export named Inkscape figure |
